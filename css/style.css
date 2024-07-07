@@ -204,11 +204,17 @@ a[href$=".swf"]{
 	height: 30px;
 	padding-top:0;
 }
+
+@media (hover: hover) {
+  a:hover {
 #menu li:hover {
   	background: #666;
 	height: 38px;
   	width: 10%;
 }
+}
+}
+
 #menu a {
   padding:5px 5px;
   display:block;
@@ -271,9 +277,15 @@ a[href$=".swf"]{
   	min-width: 0;
   	transition: 0.3s all;
 }
+
+@media (hover: hover) {
+  a:hover {
 #menu ul li:hover ul {
   max-width: 30em;
 }
+  }
+}
+
 #menu ul li {
   	width: inherit;
   	min-width: 10;
@@ -284,13 +296,20 @@ a[href$=".swf"]{
 #menu li li li {
   max-height: inherit;
 }
+
+
+@media (hover: hover) {
+  a:hover {
 #menu li:hover li {
   	width: inherit;
   	max-height: 15em;
   	overflow: visible;
 	height: 30px;
 }
-	
+	  }
+}
+
+
 #hideoverflow { 
   overflow-y: hidden;
 	margin-top: 60px; 
