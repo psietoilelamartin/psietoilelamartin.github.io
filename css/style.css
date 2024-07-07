@@ -117,11 +117,11 @@ a {
 	color: #68550B;
   	text-decoration: none;}
   	
-#phys:hover {
+#tip:hover {
 	color: #56C039;
   	text-decoration: none;}
   	
-#phys:visited {
+#tip:visited {
 	color: #125A2D;
   	text-decoration: none;}
   	
@@ -141,11 +141,11 @@ a {
 	color: #125A2D;
   	text-decoration: none;}
   	
-#tip:hover {
+#phys:hover {
 	color: #BB5DEA;
   	text-decoration: none;}
   	
-#tip:visited {
+#phys:visited {
 	color: #672F97;
   	text-decoration: none;}
 
