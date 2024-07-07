@@ -16,7 +16,7 @@ body {
 }
 
 #fondmaths {
-background: url(../img/test.jpg) center; background-attachment: fixed;
+background: url(../img/9bw.jpg) center; background-attachment: fixed;
 background-size: cover;
 width: 100%;
 height: 100%;
@@ -27,23 +27,58 @@ resize: both;
 }
 
 #fondphysique {
-  background: url(../img/curie.jpg) no-repeat center fixed; 
+background: url(../img/10bw.jpg) center; background-attachment: fixed;
+background-size: cover;
+width: 100%;
+height: 100%;
+position: relative;
+min-height: 500px;
+background-repeat: no-repeat;
+resize: both;
 }
 
 #fondinfo {
-  background: url(../img/hamilton.png) no-repeat center fixed; 
+background: url(../img/11bw.jpg) center; background-attachment: fixed;
+background-size: cover;
+width: 100%;
+height: 100%;
+position: relative;
+min-height: 500px;
+background-repeat: no-repeat;
+resize: both;
 }
 
 #fondorga {
-  background: url(../img/johnson2.png) no-repeat center fixed; 
+background: url(../img/12bw.jpg) center; background-attachment: fixed;
+background-size: cover;
+width: 100%;
+height: 100%;
+position: relative;
+min-height: 500px;
+background-repeat: no-repeat;
+resize: both;
 }
 
 #fondsii {
-  background: url(../img/eiffel.jpg) no-repeat center fixed; 
+background: url(../img/7bw.jpg) center; background-attachment: fixed;
+background-size: cover;
+width: 100%;
+height: 100%;
+position: relative;
+min-height: 500px;
+background-repeat: no-repeat;
+resize: both;
 }
 
 #fondlangues {
-  background: url(../img/cervantes.jpg) no-repeat center fixed; 
+background: url(../img/3bw.jpg) center; background-attachment: fixed;
+background-size: cover;
+width: 100%;
+height: 100%;
+position: relative;
+min-height: 500px;
+background-repeat: no-repeat;
+resize: both;
 }
 
 
