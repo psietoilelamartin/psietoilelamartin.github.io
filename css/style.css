@@ -4,11 +4,6 @@
   url('https://psietoilelamartin.github.io/fonts/simplifica.woff') format('woff'), url('https://psietoilelamartin.github.io/fonts/simplifica.ttf') format('truetype');
 }
 
-@font-face {
-  font-family: 'clearlight';
-  src: url('https://psietoilelamartin.github.io/fonts/Clearlight-lJlq.ttf') format('truetype');
-}
-
 body {
   margin: 0;
   padding: 0;
