@@ -19,7 +19,13 @@ for e in L :
 
 
 
-# On va commencer par les PSI
+
+
+
+#### On va commencer par les PSI pour s'entrainer
+
+import matplotlib.pyplot as plt
+import numpy as np
 
 dico_filiere = {}
 vals = []
@@ -31,21 +37,8 @@ for k,v in dico_compte.items():
         legende.append(k[1])
 
 
-
-import matplotlib.pyplot as plt
-import numpy as np
-
 vals = np.array(vals)
 
-vals = np.array([[  0,   1],
-       [ 78,   1],
-       [ 54,   1],
-       [ 24,   1],
-       [102,   1],
-       [ 84,   1],
-       [108,   1]])
-
-legende = ['Concours Polytechnique - ENS', 'Concours Mines-Telecom', 'Concours Mines-Ponts', 'Arts Et Métiers', 'Concours Centrale-Supélec', 'Concours CCINP', 'Autres']
 
 fig, ax = plt.subplots(figsize=(12, 8))
 
@@ -56,39 +49,14 @@ inner_colors = plt.cm.tab20c(np.linspace(0, 1, vals.size))  # Couleurs pour l'in
 
 
 
-wedges, texts, autotexts = ax.pie(
-    vals.sum(axis=1), radius=1, colors=outer_colors, labels=legende,
-    autopct=lambda pct: f"{int(round(pct * vals.sum() / 100, 0))}",  # Valeurs pourcentage et somme
-    wedgeprops=dict(width=size, edgecolor='w')
-)
+ax.pie(vals.sum(axis=1), radius=1, colors=outer_colors,labels = legende,
+       wedgeprops=dict(width=size, edgecolor='w'))
 
-
-#Exteriur
-# ax.pie(vals.sum(axis=1), radius=1, colors=outer_colors,
-#        wedgeprops=dict(width=size, edgecolor='w'),)
-#Intérieur
-# ax.pie(vals.flatten(), radius=1-size, colors=inner_colors,
-#         wedgeprops=dict(width=size, edgecolor='w'))
+#ax.pie(vals.flatten(), radius=1-size, colors=inner_colors,
+#       wedgeprops=dict(width=size, edgecolor='w'))
 
 ax.legend()
-ax.set(aspect="equal", title='Résultats PSI/PSI* - 2024')
+
+
+ax.set(aspect="equal", title='Test Résultats')
 plt.show()
-
-
-# fig, ax = plt.subplots()
-#
-# size = 0.3
-# vals = np.array([[60., 32.], [37., 40.], [29., 10.]])
-#
-# tab20c = plt.color_sequences["tab20c"]
-# outer_colors = [tab20c[i] for i in [0, 4, 8]]
-# inner_colors = [tab20c[i] for i in [1, 2, 5, 6, 9, 10]]
-#
-# ax.pie(vals.sum(axis=1), radius=1, colors=outer_colors,
-#        wedgeprops=dict(width=size, edgecolor='w'))
-#
-# # ax.pie(vals.flatten(), radius=1-size, colors=inner_colors,
-#        # wedgeprops=dict(width=size, edgecolor='w'))
-#
-# ax.set(aspect="equal", title='Résultats PSI/PSI* - 2024')
-# plt.show()
