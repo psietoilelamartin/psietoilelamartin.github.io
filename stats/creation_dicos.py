@@ -1,11 +1,18 @@
 liste_filieres=["PC","MP","PSI","PT","BCPST"]
+
+
+# L'ordre des banques conditionne l'ordre dans le graphe
 liste_banques=["Concours Polytechnique - ENS",
-"Concours Mines-Telecom",
 "Concours Mines-Ponts",
-"Arts Et Métiers",
 "Concours Centrale-Supélec",
+"Arts Et Métiers",
+"Concours Mines-Telecom",
 "Concours CCINP",
 "Autres","Agro Veto","G2E","PAS DE VOEUX"]
+liste_banques.reverse()
+
+groupe_INSA = "Concours CCINP"
+
 
 dico_banques={"ECOLE POLYTECHNIQUE":"Concours Polytechnique - ENS",
               "ENS Paris-Saclay":"Concours Polytechnique - ENS",
@@ -47,7 +54,7 @@ dico_banques={"ECOLE POLYTECHNIQUE":"Concours Polytechnique - ENS",
               "ISAE - SUPAERO Toulouse":"Concours Mines-Ponts",
               "Chimie ParisTech":"Concours Mines-Ponts",
               "IMT Atlantique":"Concours Mines-Ponts",
-              "MINES SAINTETIENNE":"Concours Mines-Ponts",
+              "MINES SAINT-ETIENNE":"Concours Mines-Ponts",
               "TELECOM Paris":"Concours Mines-Ponts",
               "Arts et Métiers":"Arts Et Métiers",
               "Arts et Métiers - ingénieurs militaires":"Arts Et Métiers",
@@ -122,16 +129,16 @@ dico_banques={"ECOLE POLYTECHNIQUE":"Concours Polytechnique - ENS",
               "ECAM LaSalle":"Autres",
               "ENSAIT Roubaix":"Autres",
               "ENSISA Mulhouse Mécanique":"Autres",
-              "INSA Lyon Génie Civil et Urbanisme":"Autres",
-              "INSA Lyon Génie Electrique":"Autres",
-              "INSA Lyon Génie Industriel":"Autres",
-              "INSA Lyon Génie Mécanique":"Autres",
-              "INSA Lyon Informatique":"Autres",
-              "INSA Lyon Biotechnologies et Bioinformatique":"Autres",
-              "INSA Strasbourg Génie Thermique, Energétique et Environnement":"Autres",
-              "INSA Strasbourg Génie Mécanique":"Autres",
-              "INSA Hauts de France Mécatronique":"Autres",
-              "INSA Hauts-de-France Audiovisuel et Multimédia":"Autres",
+              "INSA Lyon Génie Civil et Urbanisme" : groupe_INSA,
+              "INSA Lyon Génie Electrique" : groupe_INSA,
+              "INSA Lyon Génie Industriel" : groupe_INSA,
+              "INSA Lyon Génie Mécanique" : groupe_INSA,
+              "INSA Lyon Informatique" : groupe_INSA,
+              "INSA Lyon Biotechnologies et Bioinformatique":groupe_INSA,
+              "INSA Strasbourg Génie Thermique, Energétique et Environnement" : groupe_INSA,
+              "INSA Strasbourg Génie Mécanique" : groupe_INSA,
+              "INSA Hauts de France Mécatronique" : groupe_INSA,
+              "INSA Hauts-de-France Audiovisuel et Multimédia" : groupe_INSA,
               "Toulouse INP - ENIT":"Autres",
               "CPE Lyon - apprentissage - Physique et Systèmes Microélectronique":"Autres",
               "ECOLE DE L'AIR Base":"Autres",
