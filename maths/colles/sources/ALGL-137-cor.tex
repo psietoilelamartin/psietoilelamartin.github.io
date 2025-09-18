@@ -1,0 +1,48 @@
+\begin{enumerate}
+\item Si $f^p(x)=0_E, f\left(f^p(x)\right)=0_E$, i.e. $f^{p+1}(x)=0_E$. On a donc
+$$
+x \in F_p \Longrightarrow x \in F_{p+1}
+$$
+
+Ou encore $F_p \subset F_{p+1}$.
+De plus, si $y \in G_{p+1}$, il existe $x$ tel que $y=f^{p+1}(x)$. Mais alors $y=f^p(f(x))$, donc $y \in G_p$. Et finalement $G_{p+1} \subset G_p$.
+\item On est en dimension finie : la suite des dimensions des $F_p$, croissante et majorée, converge vers $\ell$. Mais c'est une suite d'entiers naturels. Elle est donc stationnaire et $\ell\in\N$. Il existe donc $l$ tel que pour tout $k\geq l$, $F_k=F_{k+1}=F_l$ (si un sev est inclus dans un autre et s'ils ont même dimension, ils sont égaux).
+On peut alors poser $r=\min\set{l\in\N\ ,\ F_l=F_{l+1}}$. C'est un ensemble d'entiers naturels, non vide d'après le point précédent, donc $r$ existe bien.\\
+On montre ensuite par récurrence sur $p$ que :
+      \[ \forall p\in\N,~H_p:\textrm{\og} \Ker(f^r) =\Ker(f^{r+p})\textrm{\fg}.
+    \].
+    \begin{description}
+      \item[Initialisation :] $H_0$ est évidente.
+      \item[Hérédité :] Soit $p\in \N$, montrons $H_p\Rightarrow H_{p+1}$ et supposons pour cela $H_p$. On a d'abord, par croissance de la suite de sous-espaces vectoriels de $E$ $(\Ker f^n)$, que $ \Ker(f^r) \subset \Ker(f^{r+p+1})$. Ensuite, soit $x\in\Ker(f^{r+p+1})$. On a alors $f^{p+r+1}(x) = f^{p+r}(f(x)) = 0_E$ et donc $f(x) \in \Ker(f^{r+p})$. Par hypothèse de récurrence, on a donc $f(x) \in \Ker f^r$, et donc $f^{r}(f(x)) = f^{r+1}(x) = 0_E$, soit $x\in\Ker f^{r+1}$. D'après la question précédente, on a finalement que $x\in \Ker f^r$ et donc $\Ker(f^{r+p+1}) \subset \Ker f^r$, soit $\Ker(f^{r+p+1}) = \Ker f^r$.
+      \item[Conclusion :] Par récurrence, pour tout entier naturel $p$, $H_p$ est vraie.
+    \end{description}
+
+
+% C'est même toujours vrai à partir d'un certain rang. Mais peu importe, il suffit pour l'instant de considérer
+% $$
+% r=\min \left(\left\{p ; F_p=F_{p+1}\right\}\right)
+% $$
+%
+% Montrons maintenant que
+% $$
+% F_p=F_{p+1} \Longrightarrow F_{p+1}=F_{p+2}
+% $$
+%
+% Supposons, donc, $F_p=F_{p+1}$. On sait déjà que $F_{p+1} \subset F_{p+2}$, il s'agit donc de montrer l'inclusion inverse. Considérons $x \in F_{p+2}$. Comme on a envie d'utiliser l'hypothèse qui est $F_{p+1} \subset F_p$, il est naturel de chercher à faire apparaître un élément de $F_{p+1}$. Or le fait que $f^{p+2}(x)=0_E$ s'écrit aussi bien $f^{p+1}(f(x))=0_E$, donc $f(x) \in F_{p+1}$. De cela on déduit que $f(x) \in F_p$, c'est-à-dire que $x \in F_{p+1}$. On a donc bien montré ce qu'on voulait et, par récurrence, le résultat demandé s'ensuit.
+\item On peut faire le même genre de raisonnement qu'à la question précédente, mais il est plus simple de se souvenir du théorème du rang. En effet, comme pour tout $p$ on a $G_{p+1} \subset G_p$, on a
+$$
+G_p=G_{p+1} \Longleftrightarrow \operatorname{dim}\left(G_p\right)=\operatorname{dim}\left(G_{p+1}\right)
+$$
+
+Mais du théorème du rang on déduit facilement que
+$$
+\left(\operatorname{dim}\left(G_p\right)=\operatorname{dim}\left(G_{p+1}\right)\right) \Longleftrightarrow\left(\operatorname{dim}\left(F_p\right)=\operatorname{dim}\left(F_{p+1}\right)\right)
+$$
+et on est ramené à utiliser les résultats de la question précédente. On trouve $r=s$.
+\item Comme $r=s$, le théorème du rang fait qu'il nous suffit de montrer que
+$$
+F_r \cap G_r=\left\{0_E\right\}
+$$
+
+Mais si $x \in F_r \cap G_r$, soit $y$ tel que $x=f^r(y)$; de $f^r(x)=0_E$ on déduit que $f^{2 r}(y)=0_E$. Donc $y \in F_{2 r}$. Mais $F_{2 r}=F_r$ d'après 2. Donc $y \in F_r$, donc $x=0_E$, ce qui conclut.
+\end{enumerate}

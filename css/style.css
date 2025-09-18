@@ -182,6 +182,11 @@ a[href$=".swf"]{
 	background: url(../img/iconeswf.jpg) no-repeat right top;
 	padding-right:20px;
 	}
+
+a[href$=".tex"]{
+	background: url(../img/iconestex.jpg) no-repeat right top;
+	padding-right:20px;
+	}
 	
 #nav{ 
 	z-index:10;

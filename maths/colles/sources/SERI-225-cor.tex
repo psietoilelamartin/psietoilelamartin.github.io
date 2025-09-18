@@ -1,0 +1,73 @@
+\begin{enumerate}[label=\textbf{\alph*.}]
+\item Comparaison série--intégrale et série télescopique :
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+
+\item
+Pour $x\in[k,k+1]$ avec $k\ge1$, on a $\dfrac1{k+1}\le \dfrac1x\le \dfrac1k$. En intégrant sur $[k,k+1]$ puis en sommant pour $k=1$ à $n-1$, on obtient
+\[
+\dsum_{k=2}^n \dfrac{1}{k}\leq \int_1^n \dfrac{\dd x}{x} \le H_{n-1} ,
+\]
+soit
+\[
+\int_1^{n+1} \dfrac{\dd x}{x} \le H_{n} \le 1+\int_1^n \dfrac{\dd x}{x},
+\]
+d'où
+\[
+\ln (n+1) \le H_n \le 1+\ln n.
+\]
+Puisque $\ln(n+1)\sim 1+\ln n\sim \ln n$, $H_n\sim \ln n$.
+
+\item
+On calcule
+\[
+u_{n+1}-u_n
+= \bigl(H_{n+1}-\ln(n+1)\bigr) - \bigl(H_n - \ln n\bigr)
+= \frac1{n+1} - \ln\!\left(1+\frac1n\right).
+\]
+Or
+\[
+\ln\!\left(1+\frac1n\right) = \frac1n - \frac{1}{2n^2} + O\!\left(\frac1{n^3}\right)
+\quad\text{et}\quad
+\frac1{n+1} = \frac1n - \frac1{n^2} + O\!\left(\frac1{n^3}\right).
+\]
+Ainsi
+\begin{align*}
+u_{n+1}-u_n
+&= \left(\frac1n - \frac1{n^2} + O\!\left(\frac1{n^3}\right)\right)
+  - \left(\frac1n - \frac{1}{2n^2} + O\!\left(\frac1{n^3}\right)\right)\\
+&= -\frac{1}{2n^2} + O\!\left(\frac1{n^3}\right),
+\end{align*}
+donc $u_{n+1}-u_n = O\!\left(\dfrac1{n^2}\right)$.
+
+\item
+Posons $v_n = u_{n+1}-u_n$. Alors $v_n = O(1/n^2)$, donc la série $\dsum_{n\ge1} v_n$ est absolument convergente. Or
+\[
+\sum_{n=1}^{N} v_n = \sum_{n=1}^{N} (u_{n+1}-u_n) = u_{N+1}-u_1
+\]
+par téléscopage. Le fait que $\dsum v_n$ converge implique que $(u_{N+1})_{N\in\N}$ converge : ainsi $(u_n)$ est convergente. On note sa limite $\gamma$ (c'est la \emph{constante d'Euler}).
+\end{enumerate}
+
+\item Méthode des deux suites adjacentes :\\
+
+Posons, pour $n\ge1$,
+\[
+w_n = u_n + \ln n - \ln(n+1) = H_n - \ln(n+1).
+\]
+Alors
+\[
+u_n - w_n = \ln(n+1) - \ln n = \ln\!\left(1+\frac1n\right) > 0
+\quad\text{et}\quad
+u_n - w_n \xrightarrow[n\to\infty]{} 0.
+\]
+De plus,
+\[
+u_{n+1}-u_n = \frac1{n+1} - \ln\!\left(1+\frac1n\right) < 0,
+\]
+donc $(u_n)$ est décroissante, tandis que
+\[
+w_{n+1}-w_n = \frac1{n+1} - \ln\!\left(1+\frac1{n+1}\right) > 0,
+\]
+donc $(w_n)$ est croissante. Les suites $(w_n)$ et $(u_n)$ sont adjacentes, elles convergent donc vers la même limite~$\gamma$. On retrouve ainsi la convergence de $(u_n)$.
+
+\end{enumerate}

@@ -1,0 +1,35 @@
+\begin{enumerate}
+
+\item
+\begin{itemize}
+\item $(u_n)$ est croissante. En effet, $u_{n+1}-u_n=\dfrac{1}{(n+1)!}>0$.
+\item $(v_n)$ est décroissante à partir de $n\ge 1$. En effet, on a
+\[
+v_{n+1}-v_n
+= \Bigl(u_n+\tfrac{1}{(n+1)!}\Bigr) + \tfrac{1}{(n+1)!} - \Bigl(u_n+\tfrac{1}{n!}\Bigr)
+= \frac{2}{(n+1)!}-\frac{1}{n!}
+= -\,\frac{n-1}{(n+1)!}\le 0
+\]
+(et strictement négatif pour $n\ge 2$).
+\item Pour tout $n$,
+\[
+v_n-u_n=\frac{1}{n!}\xrightarrow[n\to\infty]{}0.
+\]
+\end{itemize}
+Ainsi, $(u_n)$ est croissante, $(v_n)$ est décroissante et $v_n-u_n\tend0$ :
+les deux suites sont adjacentes. Elles convergent donc vers la même limite, que l’on note $\ell$.
+
+\item
+On raisonne par l’absurde. Supposons $\ell=\dfrac{p}{q}$ avec $p,q\in\mathbb{Z}$, $q\ge 1$, irréductible.\\
+Alors $q!\,\ell=\dfrac{q!\,p}{q}=(q-1)!p\in\mathbb{Z}$
+et, comme $q!\,u_q=\dsum_{k=0}^q\dfrac{q!}{k!}\in\mathbb{Z}$, on obtient
+\[
+q!\,(\ell-u_q)\in\mathbb{Z}.
+\]
+D’un autre côté, comme $\ell\in]u_q,v_q[$ car pour tout $n$, $u_n<v_n$ et les suites sont adjacentes, on a
+\[
+0<\ell-u_q<\frac{1}{q!}\qquad\text{donc}\qquad 0<q!\,(\ell-u_q)<1.
+\]
+On a donc un entier strictement compris entre $0$ et $1$, ce qui constitue une contradiction. Par conséquent, $\ell$ est irrationnel.
+\end{enumerate}
+Bien sûr, il est connu que $\e=\dsum_{k=0}^{\pinf}\dfrac1{k!}$, donc $\ell=\e$ et $\e$ est irrationnel.

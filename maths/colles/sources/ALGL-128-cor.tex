@@ -1,0 +1,32 @@
+\begin{enumerate}
+\item
+\begin{enumerate}
+ \item Il suffit de remarquer que $\im(u+v)\subset \im u +\im v$. En effet, si $y\in\im(u+v)$, il existe $x\in E$ tel que $y=(u+v)(x)=u(x)+v(x)$. Or $u(x)\in\im u$ et $v(x)\in\im v$.\\
+ Attention, l'inclusion réciproque est fausse : essayez de la démontrer, remarquez où la démonsration échoue et cherchez un contre-exemple.\\
+ On en tire : $\rg(u+v)\leq \dim(\im u +\im v)\leq \rg u+\rg v$, la dernière inégalité découlant de la formule de Grassman.
+
+\item Commençons pas remarquer que pour tout $\l\in\K^\ast$, $\im(\l u)=\im u$. En effet, si $y\in\im(\l u)$, il existe $x\in E$ tel que $y=\l u(x)=u(\l x)\in \im u$. L'inclusion réciproque se démontre de la même manière, en utilisant bien que $\l\neq 0$.\\
+Ainsi
+\begin{align*}
+\rg(u)&=\rg((u+v)+(-v))\\
+&\leq\rg(u+v)+\rg(-v)\hspace{.7cm}\text{grâce à la première question}\\
+&\leq\rg(u+v)+\rg(v)\hspace{1cm}\text{avec la remarque précédente}
+\end{align*}
+d'où
+\begin{equation}\label{ALGL-128-cor1}
+\rg(u)-\rg(v)\leq\rg(u+v)
+\end{equation}
+En inversant les rôles de $u$ et $v$ et en écrivant $v=(u+v)-u$, on obtient de la même manière
+\begin{equation}\label{ALGL-128-cor2}
+\rg(v)-\rg(u)\leq\rg(u+v)
+\end{equation}
+Les équations (\ref{ALGL-128-cor1}) et (\ref{ALGL-128-cor2}) assurent alors que
+$$\abs{\rg(u)-\rg(v)}\leq \rg(u+v).$$
+\end{enumerate}
+\item Nous savons que $\im(u\circ v)\subset\im u$ donc $\rg(u\circ v)\leq\rg u$. De plus $\im(u\circ v)=u(\im v)$. Si $\tilde u$ est la restriction de $u$ à $\im v$, alors $\rg(u\circ v)=\rg(\tilde u)$. Le théorème du rang assure que $\rg(\tilde u)= \dim\im v-\dim\Ker\tilde u\leq \rg v$. Ainsi
+$$\rg(u\circ v)\leq\inf(\rg u,\rg v).$$
+D'autre part, en repartant de $\rg(\tilde u)= \dim\im v-\dim\Ker\tilde u$, nous avons $\Ker\tilde u=\Ker u\cap\im v\subset\Ker u$ donc $\dim\Ker\tilde u\leq\dim\Ker u$. Avec le théorème du rang il vient $\dim\Ker\tilde u\leq n-\rg u$, et donc finalement
+$$\rg v+\rg u-n\leq\rg(u\circ v).$$
+
+\end{enumerate}
+

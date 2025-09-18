@@ -1,0 +1,16 @@
+\begin{enumerate}
+\item 
+\textbf{Condition nécessaire :} Supposons qu'il existe $u\in\lin(E)$ tel que $\Ker u=F$ et $\im u =G$. Avec $n = \dim E$, par le théorème du rang $\dim\Ker u+\dim\im u=\dim E$, donc $\dim E=\dim F + \dim G$ est une conditon nécessaire. 
+
+\textbf{Condition sufisante :} Réciproquement, en posant $p = \dim F$, $q = \dim G$, supposons que $p+q = n$. Nous allons construire $u$ convenable en la définissant sur une base judicieusement choisie de $E$.\\
+Soit $(f_1,\cdots,f_p)$ une base de $F$, que l'on complète par $(f_{p+1}, \cdots,f_{p+q})$ en une base de $E$ : cette base servira de base \og de départ \fg pour $u$.\\
+Soit $(g_1,\cdots,g_q)$ une base de $G$, on considère la famille \og à l'arrivée \fg $(0,\cdots,0,g_1,\cdots,g_q)$, dont les $p$ premiers vecteures sont nuls. Notons cette famille $(k_1,\cdots,k_n)$.\\
+On sait alors qu'il existe un unique endomorpisme $u$ tel que pour tout $i\in\llbr1,n\rrbr$, $u(f_i)=k_i$.\\
+Alors : $\im u=\Vect(u(f_1),\cdots,u(f_n))=\Vect(0,\cdots,0,g_1,\cdots,g_q)=\Vect (g_1,\cdots,g_q)=G$.\\ En particulier, $\rg u=\dim G=q$.\\
+Or pour tout $i$ de 1 à $p$, $f_i\in\Ker u$ donc $F=\Vect(f_1,\cdots,f_p)\subset \Ker u$. Or avec le théorème du rang, $\dim\Ker u=\dim E-\rg u=n-q=p=\dim F$. Donc $F=\Ker u$ : la condition était bien suffisante.
+\item Une base de $F$ est $\p{\bpm 0\\-1\\1\epm,\bpm -1\\1\\0\epm}$, que l'on compléte en la base de \Rt\ $\p{\bpm 0\\-1\\1\epm,\bpm -1\\1\\0\epm,\bpm 1\\0\\0\epm}$, notée $(f_1,f_2,f_3)$. Posons $g_1=\bpm 2\\-1\\-1\epm$. Cherchons l'expression de l'endomorpisme $u$ tel que $u(f_1)=u(f_2)=0$ et $u(f_3)=g_1$.\\
+Soit $\bpm x\\y\\z\epm$. Décomposons-le dans la base $(f_1,f_2,f_3)$. Une résolution de système linéaire sans surprise donne $\bpm x\\y\\z\epm=zf_1+(y+z)f_2+(x+y+z)f_3$. Ainsi $u\bpm x\\y\\z\epm=zu(f_1)+(y+z)u(f_2)+(x+y+z)u(f_3)=(x+y+z)g_1$.\\
+Une application $u$ telle que $\Ker u=F$ et $\im u=G$ est donc $\Foncn u\Rt\Rt{\bpm x\\y\\z\epm}{(x+y+z)\bpm 2\\-1\\-1\epm}$.
+\end{enumerate}
+
+

@@ -1,0 +1,22 @@
+\begin{enumerate}
+ \item Pour tout $x \neq 0_E$, il existe $\lambda(x) \in \K$ tel que
+$$
+f(x)=\lambda(x) . x
+$$
+et le but est de montrer que $\lambda(x)$ ne dépend pas de $x$, i.e. que si $x \neq y, \lambda(x)=$ $\lambda(y)$. Pour cela on considère deux vecteurs non nuls $x$ et $y$, et on examine deux cas :
+Si $(x, y)$ est liée, il existe $\mu$ tel que $y=\mu x$. On a alors
+$$
+f(y)=\mu f(x)=\mu \lambda(x) x=\lambda(x) y
+$$
+et donc $\lambda(x)=\lambda(y)$.
+Si $(x, y)$ est libre, on passe par l'intermédiaire de $x+y$. En effet, $f(x+y)=f(x)+f(y)=\lambda(x) x+\lambda(y) y$ d'une part,
+$f(x+y)=\lambda(x+y)(x+y)$ d'autre part.
+Comme $(x, y)$ libre, on obtient $\lambda(x)=\lambda(y)=\lambda(x+y)$. Et c'est ce qu'on voulait...
+\item Une droite est l'intersection de deux plans donc une telle application stabilise aussi les droites : c'est donc une homothétie.
+\item Une homothétie commute avec tout endomorphisme. Réciproquement, soit $f$ un endomorphisme qui commute avec tout endomorphisme. Si $x \neq 0_E$, soit $F$ un supplémentaire de Vect $(x)$ dans $E$ (C'est pour l'existence de ce supplémentaire qu'on suppose $E$ de dimension finie). Soit $p$ la projection sur $\operatorname{Vect}(x)$ parallèlement à $F$. Alors $f \circ p=p \circ f$. On applique cela en $x$, on obtient $p(f(x))=f(x)$, donc $f(x)$ est lié avec $x$. Et ce, pour tout $x$. Il ne reste plus qu'à appliquer la question précédente.
+\item On en déduit que le centre de $\mathcal{M}_n(\K)$ est constitué par les homothéties (en utilisant l'isomorphisme canonique entre $\mathcal{M}_n(\K)$ et $\mathcal{L}\left(\K^n\right)$ ).
+\item On retrouve ce résultat en considérant une matrice $M$ du centre et en écrivant
+$$
+\forall(i, j) \in \llbracket 1, n \rrbracket \quad M E_{i, j}=E_{i, j} M
+$$
+\end{enumerate}

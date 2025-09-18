@@ -1,0 +1,6 @@
+Remarque : on compare souvent la transformation d'Abel à l'intégration par parties.
+\begin{enumerate}
+ \item Soit $M$ un majorant de $(|S_n|)$. Alors $0\leq |(a_n-a_{n+1})S_n|\leq a_n-a_{n+1}$. Or $\dsum a_n-a_{n+1}$ a même nature que la suite $(a_n)$, donc elle cv. Donc $\dsum |(a_n-a_{n+1})S_n|$ aussi, donc $\dsum (a_n-a_{n+1})S_n$ cv absolument.
+ \item $\dsum_{n=0}^N a_{n+1}(S_{n+1}-S_n)=-\dsum_{n=0}^N a_{n+1}S_n+\dsum_{n=0}^N a_{n+1}S_{n+1}=-\dsum_{n=0}^N a_{n+1}S_n+\dsum_{n=1}^{N+1} a_{n}S_{n}=-a_0S_0+a_{N+1}S_{N+1}+\dsum_{n=0}^N (a_n-a_{n+1})S_n$. Or $\dsum_{n=0}^N (a_n-a_{n+1})S_n$ cv et $a_{N+1}S_{N+1}\Tend N{\pinf}0$, donc $\dsum a_{n+1}(S_{n+1}-S_n)$ cv.
+ \item Appliquer ce qui précède avec $a_n=\dfrac 1n$ et $S_n=\dsum_{k=0}^{n} \sin(k)=\im\p{\dsum_{k=0}^{n} \e^{ik}}=\im\p{\dfrac{\e^{i(n+1)}-1}{\e^{i}-1}}=\im\p{\e^{in/2}\dfrac{\sin((n+1)/2)}{\sin(1/2)}}$. On vérifiera bien les hypothèses !
+\end{enumerate}

@@ -1,0 +1,41 @@
+\begin{enumerate}
+
+\item
+
+Soit $\varepsilon>0$. Comme $u_n\tend 0$, il existe $N\in\mathbb{N}$ tel que pour tout $k\ge N$, $|u_k|\le \varepsilon$.
+Pour $n\ge N$,
+\[
+  |v_n|
+  = \left|\frac{1}{n+1}\sum_{k=0}^n u_k\right|
+  \le \frac{1}{n+1}\left(\sum_{k=0}^{N-1}|u_k| + \sum_{k=N}^n |u_k|\right)
+  \le \frac{A}{n+1} + \frac{n-N+1}{n+1}\,\varepsilon,
+\]
+où $A=\dsum_{k=0}^{N-1}|u_k|$. Choisissons $n$ assez grand pour avoir $\dfrac{A}{n+1}\le \varepsilon$ (par exemple $n+1\ge A/\varepsilon$). Alors
+\[
+  |v_n| \le \varepsilon + \varepsilon = 2\varepsilon.
+\]
+Comme $\varepsilon>0$ est arbitraire, on en déduit $v_n\tend 0$.
+
+\item \textbf{(Théorème de Césaro) Si $u_n$ converge, alors $v_n$ converge et $\displaystyle \lim v_n=\lim u_n$.}
+
+Supposons $u_n\tend \ell\in\mathbb{C}$. Posons $w_n= u_n-\ell$, alors $w_n\tend 0$.
+On écrit
+\[
+  v_n
+  = \frac{1}{n+1}\sum_{k=0}^n u_k
+  = \frac{1}{n+1}\sum_{k=0}^n (\ell + w_k)
+  = \ell + \frac{1}{n+1}\sum_{k=0}^n w_k.
+\]
+Grâce à la première question, comme $w_k\tend 0$, on a $\dfrac{1}{n+1}\dsum_{k=0}^n w_k \to 0$. Donc $v_n\tend \ell$, d'où le résultat.
+
+\item
+Considérons $u_n = (-1)^n$, qui n'admet pas de limite. Pourtant,
+\[
+  v_n = \frac{1}{n+1}\sum_{k=0}^n (-1)^k =
+  \begin{cases}
+    0 & \text{si $n$ est impair},\\[0.2em]
+    \dfrac{1}{n+1} & \text{si $n$ est pair},
+  \end{cases}
+\]
+donc $v_n\tend 0$. Ainsi, $(v_n)$ peut converger sans que $(u_n)$ ne converge.
+\end{enumerate}
