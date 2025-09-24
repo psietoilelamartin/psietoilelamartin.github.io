@@ -1,0 +1,8 @@
+\begin{enumerate}
+    \item Puisque $A$ est de rang 1, elle comporte au moins une colonne non nulle. Appelons-la $C$. Toutes les autres colonnes de $A$ de lui sont alors proportionnelles, \emph{i.e.} si les colonnes de $A$ sont $C_1,\ldots,C_n$, alors pour tout $j\in\intn$, il existe $\l_j$ tel que $C_j=\l_jC$. Posons alors la matrice ligne $L=(\l_1\ldots\l_n)$. Alors $A=CL$.
+    \item On remarque que $A^2=CLCL$. Posons $\al=LC$, qui est une matrice $1\times1$, que l'on assimile donc à un scalaire. D'où $A^2=\al CL=\al A$. On peut alors conjecturer que pour tout $n\in\N^*$, $A^n=\al^{n-1}A$, ce qui se démontre facilement par récurrence.
+    \item En revenant aux notations de la première question, si l'on note $C=\bpm c_1\\\vdots\\c_n\epm$, alors le coefficient $(i,i)$ de $A$ est $\l_ic_i$, donc $\tr A=\dsum_{i=1}^n \l_ic_i$. Or la formule du produit de deux matrices assure que $\al=LC=\dsum_{i=1}^n \l_ic_i$, d'où le résultat.
+    \item $(1+\tr A)(A+\Id_n)-(1+\tr A)\Id_n=(1+\tr A)A=A+A^2=A(A+\Id_n)$. Donc $(A+\Id_n)^2=(A+\Id_n)+A(A+\Id_n)=(2+\tr A)(A+\Id_n)-(1+\tr A)\Id_n$. Un polynôme annulateur de $A+\Id_n$ est donc $X^2-(2+\tr A)X+(1+\tr A)$.\\
+    Si $\tr A\neq 1$, alors $\Id_n=\dfrac{1}{1+\tr A}(A+\Id_n)(A+\Id_n(\tr A-1))$. $A+\Id_n$ est donc inversible et $(A+\Id_n)\inv=A+\Id_n(\tr A-1)$.\\
+    Si $\tr A=-1$, il existe une matrice $B=A+\Id_n(\tr A-1)$ telle que $AB=0$. Mais $\tr B=-1-2n\neq 0$ donc $B\neq 0$, donc $A$ n'est pas inversible.
+\end{enumerate}
