@@ -1,0 +1,27 @@
+$A$ est inversible \ssi{} $\Ker(A) =  \ens{0}$. Soit $X  = \bpm x_1 \\ \vdots \\ x_n \epm \in \Ker A$, supposons que $X \neq 0$. 
+    Il existe donc $j \in \llbr 1,n \rrbr$ tel que $\abs{x_j} \neq 0$. 
+    On peut donc prendre $i \in \llbr 1,n \rrbr$ tel que $\abs{x_i}$ est maximal. 
+    Notamment, $\abs{x_i} >0$. 
+    Considérons la $i\ieme$ ligne de $AX$ : 
+    \begin{equation*}
+      \dsum_{j=1}^n a_{i,j} x_j = 0,
+    \end{equation*}
+    donc 
+    \begin{equation*}
+      a_{i,i} x_i = - \dsum_{j\neq i} a_{i,j} x_j. 
+    \end{equation*}
+    Par l'inégalité triangulaire, 
+    \begin{equation*}
+      \abs{a_{i,i}} \cdot \abs{x_i} \leq \dsum_{j\neq i} \abs{a_{i,j}} \cdot \abs{x_j}. 
+    \end{equation*}
+    Par maximalité de $\abs{x_i}$, on a alors 
+    \begin{equation*}
+       \abs{a_{i,i}} \cdot \abs{x_i} \leq  \abs{x_i} \dsum_{j\neq i} \abs{a_{i,j}}. 
+    \end{equation*}
+    Comme $ \abs{x_i}>0$, on a 
+    \begin{equation*}
+      \abs{a_{i,i}} \leq \dsum_{j\neq i} \abs{a_{i,j}},
+    \end{equation*}
+    ce qui est absurde. 
+    
+    Ainsi, \fbox{$A$ est inversible.}
