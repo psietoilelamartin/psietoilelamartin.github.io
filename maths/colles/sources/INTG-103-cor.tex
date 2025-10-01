@@ -1,0 +1,6 @@
+\begin{enumerate}
+\item En 0, $\dfrac{1}{(1-t)\sqrt t}\sim\dfrac{1}{\sqrt t}$, qui est intégrable (c'est une intégrale de Riemann). En 1, $\dfrac{1}{(1-t)\sqrt t}\sim\dfrac{1}{1-t}$, qui n'est pas intégrable car $h\mapsto\dfrac1h$ n'est pas intégrable en 0. Cette intégrale n'est donc pas définie.
+\item  En 0, $\dfrac{\ln t}{\sqrt{(1-t)^3}}\sim\ln t=\mathcal o(1/\sqrt t)$, qui est donc intégrable en 0. Quand $t\to1$, on pose $h=1-t$ et alors $\dfrac{\ln t}{\sqrt{(1-t)^3}}=\dfrac{\ln(1-h)}{h^{3/2}}\sim -\dfrac{1}{\sqrt h}$, qui est intégrable quand $h\to 0$. Ainsi cette intégrale est bien définie.
+\item  La fonction $t\mapsto \dfrac{1}{t^2\sqrt{1+t^2}}$ est continue en 1, donc l'intégrabilité en 1 ne pose pas de souci. Cette fonction est équivalente à $t\mapsto\dfrac{1}{t^3}$ quand $t\to\pinf$, donc l'intégrale est bien définie, par comparasion à une série de Riemann.\\
+Pour le calcul, posons $\ffi(t)=\dfrac1t$ et $f(u)=-\dfrac{u}{\sqrt{1+u^2}}$, alors $\dfrac{1}{t^2\sqrt{1+t^2}}=\ffi'(t).f(\ffi(t))$ donc $\displaystyle\int_1^{+\infty}\dfrac{\mathrm{d}t}{t^2\sqrt{1+t^2}}=\dint_{\ffi(1)}^{\lim_{\pinf}\ffi}f(u)\dd u=-\dint_1^0\dfrac{u}{\sqrt{1+u^2}}\dd u=\left[\sqrt{1+u^2}\right]_0^1=\sqrt 2-1$.
+\end{enumerate}

@@ -1,0 +1,29 @@
+\begin{enumerate}
+\item En 0 : prolongeable par continuité.
+En $\pinf$ : On pose $f(t)=1-\cos(t)$ et $g(t)=\dfrac1t$. Alors d'une part $fg\rightarrow 0$ en $\pinf$ et en 0, donc par IPP $\dint_0^{\pinf} f'g$ et $\dint_0^{\pinf}  fg'$ ont même nature. Et d'autre part $f(t)g'(t)=\dfrac{1-\cos(t)}{t^2}=\mathcal O\p{\dfrac{1}{t^2}}$ donc $fg'$ est intégrable en $\pinf$.
+Puisque $\dint_0^{\pinf} f'g=\dint_0^{\pinf} \dfrac{\sin(t)}{t}\dt$, on obtient la convergence voulue.
+\item On continue l'IPP :\\
+$$\int_0^{+\infty} \frac{\sin t}{t} \mathrm{~d} t=\left[\frac{1-\cos t}{t}\right]_0^{+\infty}+\int_0^{+\infty} \frac{1-\cos t}{t^2} \mathrm{~d} t$$
+Or il y a convergence des deux termes en second membre donc il y a convergence de l'intégrale en premier membre et on a l'égalité
+
+$$
+\int_0^{+\infty} \frac{\sin t}{t} \mathrm{~d} t=\int_0^{+\infty} \frac{1-\cos t}{t^2} \mathrm{~d} t
+$$
+
+
+Puisque $1-\cos t=2 \sin ^2(t / 2)$
+
+$$
+\int_0^{+\infty} \frac{\sin t}{t} \mathrm{~d} t=\int_0^{+\infty} 2 \frac{\sin ^2(t / 2)}{t^2} \mathrm{~d} t
+$$
+
+
+Enfin par le changement de variable $u=t / 2$ sous-jacente à une bijection de classe $\cC^1$
+
+$$
+\int_0^{+\infty} \frac{\sin t}{t} \mathrm{~d} t=\int_0^{+\infty} \frac{\sin ^2 u}{u^2} \mathrm{~d} u
+$$
+
+\item $2\sin^2t=1-\cos(2t)$. Comme dans la question précédente on montre que $\dint_0^{\pinf}\dfrac{\cos(2t)}{2t}\dt$ converge, mais $\dint_0^{\pinf}\dfrac{1}{2t}\dt$ diverge.
+\item On observe que $\abs{\sin t}\geq \sin^2 t$.
+\end{enumerate}
