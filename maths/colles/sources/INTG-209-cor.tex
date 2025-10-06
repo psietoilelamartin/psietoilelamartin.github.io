@@ -1,0 +1,33 @@
+\begin{enumerate}
+\item Pas de problème d'intégrabilité en 1. En $\pinf$, $\dfrac1{x^n(1+x^2)}\sim\dfrac1{x^{n+2}}$, donc par comparaison à une intégrale de Riemann, $I_n$ converge.
+\item $0\leq \dfrac1{x^n(1+x^2)}\leq \dfrac1{x^{n+2}}$. Or $\dint_1^{\pinf} \dfrac1{x^{n+2}}\dd x=\left[-\dfrac1{n+1}.\dfrac1{x^{n+1}}\right]_1^{\pinf}=\dfrac1{n+1}$, donc par encadrement, $I_n\tend 0$.
+\item On a, par une intégration par parties pour des applications de classe $\cC^1$, pour tout $X \in[1,+\infty[$ :
+
+$$
+\begin{aligned}
+\int_1^X & \frac{1}{x^n\left(1+x^2\right)} \mathrm{d} x=\int_1^X x^{-n} \frac{1}{1+x^2} \mathrm{~d} x \\
+& =\left[\frac{x^{-n+1}}{-n+1} \frac{1}{1+x^2}\right]_1^X-\int_1^X \frac{x^{-n+1}}{-n+1} \frac{-2 x}{\left(1+x^2\right)^2}, \mathrm{~d} x \\
+\quad= & \frac{X^{-n+1}}{-n+1} \frac{1}{1+X^2}+\frac{1}{2(n-1)}-\frac{2}{n-1} \int_1^X \frac{x^{-n+2}}{\left(1+x^2\right)^2} \mathrm{~d} x
+\end{aligned}
+$$
+On en déduit, en faisant tendre $X$ vers $+\infty$ :
+
+$$
+I_n=\frac{1}{2(n-1)}-\frac{2}{n-1} \underbrace{\int_1^{+\infty} \frac{x^{-n+2}}{\left(1+x^2\right)^2} \mathrm{~d} x}_{\text {notée } J_n}
+$$
+
+
+On a, pour $n \geqslant 4$ :
+
+$$
+0 \leqslant J_n \leqslant \int_1^{+\infty} x^{-n+2} \mathrm{~d} x=\left[\frac{x^{-n+3}}{-n+3}\right]_1^{+\infty}=\frac{1}{n-3}
+$$
+
+$$
+\begin{aligned}
+&\text { donc : } J_n=O\left(\frac{1}{n}\right) \text {, puis : }\\
+&I_n=\frac{1}{2(n-1)}+O\left(\frac{1}{n^2}\right) \sim \frac{1}{2(n-1)} \sim \frac{1}{2 n}
+\end{aligned}
+$$
+
+\end{enumerate}

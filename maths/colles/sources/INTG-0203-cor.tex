@@ -1,0 +1,19 @@
+
+\begin{enumerate}
+\item  $I_0=\pi/2$ ; $I_1=1$ et $nI_n=(n-1)I_{n-2}$, d'où~:\\
+Si $n$ est pair, il existe $p\in\N$ tel que $n=2p$, et par récurrence $I_n=\dfrac{(2p)!}{2^{2p}(p!)^2}\times\dfrac{\pi}{2}$~;\\
+Si $n$ est impair, il existe $p\in\N$ tel que $n=2p+1$, et par récurrence $I_{2p+1}=\dfrac{2^{2p}(p!)^2}{(2p)!(2p+1)}$.
+\item $I_{n+1}-I_n\leqslant 0$ est clair. De plus $t\mapsto\sin^nt$ est continue, positive, et prend une valeur strictement positive, donc $I_n>0$.\\
+D'où
+$\dfrac{I_{n-1}}{I_n}\geqslant 1$ et $\dfrac{I_{n-1}}{I_n}\leqslant
+\dfrac{I_{n-2}}{I_n}=\dfrac{n}{n-1}$ et donc
+$\lim\dfrac{I_{n-1}}{I_n}=1$.
+\item Soit $u_n=nI_nI_{n-1}=(n-1)I_{n-2}I_{n-1}=u_{n-1}$ donc la
+suite $(u_n)$ est constante égale à $u_1=\dfrac{\pi}{2}$.
+\\d'où $nI_n^2\sim \dfrac{\pi}{2}$ et donc
+$\sqrt{n}I_n\sim\sqrt{\dfrac{\pi}{2}}$.
+\item $\lim(nI_n^2)=\dfrac{\pi}{2}$ d'où
+$\lim(2nI_{2n}^2)=\dfrac{\pi}{2}$ et en combinant avec la question
+\textbf{1)}, on obtient la formule de Wallis.
+\end{enumerate}
+
