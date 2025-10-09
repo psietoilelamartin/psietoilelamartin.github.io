@@ -1,0 +1,22 @@
+Soit $(x_1,\ldots,x_p),(y_1,\ldots,y_p)\in E$ et $\l\in\R$.\\
+\bu\ La positivité de $N$ est évidente.\\
+\bu\ \begin{align*}
+N(\l(x_1,\ldots,x_p))&=N(\l x_1,\ldots,\l x_p)=\max\limits_{1\leq k\leq p}N_k(\l x_k)\\
+&=\max\limits_{1\leq k\leq p}\abs{\l}N_k(x_k)=\abs{\l}\max\limits_{1\leq k\leq p}N_k(x_k)\\
+&=\abs{\l} N(x_1,\ldots,x_p)
+\end{align*}
+
+\bu\ En utilisant la norme $\normi .$ de $\R^p$, nous avons~:
+\begin{align*}
+N((x_1,\ldots,x_p)+(y_1,\ldots,y_p))&=\max\limits_{1\leq k\leq p}N_k(x_k+y_k)\\
+&\leq \max\limits_{1\leq k\leq p}\left[N_k(x_k)+N(y_k)\right]\\
+&\leq \normi{(N_1(x_1),\ldots,N_p(x_p))+(N_1(y_1),\ldots,N_p(y_p))}\\
+&\leq \normi{(N_1(x_1),\ldots,N_p(x_p))}+\normi{(N_1(y_1),\ldots,N_p(y_p))}\\
+&\leq \max\limits_{1\leq k\leq p}\left[N_k(x_k)\right]+\max\limits_{1\leq k\leq p}\left[N(y_k)\right]\\
+&\leq N(x_1,\ldots,x_p)+N(y_1,\ldots,y_p).
+\end{align*}
+
+\bu\ Si $N(x_1,\ldots,x_p)=0$, alors pour tout $k$, $0\leq N_k(x_k)\leq N(x_1,\ldots,x_p)=0$. 
+Donc $N_k(x_k)=0$ et ainsi $x_k=0$ et $(x_1,\ldots,x_p)=0$.\\
+
+Avec tous ces points, $N$ est bien une norme.
