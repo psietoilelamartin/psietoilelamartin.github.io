@@ -1,0 +1,25 @@
+\begin{enumerate}
+  \item Le tout est de remarquer que cette fonction correspond au produit scalaire usuel. Notons $A=(a_{ij})$, $\transp A=(c_{ij})$, et $B=(b_{ij})$.\\
+  Alors $\tr(\transp AB)=\dsum_{i=1}^n(\dsum_{k=1}^n c_{ik}b_{ki})=\dsum_{i=1}^n(\dsum_{k=1}^n a_{ki}b_{ki})$ : c'est bien l'expression du produits scalaire usuel
+  de $\mcal M_n(\R)$ associé à la base canonique.\\
+  Vérifions que $\ffi(A,B)=\tr(\transp AB)$ est bien un produit scalaire~:\\
+  Soit $A,B,C\in\cM_n(\R)$ et $\l_in\R$.\\
+  \bu\ $\ffi(B,A)=\tr(\transp BA)=\tr(\transp{(\transp BA)}=\tr(\transp AB)=\ffi(A,B)$ ;\\
+  \bu\ Pour  on a $\tr(\transp{(A+\l B)}C)=\tr(\transp AC + \transp BC)=\tr(\transp AC) + \tr(\transp BC)$ donc $\ffi$ est linéaire par rapport à la première variable. Par
+  symétrie elle est donc bilinéaire ;\\
+  \bu\ $\ffi(A,A)=\dsum_{i,j} a_{ij}^2\geq 0$ avec égalité \ssi\ tous les $a_{ij}$ sont nuls, \emph{i.e.} $A=0$.
+  
+  \item Grâce à la question précédente, la norme associée à $\ffi$ est la norme euclidienne usuelle associée à la base canonique.\\
+  Avec $A_{\ast,j}$ la colonne $j$ de $A$, $A_{i,\ast}$ la ligne $i$ de $A$ et $\norm{\cdot}$ la norme euclidienne sur $\R^n$, on a
+    \begin{equation*}
+      N(A)^2 = \sum_{i=1}^n \norm{A_{i,\ast}}^2 = \sum_{j=1}^n \norm{A_{\ast,j}}^2.
+    \end{equation*}
+    Si $x\in \R^n$, on a alors par l'inégalité de Cauchy-Schwarz sur $\R^n$ :
+    \begin{equation*}
+      \norm{Ax}^2 = \sum_{i=1}^n \scal{A_{i,\ast}}{x}^2 \leq \sum_{i=1}^n \norm{A_{i,\ast}}^2 \norm{x}^2 = N(A) \norm{x}^2
+    \end{equation*}
+    Alors,
+    \begin{equation*}
+      N(AB) = \sum_{j=1}^n \norm{(AB)_{\ast,j}}^2 = \sum_{j=1}^n \norm{A\times B_{\ast,j}}^2 \leq  \sum_{j=1}^n N(A)\norm{B_{\ast,j}}^2 = N(A)N(B).
+    \end{equation*}
+\end{enumerate}

@@ -1,0 +1,26 @@
+\begin{enumerate}
+\item On a bien sûr $N_1, N_2: \mathbb{R}[X] \rightarrow \mathbb{R}_+$.\\
+\bu\
+\begin{align*}
+N_1(P+Q)&=\dsum_{k=0}^{+\infty}\left|P^{(k)}(0)+Q^{(k)}(0)\right|\\
+&\leqslant \dsum_{k=0}^{+\infty}\left|P^{(k)}(0)\right|+\left|Q^{(k)}(0)\right| \\
+& \leq \dsum_{k=0}^{+\infty}\left|P^{(k)}(0)\right|+\dsum_{k=0}^{+\infty}\left|Q^{(k)}(0)\right|\\
+&=N_1(P)+N_1(Q).
+\end{align*}
+\bu\ $N_1(\lambda P)=\dsum_{k=0}^{+\infty}\left|\lambda P^{(k)}(0)\right|=|\lambda| \dsum_{k=0}^{+\infty}\left|P^{(k)}(0)\right|=|\lambda| N_1(P)$.\\
+\bu\ $N_1(P)=0 \Rightarrow \forall\,k \in \mathbb{Z}, P^{(k)}(0)=0$, or $P=\dsum_{k=0}^{+\infty} \dfrac{P^{(k)}(0)}{k!} X^k$ donc  $P=0$.\\
+
+Finalement $N_1$ est une norme.
+
+\bu\
+\begin{align*}
+N_2(P+Q)&=\sup _{t \in[-1,1]}|P(t)+Q(t)|\\
+&\leqslant \sup _{t \in[-1,1]}|P(t)|+|Q(t)|\\
+& \leqslant \sup _{t \in[-1,1]}|P(t)|+\sup _{t \in[-1,1]}|Q(t)|\\
+&=N_2(P)+N_2(Q).
+\end{align*}
+\bu\ $N_2(\lambda P)=\sup _{t \in[-1,1]}|\lambda P(t)|=\sup _{t \in[-1,1]}|\lambda||P(t)|=|\lambda| \sup _{t \in[-1,1]}|P(t)|=|\lambda| N_2(P)$.\\
+\bu\ $N_2(P)=0 \Rightarrow \forall\,t \in[-1,1], P(t)=0$ et par infinité de racines, $P=0$.
+\item La suite $\dfrac{1}{n} X^n$ converge vers 0 pour $N_2$ mais n'est pas bornée et donc diverge pour $N_1$.
+\item Les normes ne peuvent être équivalentes car sinon les suites convergeant pour l'une des normes convergerait pour l'autre.
+\end{enumerate}
