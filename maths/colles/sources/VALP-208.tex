@@ -1,0 +1,17 @@
+Pour $P=X^n+a_{n-1} X^{n-1}+\ldots+a_1 X+a_0$ polynôme unitaire, on définit la matrice compagne de $P$ :
+$$
+\mcal{C}(P)=\left(\begin{array}{cccc}
+0 & & & -a_0 \\
+1 & \ddots & & \vdots \\
+& \ddots & 0 & -a_{n-2} \\
+& & 1 & -a_{n-1}
+\end{array}\right).
+$$
+Pour $n=1$, $P$ s'écrit $X+a_0$ et $\mcal{C}(P)=\mcal{C}\left(X+a_0\right)=\left(-a_0\right)$.\\
+\begin{enumerate}
+\item Montrer que $P$ est le \poca\ de $\cC(P)$.
+\item On suppose dans cette question que $P$ est scindé à racines simples, notées $\lambda_1, \ldots, \lambda_n$. Montrer que :
+$$
+\transp{\cC(P)}=V\diag(\l_1,\ldots,\l_n) V^{-1}
+$$
+où $V$ désigne la matrice de Vandermonde de $\left(\lambda_1, \ldots, \lambda_n\right)$.                                                                                                                                 \end{enumerate}

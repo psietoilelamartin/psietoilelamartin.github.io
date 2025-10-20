@@ -1,0 +1,28 @@
+\begin{enumerate}
+\item Pour montrer cela, on développe $\chi_{\mcal{C}(P)}=\left|\begin{array}{cccc}X & & & a_0 \\ -1 & \ddots & & \vdots \\ & \ddots & X & a_{n-2} \\ & & -1 & X+a_{n-1}\end{array}\right|$ selon sa dernière colonne.\\
+Si l'on note $M_i$ obtenue à partir de $\cC(P)$ en supprimant la dernière colonne et la ligne $i+1$, il vient $\chi_{\mcal{C}(P)}=\dsum_{i=0}^{n-2} (-1)^{n+i+1} a_i\det(M_i) + (X+a_{n-1})\det M_{n-1}$.\\
+On remarque alors que $M_{i}=\bpm X&&&&&&&\\
+                            -1&\ddots&&&&&&\\
+                            &\ddots&\ddots&&&&&\\
+                            &&-1&X&&&&\\
+                            &&&&-1&X&&\\
+                            &&&&&\ddots&\ddots&\\
+                            &&&&&&\ddots&X\\
+                            &&&&&&&-1\epm$
+où la premier bloc contient $i$ lignes, et le second $n-1-i$ lignes. Ainsi $\det M_i=(-1)^{n-1-i}X^i$.\\
+Alors $\chi_{\mcal{C}(P)}=\dsum_{i=0}^{n-2} a_iX^i + (X+a_{n-1})X^{n-1}=P$
+
+
+On pourrait également profiter de la présence des zéros et développer selon la première ligne; le résultat s'obtiendrait aisément par récurrence.
+
+\item Si $\lambda$ est racine de P, on note $\mu_\lambda=\bpm 1 \\ \lambda \\ \vdots\\ \lambda_{n-1}\epm$.
+On calcule :
+\begin{align*}
+\transp{\cC(P)} \mu_\lambda&=\bpm 0 & 1 & & 0 \\ \vdots &\cdots & \cdots & \\ 0 & \ldots & 0 & 1 \\ -a_0 & \ldots & \ldots & a_{n+}\epm\times\bpm1 \\ \lambda \\ \vdots \\ \lambda^{n-1}\epm\\
+&=\bpm\lambda \\ \lambda^2 \\ \vdots & & \\ \lambda^{n-1} & & \\ -a_0-a_1 \lambda & \ldots & -a_{n-1} \lambda^{n-1}\epm=\lambda \mu_\lambda
+\end{align*}
+
+donc $\mu_\lambda$ est \vecp\ associé à la \valp\ $\lambda$.\\
+S'il y a $n$ \valps\ deux à deux distinctes, il y a $n$ \vecps\ $\m_{\l_1},\ldots,\m_{\l_n}$ formant une famille libre, donc une base de $\R^n$. Appelons $\cB$ cette base, $\cC$ la base canonique.\\
+Alors $Q=\MAT{\cC}(\cB)=\bpm 1&1&\ldots&1\\ \l_1&\l_2&\ldots&\l_n\\ \vdots&\vdots&&\vdots\\ \l_1^{n-1}&\l_2^{n-1}&\ldots&\l_n^{n-1}\epm=\mathrm{Vdm}(\l_1,\ldots,\l_n)$, et $\cC(P)=QDQ\inv$.
+\end{enumerate}
