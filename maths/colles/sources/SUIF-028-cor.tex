@@ -1,0 +1,15 @@
+\begin{enumerate}
+\item Puisque $\left\Vert f_n-f\right\Vert_{\infty}\xrightarrow[n\to +\infty]{} 0$, à partir d'un certain rang $n_0$ nous avons $\left\Vert f_n-f\right\Vert_{\infty}\leq 1$.\\
+En particulier $\left\Vert f_{n}\right\Vert_{\infty}\leq \left\Vert f\right\Vert_{\infty} +1$, donc si $f$ est bornée, les $f_n$ le sont aussi, au moins à partir du rang $n_0$.\\
+Et de même, s'il existe un rang $n_1$ à partir duquel les $f_n$ sont bornées, alors si $n_2$ est un entier fixé tel que $n_2\geq\max(n_0,n_1)$ nous avons $\left\Vert f\right\Vert_{\infty}\leq \left\Vert f_{n_2}\right\Vert_{\infty}+1$, et $f$ est bien bornée.
+\item Grâce à la question précédente, les $f_n$ et les $g_n$ sont bornées à partir d'un certain rang. De plus, nous avons vu à la question précédente qu'à partir d'un certain rang $\left\Vert f_n\right\Vert_{\infty}\leq 1+\left\Vert f\right\Vert_{\infty}$, la suite $(\left\Vert f_n\right\Vert_{\infty})$ est bornée. Donc
+\begin{align*}
+\left\Vert f_ng_n-fg\right\Vert_{\infty}&=\left\Vert f_n(g_n-g)+(f_n-f)g\right\Vert_{\infty}\\
+&\leq \left\Vert f_n\right\Vert_{\infty}\left\Vert g_n-g\right\Vert_{\infty}+\left\Vert g\right\Vert_{\infty}\left\Vert f_n-f\right\Vert_{\infty}\\
+&\xrightarrow[n\to +\infty]{} 0
+\end{align*}
+par somme de produits d'une suite bornée par une suite tendant vers 0.
+\item $\left\Vert f_nh-fh\right\Vert_{\infty}\leq\left\Vert h\right\Vert_{\infty}\left\Vert f_n-f\right\Vert_{\infty}\xrightarrow[n\to +\infty]{} 0$, en tant que produit d'une suite bornée par une suite tendant vers 0.
+\item Considérons par exemple sur $[0,1[$ les fonctions $f_n$ : $x\mapsto x^n(1-x)$ et $h$ : $x\mapsto\dfrac1{1-x}$. La suite $(f_n)$ converge simplement vers la fonction nulle. Une étude de fonction assure que $|f_n|$ atteint son maximum en $\dfrac{n}{n+1}$, ce maximum vaut $\p{\dfrac n{n+1}}^n\times\dfrac1{n+1}\sim\dfrac1{\e n}\xrightarrow[n\to +\infty]{} 0$, donc $(f_n)$ converge bien uniformément vers 0 sur $[0,1[$.\\
+Mais $hf_n$ : $x\mapsto x^n$, qui converge simplement vers 0, mais pas uniformément, car $\dsp\sup_{[0,1[} hf_n=1$.
+\end{enumerate}

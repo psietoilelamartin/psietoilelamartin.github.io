@@ -1,0 +1,40 @@
+% CCP 2023, ex. 9
+\begin{enumerate}
+\item
+Soit $g_n:X\longrightarrow \mathbb{C}$ et $g:X\longrightarrow \mathbb{C}$.\\
+Dire que $(g_n)$ converge uniformément vers $g$ sur $X$ signifie que :
+  \[ \forall \varepsilon>0,\exists\:N\in\mathbb{N}  /  \forall \:n\in\mathbb{N}, n\geqslant N \Longrightarrow \forall \:x \in X, |g_n(x)-g(x)|\leqslant \varepsilon. \]
+Ou encore, $(g_n)$ converge uniformément vers $g$ sur $X$ $\Longleftrightarrow$  $ \lim\limits_{n\to +\infty}^{}\left( \sup\limits_{x\in X}^{}|g_n(x)-g(x)|\right) =0$.\\
+
+ \item
+ \begin{enumerate}
+ \item
+ On pose pour tout $ x\in\mathbb{R}$, $f_{n}(x) =\dfrac{n+2}{n+1}\mathrm{e}^{-n x^{2}}\cos \left( \sqrt{n}x\right) $.\\
+ Soit $x\in\mathbb{R}$.\\
+ Si $x=0$, alors $f_n(0)=\dfrac{n+2}{n+1}$, donc $\lim\limits_{n\to+\infty}^{}f_n(0)=1$.\\
+ Si $x\neq 0$, alors $\lim\limits_{n\to+\infty}^{}f_n(x)=0$.\\
+ En effet, $|f_n(x)|\underset{+\infty}{\thicksim}\mathrm{e}^{-nx^2}|\cos \left( \sqrt{n}x\right)| $ et $0\leqslant\mathrm{e}^{-nx^2}|\cos \left( \sqrt{n}x\right)|\leqslant \mathrm{e}^{-nx^2}\underset{n\to +\infty}{\longrightarrow}0$.\\
+ \medskip
+ On en déduit que $(f_n)$ converge simplement sur $\mathbb{R}$ vers la fonction $f$ définie par:
+ \[ f(x)=\left\lbrace \begin{array}{lll}
+ 0&\:\text{si}\:& x\neq 0\\
+ 1&\:\text{si}\:& x=0
+ \end{array}\right.   \]
+ \item
+ Pour tout $n\in\mathbb{N}$, $f_n$ est continue sur $\left[0,+\infty \right[ $ et $f$ non continue en $0$ donc $(f_n)$ ne converge pas uniformément vers $f$ sur  $\left[0,+\infty \right[ $.
+ \item
+ Soit $a>0$.\\
+  On a~:   $\forall \,x\in \left[a,+\infty \right[ $, $|f_n(x)-f(x)|=|f_n(x)|\leqslant\dfrac{n+2}{n+1}\mathrm{e}^{-n a^{2}}$ (majoration indépendante de $x$).\\
+  Donc $||f_n-f||_{\infty}\leqslant \dfrac{n+2}{n+1}\mathrm{e}^{-n a^{2}}$.\\
+ Par ailleurs, $\lim\limits_{n\to +\infty}^{}\dfrac{n+2}{n+1}\mathrm{e}^{-n a^{2}}=0$ (car $\dfrac{n+2}{n+1}\mathrm{e}^{-n a^{2}}\underset{+\infty}{\thicksim}\mathrm{e}^{-n a^{2}})$.\\
+ Donc $(f_n)$ converge uniformément vers $f$ sur $\left[a,+\infty \right[$.
+ \item
+ On remarque que pour tout $n\in\mathbb{N}$, $f_n$ est bornée sur $\left] 0,+\infty\right[$ car pour tout $x\in \left] 0,+\infty\right[$, $|f_n(x)|\leqslant \dfrac{n+2}{n+1}\leqslant 2$.\\
+D'autre part, $f$ est bornée sur $\left]  0,+\infty\right[$, donc, pour tout $n\in\mathbb{N}$, $\sup\limits_{x\in \left] 0,+\infty\right[ }^{}|f_n(x)-f(x)|$ existe.\\
+ \medskip
+ On a $\abs{f_n(\dfrac{1}{\sqrt{n}})-f(\dfrac{1}{\sqrt{n}})}=\dfrac{(n+2)\mathrm{e}^{-1}\cos 1}{n+1}$
+  donc $$\lim\limits_{n\to+\infty}^{}\abs{f_n(\dfrac{1}{\sqrt{n}})-f(\dfrac{1}{\sqrt{n}})}=\mathrm{e}^{-1}\cos 1\neq 0.$$
+  Or  $\sup\limits_{x\in \left] 0,+\infty\right[ }^{}|f_n(x)-f(x)|\geqslant\abs{f_n(\dfrac{1}{\sqrt{n}})-f(\dfrac{1}{\sqrt{n}})}$, donc  $$\sup\limits_{x\in \left] 0,+\infty\right[ }^{}|f_n(x)-f(x)|\underset{n\to +\infty}{\not\to}0.$$
+Donc $(f_n)$ ne converge pas uniformément vers $f$ sur $\left]0,+\infty \right[ $.
+ \end{enumerate}
+\end{enumerate}

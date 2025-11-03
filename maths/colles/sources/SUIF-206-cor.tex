@@ -1,0 +1,54 @@
+% Monnier PC-PSI-PT
+% 5.17 Exemple d'utilisation du théorème de convergence dominée\\
+
+Essayons d'appliquer le théorème de convergence dominée.
+
+Notons, pour tout $n \in \mathbb{N}^{*}$ :
+
+$$
+f_{n}\ :\  ]0,a] \longrightarrow \mathbb{R},\ x \longmapsto \dfrac{1}{x}\left(\left(1+\dfrac{x}{n}\right)^{n}-1\right)
+$$
+
+\begin{itemize}
+  \item Pour tout $n \in \mathbb{N}^{*}, f_{n}$ est continue par morceaux (car continue) sur $] 0,a]$.
+
+  \item Soit $x \in] 0,a]$. On sait : $\left(1+\dfrac{x}{n}\right)^{n} \underset{n\to+\infty}{\longrightarrow} \mathrm{e}^{x}$, donc : $f_{n}(x) \underset{n\to+\infty}{\longrightarrow} \dfrac{\mathrm{e}^{x}-1}{x}$. Ainsi, $f_{n} \underset{n\to+\infty}{\stackrel{C . S}{\longrightarrow}} f$ sur $\left.] 0,a\right]$, où :
+
+\end{itemize}
+
+$$
+f\ :\ ] 0,a] \longrightarrow \mathbb{R},\ x \longmapsto \dfrac{\mathrm{e}^{x}-1}{x}
+$$
+
+\begin{itemize}
+  \item $f$ est continue par morceaux (car continue) sur $] 0,a]$.
+
+  \item Soit $n \in \mathbb{N}^{*}$.
+
+\end{itemize}
+
+Puisque : $\forall\, t \in]-1 ,+\infty[,\ \ln (1+t) \leqslant t$,
+
+on a: $\quad \forall\, t \in\left[0 ,+\infty\left[,\ 1+t \leqslant \mathrm{e}^{t}\right.\right.$,
+
+d'où, pour tout $x \in] 0,a]:\left(1+\dfrac{x}{n}\right)^{n} \leqslant\left(\mathrm{e}^{\frac{x}{n}}\right)^{n}=\mathrm{e}^{x}$,
+
+puis : $\quad 0 \leqslant\left(1+\dfrac{x}{n}\right)^{n}-1 \leqslant \mathrm{e}^{x}-1$,
+
+et enfin : $\quad 0 \leqslant f_{n}(x) \leqslant f(x)$.
+
+L'application $f$ est continue par morceaux sur $] 0,a]$, positive, et intégrable sur $] 0,a] \operatorname{car} f(x)=\dfrac{\mathrm{e}^{x}-1}{x} \underset{x \longrightarrow 0}{\longrightarrow} 1$.
+
+Ainsi, la suite $\left(f_{n}\right)_{n \geqslant 1}$ vérifie l'hypothèse de domination.
+
+D'après le théorème de convergence dominée, on déduit :
+
+$$
+\displaystyle\int_{0}^{a} f_{n} \underset{n\to+\infty}{\longrightarrow} \displaystyle\int_{0}^{a} f
+$$
+
+c'est-à-dire :
+
+$$
+\displaystyle\int_{0}^{a} \dfrac{1}{x}\left(\left(1+\dfrac{x}{n}\right)^{n}-1\right) \mathrm{d} x \underset{n\to+\infty}{\longrightarrow} \displaystyle\int_{0}^{a} \dfrac{\mathrm{e}^{x}-1}{x} \mathrm{~d} x
+$$

@@ -1,0 +1,21 @@
+% CCP 2023, ex. 10
+\begin{enumerate}
+\item
+Pour $x \in \left[ {0,1} \right]$,
+$\lim\limits_{n\to +\infty}^{}f_n (x)=(x^2  + 1){\mathrm{e}}^x $.\\
+La suite de fonctions $(f_n )$ converge simplement vers $f:x \mapsto (x^2  + 1){\mathrm{e}}^x $ sur $\left[ {0,1} \right]$.\\
+\medskip
+On a $\forall\: x\in \left[ 0,1\right] $,
+$f_n (x) - f(x) = (x^2  + 1)\dfrac{{x({\mathrm{e}}^{ - x}  - {\mathrm{e}}^x )}}{{n + x}}$, \\
+et donc: $\forall x\in \left[ 0,1\right]$,
+$\left| {f_n (x) - f(x)} \right| \leqslant \dfrac{{2\textrm{e}}}{n}$ ( majoration   indépendante de $x$).\\
+  Donc $||f_n-f||_{\infty}\leqslant \dfrac{{2\textrm{e}}}{n}$.\\
+De plus, $\lim\limits_{n\to +\infty}^{} \dfrac{{2\textrm{e}}}{n}=0$ donc la suite de fonctions $(f_n)$ converge uniformément vers $f$ sur $\left[ {0,1} \right]$.
+
+\item
+Par convergence uniforme sur le segment $\left[ 0,1\right]$ de cette suite de fonctions continues sur $\left[ 0,1\right]$, on peut intervertir limite et intégrale.\\
+On a donc $\mathop {\lim }\limits_{n \to  + \infty } \displaystyle\int_0^1 {(x^2  + 1)\dfrac{{n{\mathrm{e}}^x  + x{\mathrm{e}}^{ - x} }}{{n + x}}\,{\mathrm{d}}x}  = \displaystyle\int_0^1 {(x^2  + 1){\mathrm{e}}^x \,{\mathrm{d}}x} $.\\
+Puis, en effectuant deux intégrations par parties, on trouve
+$\displaystyle\int_0^1 {(x^2  + 1){\mathrm{e}}^x \,{\mathrm{d}}x}  = 2{\mathrm{e}} - 3$.
+
+\end{enumerate}
