@@ -1,0 +1,80 @@
+% Monnier PC-PSI-PT
+% 5.19 Comportement asymptotique d'une intégrale\\
+
+
+D'abord, pour tout $n \in \mathbb{N}^{*}, I_{n}$ existe comme intégrale d'une application continue sur un segment.
+\begin{enumerate}
+\item Comme, pour tout $x \in] 0,1], \sqrt{1-x^{n}} \underset{n\to\pinf}{\longrightarrow} 1$,
+
+on peut conjecturer : $I_{n} \underset{n\to\pinf}{\longrightarrow} 1$.
+
+Le théorème de convergence dominée s'applique, mais un simple calcul de majoration est possible. En effet, on a, pour tout $n \in \mathbb{N}^{*}$, en utilisant une expression conjuguée :
+
+$$
+\begin{aligned}
+& \left|I_{n}-1\right|=\left|\dint_{0}^{1} \sqrt{1-x^{n}} \mathrm{~d} x-\dint_{0}^{1} 1 \mathrm{~d} x\right| \\
+& =\dint_{0}^{1}\left(1-\sqrt{1-x^{n}}\right) \mathrm{d} x=\dint_{0}^{1} \dfrac{x^{n}}{1+\sqrt{1-x^{n}}} \mathrm{~d} x \\
+& \quad \leqslant \dint_{0}^{1} x^{n} \mathrm{~d} x=\left[\dfrac{x^{n+1}}{n+1}\right]_{0}^{1}=\dfrac{1}{n+1},
+\end{aligned}
+$$
+
+donc $\left|I_{n}-1\right| \underset{n\to\pinf}{\longrightarrow} 0$, puis : $I_{n} \underset{n\to\pinf}{\longrightarrow} 1$.
+\item  Reprenons le calcul de $I_{n}-1$ effectué ci-dessus (sans la valeur absolue)~:
+
+$$
+I_{n}-1=-\underbrace{\dint_{0}^{1} \dfrac{x^{n}}{1+\sqrt{1-x^{n}}} \mathrm{~d} x}_{\text {notée } J_{n}} .
+$$
+
+Pour étudier $J_{n}$, effectuons le changement de variable $t=x^{n}, x=t^{\frac{1}{n}}, \mathrm{~d} x=\dfrac{1}{n} t^{\frac{1}{n}-1} \mathrm{~d} t:$
+
+$$
+J_{n}=\dint_{0}^{1} \dfrac{t}{1+\sqrt{1-t}} \dfrac{1}{n} t^{\frac{1}{n}-1} \mathrm{~d} t=\dfrac{1}{n} \underbrace{\dint_{0}^{1} \dfrac{t^{\frac{1}{n}}}{1+\sqrt{1-t}} \mathrm{~d} t}_{\text {notée } K_{n}} .
+$$
+
+Pour trouver la limite de $K_{n}$ (si elle existe) lorsque l'entier $n$ tend vers l'infini, nous allons essayer d'utiliser le théorème de convergence dominée.
+
+Notons, pour tout $n \in \mathbb{N}^{*}$ :
+
+$$
+\left.\left.f_{n}:\right] 0,1\right] \longrightarrow \mathbb{R}, t \longmapsto \dfrac{t^{\frac{1}{n}}}{1+\sqrt{1-t}}
+$$
+
+\begin{itemize}
+  \item Pour tout $n \in \mathbb{N}^{*}, f_{n}$ est continue par morceaux (car continue) sur $] 0,1]$.
+
+  \item Pour tout $t \in] 0,1]$, on a : $t^{\frac{1}{n}} \underset{n\to\pinf}{\longrightarrow} 1$, donc $f_{n} \underset{n\to\pinf}{\stackrel{C . S}{\longrightarrow}} f$ sur $]0,1]$, où $: f:] 0,1] \longrightarrow \mathbb{R}, t \longmapsto \dfrac{1}{1+\sqrt{1-t}}$.
+
+  \item $f$ est continue par morceaux (car continue) sur $] 0,1]$.
+
+  \item On a :
+
+\end{itemize}
+
+$$
+\left.\left.\forall n \in \mathbb{N}^{*}, \forall t \in\right] 0,1\right],\left|f_{n}(t)\right|=\dfrac{t^{\frac{1}{n}}}{1+\sqrt{1-t}} \leqslant 1
+$$
+
+et l'application constante 1 est continue par morceaux, $\geqslant 0$, intégrable sur l'intervalle borné $] 0,1]$.
+
+Ainsi, la suite $\left(f_{n}\right)_{n \geqslant 1}$ vérifie l'hypothèse de domination.
+
+D'après le théorème de convergence dominée, on déduit :
+
+$$
+K_{n}=\dint_{0}^{1} f_{n} \underset{n\to\pinf}{\longrightarrow} \dint_{0}^{1} f=\underbrace{\dint_{0}^{1} \dfrac{1}{1+\sqrt{1-t}}}_{\text {notée } L} \mathrm{~d} t
+$$
+
+Pour calculer $L$, on effectue le changement de variable $u=\sqrt{1-t}, t=1-u^{2}, \mathrm{~d} t=-2 u \mathrm{~d} u$ :
+
+$L=\dint_{1}^{0} \dfrac{1}{1+u}(-2 u) \mathrm{d} u=2 \dint_{0}^{1} \dfrac{u}{1+u} \mathrm{~d} u$
+
+$=2 \dint_{0}^{1}\left(1-\dfrac{1}{1+u}\right) \mathrm{d} u=2[u-\ln (1+u)]_{0}^{1}=2(1-\ln 2)$.
+
+Ainsi : $\quad K_{n} \underset{n\to\pinf}{\longrightarrow} 2(1-\ln 2)$,
+
+et on conclut :
+
+$$
+I_{n}-1=-J_{n}=-\dfrac{1}{n} K_{n} \underset{n\to\pinf}{\sim}-\dfrac{2(1-\ln 2)}{n} .
+$$
+\end{enumerate}
