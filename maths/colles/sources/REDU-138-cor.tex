@@ -1,0 +1,10 @@
+On observe que le noyau est de dimension $n-1$, et on en trouve facilement $n-1$ vecteurs formant une famille libre : $(e_{i}-e_{i+1})_{i\in\llbracket e 1,n-1\rrbracket}$.\\
+Enfin, $(1,\ldots,1)$ est un vecteur propre pour la valeur propre $n$.\\
+Finalement $J=PDP^{-1}$ avec $D=\mathrm{diag}(0,\ldots,0,n)$ et
+$P=\begin{pmatrix} 1       &0      &\ldots &0      &1\\
+        -1      &\ddots &\ddots &\vdots &\vdots\\
+        0       &\ddots &\ddots & 0     &\vdots\\
+        \vdots  &\ddots &\ddots & 1     &\vdots\\
+        0       &\ldots &0      & -1    &1 \end{pmatrix}$.\\
+
+Ensuite on remarque que $A=\beta J+(\alpha-\beta)\mathrm{I}_n=\beta PDP^{-1} + (\alpha-\beta)P\mathrm{I}_nP^{-1}=P\left(\beta D+(\alpha-\beta)\mathrm{I}_n\right)P^{-1}$. Puisque $\beta D+(\alpha-\beta)\mathrm{I}_n$ est diagonale, nous avons bien diagonalisé $A$.

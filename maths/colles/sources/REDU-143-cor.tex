@@ -1,0 +1,9 @@
+\begin{enumerate}
+\item On note $M=\mathrm{diag}(\lambda_1,\ldots,\lambda_n)$. Soit $A=(a_{ij})$ une matrice commutant avec $M$. Soit $i,j\in\llbracket 1,n\rrbracket$ tels que $i\neq j$. Le coefficient $(i,j)$ de $AM$ vaut $\lambda_j a_{ij}$, tandis que celui de $MA$ vaut $\lambda_i a_{ij}$. Puisque $\lambda_i\neq \lambda_j$, alors $a_{ij}$, et $A$ est diagonale.\\
+Réciproquement, on sait que deux matrices diagonales commutent.
+\item $\operatorname{Sp}(A)=\{1,3,-4\}$.
+\item Il existe une matrice $P$ inversible tel que $A=P D P^{-1}$ avec $D=\operatorname{diag}(1,3,-4)$.\\
+Si $M \in \mathscr{M}_n(\mathbb{C})$ est solution de l'équation $M^2=A$ alors $\left(P^{-1} M P\right)^2=D$ et donc $P^{-1} M P$ commute avec la matrice $D$. Or celle-ci est diagonale à coefficient diagonaux distincts donc $P^{-1} M P$ est diagonale de coefficients diagonaux $a, b, c$ vérifiant $a^2=1$, $b^2=3$ et $c^2=-4$. La réciproque est immédiate.\\
+Il y a 8 solutions possibles pour $(a, b, c)$ et donc autant de solutions pour $M$.\\
+Les solutions réelles sont a fortiori des solutions complexes or toutes les solutions complexes vérifient $\operatorname{tr} M=a+b+c \in \mathbb{C} \backslash \mathbb{R}$. Il n'existe donc pas de solutions réelles.
+\end{enumerate}
