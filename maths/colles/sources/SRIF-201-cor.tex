@@ -1,0 +1,23 @@
+Commençons par observer que
+\begin{align*}
+\displaystyle\frac{\sin t}{\mathrm{e}^t-1}&=\sin t\times\displaystyle\frac{\e^{-t}}{1-\e-t}\\
+&=\displaystyle\sum_{n=1}^{+\infty} \sin t \times \mathrm{e}^{-n t}.
+\end{align*}
+De plus $t \mapsto \sin t \times \mathrm{e}^{-n t}$ est intégrable sur $] 0,+\infty[$ par comparaison à une série exponentielle,
+et
+\begin{align*}
+\displaystyle\int_0^{+\infty}|\sin t| \mathrm{e}^{-n t} \mathrm{~d} t &\leqslant \displaystyle\int_0^{+\infty} t \mathrm{e}^{-n t} \mathrm{~d} t\\
+&\leq\displaystyle\frac{1}{n^2}
+ \end{align*}
+et ce dernier terme est le terme général d'une série convergente,
+donc $t \mapsto \displaystyle\frac{\sin t}{\mathrm{e}^t-1}$ est intégrable sur $]0,+\infty[$.\\
+Enfin, nous pouvons utiliser le théorème d'intégration terme à terme sur un intervalle quelconque, et ainsi
+\begin{align*}
+\displaystyle\int_0^{+\infty} \displaystyle\frac{\sin t}{\mathrm{e}^t-1} \mathrm{~d} t&=\displaystyle\sum_{n=1}^{+\infty} \displaystyle\int_0^{+\infty} \sin t . \mathrm{e}^{-n t} \mathrm{~d} t.\\
+\text{Or }\ \displaystyle\int_0^{+\infty} \sin t . \mathrm{e}^{-n t} \mathrm{~d} t&=\operatorname{Im} \int_0^{+\infty} \mathrm{e}^{(-n+i) t} \mathrm{~d} t\\&
+=\displaystyle\frac{1}{n^2+1}.
+ \end{align*}
+Finalement
+$$
+\int_0^{+\infty} \frac{\sin t}{\mathrm{e}^t-1} \mathrm{~d} t=\sum_{n=1}^{+\infty} \frac{1}{n^2+1}.
+$$

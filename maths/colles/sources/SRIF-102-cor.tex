@@ -1,0 +1,11 @@
+\begin{enumerate}
+\item Les fonctions $f_n$ : $x \mapsto \displaystyle\frac{(-1)^n}{n+x}$ sont de classe $\mathscr C^1$ et $f_n^{\prime}(x)=\displaystyle\frac{(-1)^{n+1}}{(n+x)^2}$.
+
+Par le CSSA $\displaystyle\sum_{n \geqslant 0} f_n(x)$ CS sur $] 0,+\infty[$ vers $S$.\\
+$\forall\, a>0$, sur $[a,+\infty[$, $\left\|f_n^{\prime}\right\|_{\infty,[a,+\infty[ } \leqslant \displaystyle\frac{1}{(n+a)^2}$ et $\displaystyle\sum_{n=0}^{+\infty} \displaystyle\frac{1}{(n+a)^2}<+\infty$ donc $\displaystyle\sum f_n^{\prime}$ CN sur $[a,+\infty[$ puis CU sur tout segment de $[a,+\infty[$.
+Par théorème, $S$ est définie et de classe $\cC^1$ sur $] 0,+\infty\left[\right.$ et $S^{\prime}(x)=\displaystyle\sum_{n=0}^{+\infty} \displaystyle\frac{(-1)^{n+1}}{(n+x)^2}$.
+\item On peut appliquer le CSSA à la série de somme $\displaystyle\sum_{n=0}^{+\infty} \displaystyle\frac{(-1)^{n+1}}{(n+x)^2}$. Celle-ci est donc du signe de son premier terme $\displaystyle\frac{-1}{x^2}$. Ainsi $S^{\prime}(x) \leqslant 0$ et $S$ est décroissante.
+\item $S(x+1)+S(x)=\displaystyle\sum_{n=0}^{+\infty} \displaystyle\frac{(-1)^n}{n+x+1}+\displaystyle\sum_{n=0}^{+\infty} \displaystyle\frac{(-1)^n}{n+x}=-\displaystyle\sum_{n=1}^{+\infty} \displaystyle\frac{(-1)^n}{n+x}+\displaystyle\sum_{n=0}^{+\infty} \displaystyle\frac{(-1)^n}{n+x}=\displaystyle\frac{1}{x}$.
+\item Quand $x \rightarrow 0: S(x)=\displaystyle\frac{1}{x}-S(x+1)$ et $S(x+1) \rightarrow S(1)$ donc $S(x) \sim \displaystyle\frac{1}{x}$.
+\item Quand $x \rightarrow+\infty: \displaystyle\frac{1}{2}(S(x)+S(x+1)) \leqslant S(x) \leqslant \displaystyle\frac{1}{2}(S(x)+S(x-1))$ et $\displaystyle\frac{1}{x} \sim \displaystyle\frac{1}{x-1}$ d'où $S(x) \sim \displaystyle\frac{1}{2 x}$.
+\end{enumerate}

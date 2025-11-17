@@ -1,0 +1,19 @@
+Commençons par remarquer que $\displaystyle\frac\pi4=\displaystyle\int_0^1\displaystyle\frac1{1+t^2}\dt$.\\
+Par sommation géométrique on peut écrire $\displaystyle\frac{1}{1+t^2}=\displaystyle\sum_{n=0}^{+\infty}(-1)^n t^{2 n}$ sur $[0,1[$.\\
+Par suite $\displaystyle\int_0^1 \displaystyle\frac{\mathrm{~d} t}{1+t^2}=\displaystyle\int_{[0,1[ } \displaystyle\sum_{n=0}^{+\infty} f_n
+$ avec $f_n(t)=(-1)^n t^{2 n}$ définie sur $[0,1[$.\\
+Ici $\displaystyle\sum f_n$ ne converge pas en $1$ donc on ne peut pas utiliser le théorème d'intégration terme à terme sur un segment, et $\displaystyle\sum \displaystyle\int_{[0,1[ }\left|f_n\right|=\displaystyle\sum \frac{1}{2 n+1}$ diverge et on ne peut pas appliquer le théorème d'intégration terme à terme sur un intervalle quelconque non plus. Transitons alors par les sommes partielles.\\
+On pose $S_n(t)=\displaystyle\sum_{k=0}^n(-1)^k t^{2 k}$.\\
+On a $S_n \xrightarrow{CS} S$ sur $[0,1[$, avec $S(t)=\displaystyle\frac{1}{1+t^2}$.\\
+Les fonctions $S_n$ et $S$ sont continues par morceaux, et
+$$\left|S_n(t)\right|=
+\displaystyle\frac{\left|1-(-1)^{n+1} t^{2 n+2}\right|}{1+t^2} \leqslant \displaystyle\frac{2}{1+t^2}=\varphi(t)$$
+avec $\varphi$ intégrable.\\
+Par convergence dominée $\displaystyle\int_0^1 S_n(t) \mathrm{d} t \tend \displaystyle\int_0^1 S(t) \mathrm{d} t$.
+Or
+\begin{align*}
+\displaystyle\int_0^1 S_n(t) \mathrm{d} t&=\displaystyle\int_0^1 \displaystyle\sum_{k=0}^n(-1)^k t^{2 k} \mathrm{~d} t\\
+&=\displaystyle\sum_{k=0}^n \displaystyle\int_0^1(-1)^k t^{2 k} \mathrm{~d} t\\
+&=\displaystyle\sum_{k=0}^n \displaystyle\frac{(-1)^k}{2 k+1}
+\end{align*}
+donc $$\displaystyle\sum_{n=0}^{+\infty} \displaystyle\frac{(-1)^n}{2 n+1}=\displaystyle\int_0^1 \displaystyle\frac{\mathrm{~d} t}{1+t^2}=\displaystyle\frac\pi4.$$

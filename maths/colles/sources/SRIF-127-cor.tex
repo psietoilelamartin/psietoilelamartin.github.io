@@ -1,0 +1,119 @@
+\begin{enumerate}
+\item Par comparaison à des séries de Riemann, $\zeta$ converge simplement sur 
+$]1,+\infty[$.
+\item S'il y avait convergence uniforme en $1$, alors 
+$\displaystyle\sum\displaystyle\lim_{x\to1}\displaystyle\frac1{n^x}$ convergerait, 
+ce qui n'est pas le cas.
+\item Posons $f_n$ : $x\mapsto \displaystyle\frac1{n^x}$.\\
+Les fonctions $f_n$ sont de classe $\mathscr{C}^{\infty}$ sur $] 1,+\infty[$ et
+$$
+f_n^{(k)}(x)=\displaystyle\frac{(-\ln n)^k}{n^x}.
+$$
+Sur $[a, b] \subset] 1,+\infty[$,
+$$
+\forall\, s \in[a, b],\ \left|f_n^{(k)}(x)\right| \leqslant \dfrac{(\ln n)^k}{n^a}.
+$$
+Soit $\rho \in]1, a[$, on a
+$$
+n^\rho \times \displaystyle\frac{(\ln n)^k}{n^a} 
+\underset{n\to +\infty}\longrightarrow 0
+$$
+et il y a donc convergence de la série $\displaystyle\sum 
+\displaystyle\frac{(\ln n)^k}{n^a}$.\\
+Par majoration uniforme, la série de fonctions $\displaystyle\sum u_n^{(k)}$ converge 
+normalement sur $[a, b]$.\\
+Par convergence uniforme sur tout segment de $] 1,+\infty[$, 
+on peut affirmer que $\zeta$ est de classe $\mathscr{C}^{\infty}$ sur $] 1,+\infty[$ et
+$$
+\zeta^{(p)}(x)=\displaystyle\sum_{n=1}^{+\infty} \displaystyle\frac{(-\ln n)^p}{n^x}.
+$$
+\item Monotonie :
+
+$$
+\zeta^{\prime}(x)=\displaystyle\sum_{n=1}^{+\infty} \displaystyle\frac{-\ln n}{n^x} 
+\leqslant 0
+$$
+donc $\zeta$ est décroissante.\\
+Convexité :
+
+$$
+\zeta^{''}(x)=\sum_{n=1}^{+\infty} \displaystyle\frac{(\ln n)^2}{n^x} \geqslant 0
+$$
+donc $\zeta$ est convexe.
+\item Limite en $+\infty$ :
+
+$$
+\displaystyle\lim _{x \rightarrow+\infty} \displaystyle\frac{1}{n^x}= 
+\begin{cases}0 & \text { si } n>1 \\ 1 & \text { si } n=1\end{cases}.
+$$
+Pour appliquer le théorème de la double limite, observons la convergence uniforme au
+voisinage de $+\infty$.\\
+Pour $x \geqslant 2$
+
+$$
+\left|f_n(x)\right| \leqslant \displaystyle\frac{1}{n^2}
+$$
+
+
+Or $\displaystyle\sum \displaystyle\frac{1}{n^2}$ converge, donc
+$\displaystyle\sum u_n$ converge normalement et donc uniformément sur $[2,+\infty[$.
+Par le théorème de la double limite
+
+$$
+\displaystyle\lim _{x \rightarrow+\infty} \zeta(x)=\displaystyle\sum_{n=1}^{+\infty} 
+\displaystyle\lim _{x \rightarrow+\infty} \displaystyle\frac{1}{n^x}=1+0+0+\cdots=1.
+$$
+
+% Equivalent de $\zeta(s)-1$ quand $s \rightarrow+\infty$ :
+% On a
+%
+% $$
+% \zeta(s)-1=\frac{1}{2^x}+\sum_{n=3}^{+\infty} \frac{1}{n^x}
+% $$
+%
+% avec
+%
+% $$
+% 0 \leqslant \sum_{n=3}^{+\infty} \frac{1}{n^x} \leqslant \int_2^{+\infty} \frac{\mathrm{d} t}{t^x}=\frac{1}{(s-1)} \frac{1}{2^x}
+% $$
+%
+% donc
+%
+% $$
+% \zeta(s)-1=\frac{1}{2^x}+o\left(\frac{1}{2^x}\right) \sim \frac{1}{2^x}
+% $$
+
+\item
+% Par monotonie, on peut affirmer que la fonction $\zeta$ admet une limite en $1^{+}$.
+% Puisque
+% $$
+% \zeta(x) \geqslant \dsum_{k=1}^n \dfrac{1}{k^x}
+% $$
+% à la limite
+% $$
+% \dlim _{x \rightarrow 1^{+}} \zeta(x) \geqslant \dsum_{k=1}^n \dfrac{1}{k}
+% $$
+% Or ceci vaut pour tout $n$ et on sait que $\dsum_{k=1}^n \dfrac{1}{k} \tend+\infty$ donc
+% $$
+% \dlim _{x \rightarrow 1^{+}} \zeta(x)=+\infty.
+% $$
+La fonction $t \mapsto \displaystyle\frac{1}{t^x}$ est décroissante donc
+$$
+\displaystyle\int_n^{n+1} \displaystyle\frac{\mathrm{~d} t}{t^x} \leqslant 
+\displaystyle\frac{1}{n^x} \leqslant \displaystyle\int_{n-1}^n 
+\displaystyle\frac{\mathrm{~d} t}{t^x}
+$$
+On en déduit
+$$
+\displaystyle\int_1^{+\infty} \displaystyle\frac{\mathrm{d} t}{t^x} \leqslant \zeta(x) 
+\leqslant 1+\displaystyle\int_1^{+\infty} \displaystyle\frac{\mathrm{d} t}{t^x}
+$$
+i.e.
+$$
+\displaystyle\frac{1}{x-1} \leqslant \zeta(x) \leqslant 1+\displaystyle\frac{1}{x-1}.
+$$
+Par suite
+$$
+\zeta(x) \underset{x \rightarrow 1}{\sim} \displaystyle\frac{1}{x-1}.
+$$
+\end{enumerate}

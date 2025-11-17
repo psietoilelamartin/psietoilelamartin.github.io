@@ -1,0 +1,40 @@
+% CCP 2023, ex. 17
+\begin{enumerate}
+\item
+On suppose que $\displaystyle\sum f_n$ converge uniformément sur $A$.\\
+On en déduit que  $\displaystyle\sum f_n$ converge simplement sur $A$.\\
+On pose alors, $\forall\:x\in A$,
+$S(x)=\displaystyle\sum\limits_{k=0}^{+\infty}f_k(x)$ et $\forall\:n\in\mathbb{N}$, $S_n(x)=\displaystyle\sum\limits_{k=0}^{n}f_k(x)$.\\
+$\displaystyle\sum f_n$ converge uniformément sur $A$, c'est-à-dire $(S_n)$ converge uniformément vers $S$ sur $A$,
+c'est-à-dire $\lim\limits_{n\to+\infty}^{}||S_n-S||_{\infty}=0$, avec $||S_n-S||_{\infty}=\sup\limits_{x\in A}^{}|S_n(x)-S(x)|$.\\
+\medskip
+On a  $\forall\:n\in\mathbb{N}^*$, $\forall \:x\in A$, $|f_n(x)|=|S_n(x)-S_{n-1}(x)|\leqslant|S_n(x)-S(x)|+|S(x)-S_{n-1}(x)|$.\\
+\medskip
+Donc $\forall\:n\in\mathbb{N}^*$, $\forall \:x\in A$,$|f_n(x)|\leqslant ||S_n-S||_{\infty} +||S_{n-1}-S||_{\infty} $ \:(majoration indépendante de $x$).\\
+Or  $\lim\limits_{n\to+\infty}^{}||S_n-S||_{\infty}=0$, donc   $\lim\limits_{n\to+\infty}^{}\left( ||S_n-S||_{\infty}+||S_{n-1}-S||_{\infty}\right) =0$. \\
+Donc $(f_n)$ converge uniformément vers 0 sur $A$.
+\item
+On pose: $\forall\:n\in\mathbb{N}$, $\forall\:x\in\left[ 0;+\infty\right[ $, $f_n(x)=nx^2\mathrm{e}^{-x\sqrt{n}}$.\\
+Soit $x\in \left[ 0;+\infty\right[$.\\
+Si  $x=0$:\\ $\forall\:n\in\mathbb{N}$, $f_n(0)=0$ donc $\displaystyle\sum f_n(0)$ converge.\\
+Si $x\neq 0$:\\ $\lim\limits_{n\to +\infty}^{}n^2f_n(x)=0$, donc au voisinage de $+\infty$, $f_n(x)=o\left(\dfrac{1}{n^2} \right)$.\\
+Or  $\displaystyle\sum\limits_{n\geqslant 1}^{} \dfrac{1}{n^2}$ converge absolument donc, par critère de domination, $\displaystyle\sum f_n(x)$ converge absolument.\\
+\medskip
+On en déduit que $\displaystyle\sum f_n$ converge simplement sur $\left[0;+\infty \right[$.\\
+\bigskip
+$\forall\:n\in\mathbb{N}^*$, $f_n$ est continue sur  $\left[0;+\infty \right[$ et  $\lim\limits_{x\to +\infty}^{}f_n(x)=0$, donc $f_n$ est bornée sur $\left[0;+\infty \right[$.\\
+Comme $f_0$ est bornée ($f_0=0$), on en déduit que $\forall\:n\in\mathbb{N}$, $f_n$ est bornée sur  $\left[ 0,+\infty\right[$.\\
+\medskip
+De plus, la suite de fonctions $(f_n)$ converge simplement sur $\left[ 0,+\infty\right[ $ vers la fonction $f$ définie par : $\forall x\in \left[ 0,+\infty\right[$, $f(x)=0$. \\
+En effet:\\
+Soit $x\in \left[ 0,+\infty\right[$.\\
+ si $x=0$ alors $f_n(0)=0$ et si $x\neq 0$,  $\lim\limits_{n\to +\infty}^{}f_n(x)=0$\\
+ si $x\neq 0$,   $\lim\limits_{n\to +\infty}^{}f_n(x)=0$ par croissances comparées.\\
+ \medskip
+ De plus, $f_n$ est bornée sur $\left[ 0,+\infty\right[$  donc $f_n-f=f_n$ est bornée sur  $\left[ 0,+\infty\right[$.\\
+Par ailleurs, on  a $\forall\:n\in\mathbb{N}^*$, $f_n\left( \dfrac{1}{\sqrt{n}}\right) =\mathrm{e}^{-1}$.\\
+Or, $\forall\:n\in\mathbb{N}^*$,  $|f_n\left( \dfrac{1}{\sqrt{n}}\right)-f\left( \dfrac{1}{\sqrt{n}}\right)  |=f_n\left( \dfrac{1}{\sqrt{n}}\right) \leqslant \underset{t\in \left[0;+\infty \right[ }{\sup}|f_n(t)-f(t)|$; donc $\underset{t\in \left[0;+\infty \right[ }{\sup}|f_n(t)-f(t)|\geqslant \mathrm{e}^{-1}$.\\
+Ainsi,  $\underset{t\in \left[0;+\infty \right[ }{\sup}|f_n(t)-f(t)|\underset{n\to +\infty}{\nrightarrow}0$.\\
+On en déduit que $(f_n)$ ne converge pas uniformément vers $f$sur $\left[0;+\infty \right[$.\\
+Donc, d'après 1., $\displaystyle\sum f_n$ ne converge pas uniformément sur $\left[0;+\infty \right[$.
+\end{enumerate}
