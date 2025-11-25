@@ -1,0 +1,35 @@
+\begin{enumerate}
+\item D'une part les réels $P(\{k\})$ sont tous positifs. D'autre part
+$$
+\sum_{k=1}^{+\infty} P(\{k\})=\sum_{k=1}^{+\infty} \frac{1}{\zeta(a) k^a}=\frac{1}{\zeta(a)} \sum_{k=1}^{+\infty} \frac{1}{k^a}=\frac{\zeta(a)}{\zeta(a)}=1.
+$$
+Ils définissent donc bien une probabilité sur $\mathbb{N}^*$.
+\item Soit $m \in \mathbb{N}^*$. Par le calcul, on trouve
+$$
+P(m \mathbb{N}^\ast)=\sum_{k=1}^{+\infty} P(\{k m\})=\sum_{k=1}^{+\infty} \frac{1}{\zeta(a)(k m)^a}=\frac{1}{m^a \zeta(a)} \sum_{k=1}^{+\infty} \frac{1}{k^a}=\frac{1}{m^a}.
+$$
+\item Soit $(i, j) \in\left(\mathbb{N}^*\right)^2$. D'une part, d'après le calcul précédent, $P\left(i\mathbb{N}^\ast\right) P\left(j\mathbb{N}^\ast\right)=1 /(i j)^a$.
+
+D'autre part $i\mathbb{N}^\ast \cap j\mathbb{N}^\ast$ est l'ensemble des entiers qui sont multiples à la fois de $i$ et de $j$. On a donc $i\mathbb{N}^\ast \cap j\mathbb{N}^\ast=(i \vee j)\mathbb{N}^\ast$ (où $i \vee j$ désigne le p.p.c.m. de $i$ et de $j$ ). Comme
+
+$$
+P\left(i\mathbb{N}^\ast \cap j\mathbb{N}^\ast\right)=\frac{1}{(i \vee j)^a}.
+$$
+les événements $i\mathbb{N}^\ast$ et $j\mathbb{N}^\ast$ sont indépendants si et seulement si $i j=i \vee j$, c'est-à-dire si $i$ et $j$ sont premiers entre eux.
+\item
+\begin{enumerate}
+\item On peut écrire $C_n=\dbigcap_{i=1}^n \overline{p_i \mathbb{N}^\ast}$. En reprenant la question précédente, on prouve que les $\left(p_i \mathbb{N}^\ast\right)_{i \in \mathbb{N}^\ast}$ sont mutuellement indépendants. Il en va donc de même de leurs complémentaires, donc
+
+$$
+P\left(C_n\right)=\prod_{i=1}^n\left(1-P\left(p_i \mathbb{N}^\ast\right)\right)=\prod_{i=1}^n\left(1-\frac{1}{p_i^a}\right)
+$$
+
+\item L'ensemble $\dbigcap_{n \geqslant 1} C_n$ est l'ensemble des entiers non nuls qui ne sont divisibles par aucun des nombres premiers. Évidemment il n'y a que 1 dans ce cas, et donc $\dbigcap_{n \geqslant 1} C_n=\{1\}$.
+\item Comme la suite $\left(C_n\right)_{n \in \mathbb{N}^*}$ est décroissante, on a
+
+$$
+\lim _{n \rightarrow+\infty} P\left(C_n\right)=\lim _{n \rightarrow+\infty} P\left(\bigcap_{n \geqslant 1} C_n\right)=P(\{1\})=\frac{1}{\zeta(a)}$$
+$$\text { donc } \quad \zeta(a)=\lim _{n \rightarrow+\infty} \prod_{i=1}^n\left(1-\frac{1}{p_i^a}\right)\inv.
+$$
+\end{enumerate}
+\end{enumerate}

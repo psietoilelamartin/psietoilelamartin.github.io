@@ -1,0 +1,22 @@
+Soit $a>1$. On rappelle la définition de la fonction $\zeta$ de Riemann : $\zeta(a)=\displaystyle\sum_{k=1}^{\pinf}\displaystyle\frac1{k^a}$. On définit la loi de Zipf de paramètre $a$ par
+\begin{equation*}
+    \forall\, k \in \mathbb{N}^\ast,\ P(\{k\}) = \displaystyle\frac{1}{\zeta(a)k^a}.
+\end{equation*}
+\begin{enumerate}
+    \item Montrer que $(\mathbb{N}^\ast,\mathscr{P}(\mathbb{N}^\ast),P)$ est un espace probabilisé.
+    \item Pour $m\in\mathbb{N}^\ast$, calculer $P(m\mathbb{N}^\ast)$.
+    \item Pour $i,j \in \mathbb{N}^\ast$, déterminer une CNS sur $i,j$ pour que $i\mathbb{N}^\ast$ et $j\mathbb{N}^\ast$ soient indépendants.
+    \item \emph{Application} 
+    
+        Pour tout $n\in\mathbb{N}^\ast$ on note $p_n$ le $n\ieme$ nombre premier, et $C_n$ l'ensemble des entiers qui ne sont divisibles par aucun des $p_i$, pour $i\in\llbracket1,n\rrbracket$.
+        \begin{enumerate}
+            \item Calculer $P(C_n)$. 
+            \item Déterminer $\displaystyle\bigcap_{n\geq 1} C_n$. 
+            \item En déduire que 
+                \begin{equation*}
+                    \zeta(a) = \displaystyle\prod_{i=1}^{+\infty} \p{1-\displaystyle\frac{1}{p_i^a}}^{-1}.
+                \end{equation*}
+
+        \end{enumerate}
+
+\end{enumerate}
