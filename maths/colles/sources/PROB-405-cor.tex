@@ -1,0 +1,135 @@
+% p.766, les oraux corrigés et commentés, Concours PC-PC*
+
+\begin{enumerate}
+  \item Le support de $T$ est $T(\Omega)=\llbracket 2,+\infty \llbracket$.\\
+Pour $k$ dans $\mathbb{N}$, étudions l'événement $(T>k)=$ \og le motif PP n'est pas apparu avant le rang $k$\fg\ dont la probabilité est notée $p_{k}$. On a $p_{0}=p_{1}=1$.\\
+La suite d'événements $(T>k)_{k \geq 0}$ est une suite décroissante pour l'inclusion. Ainsi
+
+$$
+P(T=k)=P(T>k-1)-P(T>k)
+$$
+
+Notons $X_{k}$ la variable aléatoire égale à 1 si au $k$-ème lancer on obtient pile et égale à 0 sinon. Les évènements $(X_k=0),(X_k=1)$ forment un système complet d'évènements. On a ainsi la décomposition :
+
+$$
+(T>k)=\left((T>k) \cap\left(X_{k}=1\right)\right) \sqcup\left((T>k) \cap\left(X_{k}=0\right)\right)\hspace{1cm}(\star)
+$$
+
+Supposons $k \geq 2$.\\
+Si au $k$-ème lancer le résultat est pile et si le motif PP n'est pas apparu avant le rang $k$, le $(k-1)$-ème lancer est nécessairement face. De plus, le motif PP n'a pas pu apparaître avant le ($k-2$)-ème lancer :
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+1 & $\ldots$ & $k-2$ & $k-1$ & $k$ \\
+\hline
+ & $\ldots$ &  & $F$ & $P$ \\
+\hline
+\end{tabular}
+\end{center}
+
+On a donc
+
+$$
+P\left((T>k) \cap\left(X_{k}=1\right)\right)=P\left((T>k-2) \cap\left(X_{k-1}=0\right) \cap\left(X_{k}=1\right)\right)
+$$
+
+Par indépendance des lancers :
+
+$$
+P\left((T>k) \cap\left(X_{k}=1\right)\right)=p_{k-2} \times \frac{1}{3} \times \frac{2}{3}=\frac{2}{9} p_{k-2}
+$$
+
+Si au $k$-ème lancer le résultat est face et si le motif PP n'est pas apparu avant le rang $k$, alors le motif PP n'est pas apparu avant le $(k-1)$-ème lancer. On a donc
+
+$$
+P\left((T>k) \cap\left(X_{k}=0\right)\right)=P\left((T>k-1) \cap\left(X_{k}=0\right)\right)=p_{k-1} \times \frac{1}{3} .
+$$
+
+D'après la réunion disjointe $(\star)$,
+
+$$
+p_{k}=\frac{2}{9} p_{k-2}+\frac{1}{3} p_{k-1}
+$$
+
+de sorte que la suite $\left(p_{k}\right)_{k \geq 0}$ vérifie la relation de récurrence linéaire d'ordre 2~:
+
+$$
+\forall\, k \in \mathbb{N},\ 9 p_{k+2}-3 p_{k+1}-2 p_{k}=0 \text { et } p_{0}=p_{1}=1
+$$
+\item
+L'équation caractéristique est $9 r^{2}-3 r-2=0$ de racines $-1 / 3$ et $2 / 3$. Il existe des constantes $\alpha$ et $\beta$ telles que
+
+$$
+\forall\,k \in \mathbb{N},\ p_{k}=\alpha\left(\frac{2}{3}\right)^{k}+\beta\left(-\frac{1}{3}\right)^{k}
+$$
+
+Les données initiales $p_{0}=p_{1}=1$ donnent $\alpha=4 / 3$ et $\beta=-1 / 3$. Ainsi,
+
+$$
+\forall\,k \geq 0,\ p_{k}=\frac{4}{3}\left(\frac{2}{3}\right)^{k}+\left(-\frac{1}{3}\right)^{k+1}
+$$
+
+Pour $k \geq 1$,
+
+$$
+P(T=k)=p_{k-1}-p_{k}=\left(\frac{2}{3}\right)^{k+1}+\frac{4}{3}\left(-\frac{1}{3}\right)^{k}
+$$
+
+\underline{Commentaires :}\\
+La formule donne bien la probabilité attendue $P(T=1)=0$. De plus,
+
+$$
+P(T=2)=P\left(X_{1}=1 \cap X_{2}=1\right)=\frac{4}{9}
+$$
+
+ce qui est également cohérent.\\
+Un calcul de somme donne $\dsum_{k=1}^{\infty} P(T=k)=1$.\\
+% \item Pour $x$ tel que $|x|<1, \sum_{k=0}^{+\infty} x^{k}=\frac{1}{1-x}$. Par derivation sur ] - 1, 1[ et multiplication par $x$, on a
+%
+% $$
+% S(x)=\sum_{k=0 \text { ou } 1}^{+\infty} k x^{k}=\frac{x}{(1-x)^{2}}
+% $$
+%
+% $T$ admet une espérance (série géométrique dérivée) et
+%
+% $$
+% \mathbb{E}[T]=\sum_{k=1}^{+\infty} k\left(\frac{2}{3}\right)^{k+1}+\frac{4}{3} \sum_{k=1}^{+\infty} k\left(-\frac{1}{3}\right)^{k}=\frac{2}{3} S\left(\frac{2}{3}\right)+\frac{4}{3} S\left(-\frac{1}{3}\right)=\frac{15}{4}=3,75
+% $$
+
+\item Notons $(T=+\infty)$ l'événement \og le motif PP n'apparaît pas\fg. On a
+
+
+$$
+(T=+\infty)=\bigcap_{k=0}^{+\infty}(T>k)
+$$
+
+Par continuité décroissante (la famille $(T>k)_{k \geq 0}$ est décroissante pour l'inclusion) :
+
+$$
+P(T=+\infty)=P\left(\bigcap_{k=0}^{+\infty}(T>k)\right)=\lim _{k \rightarrow \infty} P(T>k)=\lim _{k \rightarrow \infty} p_{k}=0
+$$
+
+Ainsi, le motif PP arrive presque sûrement.
+% 4. Une exécution du code suivant
+%
+% \begin{verbatim}
+% import numpy.random as rd
+% $\mathrm{n}=1000$
+% $\mathrm{S}=0$
+% $\mathrm{N}=100000$
+% for experience in range $(\mathrm{N})$ :
+% $6 \quad \mathrm{~L}=$ rd.binomial $(1,2 / 3, \mathrm{n})$
+% $7 \quad \mathrm{k}=0$
+% $8 \quad$ motif $=$ False
+% $9 \quad$ while $\mathrm{k}<\mathrm{n}-1$ and $\operatorname{not}(\operatorname{motif})$ :
+% $10 \quad$ if $\mathrm{L}[\mathrm{k}]==1$ and $\mathrm{L}[\mathrm{k}+1]==1$ :
+% 11 motif $=$ True
+% 12 else:
+% $13 \quad \mathrm{k}=\mathrm{k}+1$
+% $14 \quad \mathrm{~S}=\mathrm{S}+(\mathrm{k}+2)$
+% $15 \operatorname{print}(\mathrm{~S} / \mathrm{N})$
+% \end{verbatim}
+%
+% a donné la valeur 3,75159 .
+\end{enumerate}

@@ -1,0 +1,80 @@
+\begin{enumerate}
+\item Par stabilité d'une tribu par réunion dénombrable, puis par intersection dénombrable, $B$ est bien un évènement.
+\item $\omega\in B$ \ssi\ pour tout $n\in\N$, il existe $k\in\N$ tel que $k\geq n$ et $\omega\in A_k$. Ainsi $B$ est l'ensemble des élèments qui sont dans une infinité de $A_k$.
+\item Posons, pour tout $p\in\N$, $U_p=\dbigcup_{k=p}^{\pinf} A_k$ et $B_p=\dbigcap_{n=0}^{p}\, \dbigcup_{k=n}^{\pinf} A_k=\dbigcap_{n=0}^{p}\, U_n$. On remarque que la suite $(U_p)_p$ est décroissante, et donc $B_p=U_p=\dbigcup_{n=p}^{+\infty} A_n$. La suite des $(B_p)_p$ est donc également décroissante, et par continuité décroissante
+$$
+P\left(B\right)=\dlim _{p \rightarrow+\infty}P\left(\dbigcup_{n=p}^{+\infty} A_n\right).
+$$
+Mais
+$$
+P\left(\bigcup_{n=p}^{+\infty} A_n\right) \leq \dsum_{n=p}^{+\infty} P\left(A_n\right)
+$$
+Et la suite des restes d'une série convergente converge vers 0 , ce qui permet de conclure.
+\item
+\begin{enumerate}
+\item Dans ce cas, pour tout $p \in \N$ il existe $n_0\in\N$ tel que $n_0\geq p$ et $P(A_{n_0})=1$. Alors
+
+$$
+1\geq P\left(\bigcup_{n=p}^{+\infty} A_n\right)\geq P(A_{n_0})=1
+$$
+
+et le résultat cherché s'ensuit directement car l'égalité $P\left(B\right)=\dlim _{p \rightarrow+\infty}P\left(\dbigcup_{n=p}^{+\infty} A_n\right)$ est toujours valable.
+\item Il faut avoir une première idée : l'indépendance se traduit mieux avec des intersections qu'avec des réunions d'événements. On va donc considérer l'évènement complémentaire de la limite supérieure :
+
+$$
+\barr B=\bigcup_{p=0}^{+\infty}\left(\bigcap_{n=p}^{+\infty} \overline{A_n}\right)
+$$
+
+
+Par continuité croissante,
+
+$$
+P(\barr B)=\lim _{p \rightarrow+\infty}\left(P\left(\bigcap_{n=p}^{+\infty} \overline{A_n}\right)\right)
+$$
+
+\item On a par croissance, et ensuite par indépendance des $\barr{A_n}$
+
+$$
+\forall q \geq p \quad P\left(\bigcap_{n=p}^{+\infty} \overline{A_n}\right) \leq P\left(\bigcap_{n=p}^q \overline{A_n}\right)=\prod_{n=p}^q\left(1-P\left(A_n\right)\right)
+$$
+\item
+La deuxième idée est de prendre le logarithme, l'hypothèse portant sur une série. Pour cela nous utilisons
+qu'au moins à partir du rang $p$, $P\left(A_n\right)<1$. Alors, si $p \leq q$,
+
+$$
+\ln \left(\prod_{n=p}^q\left(1-P\left(A_n\right)\right)\right)=\dsum_{n=p}^q \ln \left(1-P\left(A_n\right)\right)
+$$
+
+
+La suite $\left(P\left(A_n\right)\right)$ ne converge pas vers 0 a priori, donc on ne peut pas utiliser d'équivalents. On utilise donc une comparaison basée sur
+
+$$
+\forall\, x>-1, \quad \ln (1+x) \leq x
+$$
+Donc
+
+$$
+\ln \left(\dprod_{n=p}^q\left(1-P\left(A_n\right)\right)\right) \leq-\dsum_{n=p}^q P\left(A_n\right).
+$$
+\item Mais $\dsum P\left(A_n\right)=+\infty$, donc
+
+$$
+\dsum_{n=p}^q P\left(A_n\right) \xrightarrow[q \rightarrow+\infty]{}+\infty
+$$
+
+et donc
+
+$$
+\ln \left(\prod_{n=p}^q\left(1-P\left(A_n\right)\right)\right) \xrightarrow[q \rightarrow+\infty]{}-\infty
+$$
+
+et, donc,
+
+$$
+P\left(\bigcap_{n=p}^{+\infty} \overline{A_n}\right)=0
+$$
+
+
+Donc $P(\barr B)=0$, ce qui conclut.
+\end{enumerate}
+\end{enumerate}

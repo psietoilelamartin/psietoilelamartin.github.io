@@ -1,0 +1,20 @@
+Soit $(\Omega,\cA,P)$ un espace probabilisé. Soit $(A_n)$ une suite d'événements. On définit la limite supérieure de ces événements comme étant $B = \displaystyle\bigcap_{n=0}^{+\infty}\, \displaystyle\bigcup_{k=n}^{+\infty} A_k$.
+
+\begin{enumerate}
+    \item Montrer que $B$ est un événement. 
+    \item Si $\omega \in \Omega$, donner une interprétation de $\omega \in B$ en fonction des $\omega \in A_i$.
+    \item Montrer le lemme de Borel-Cantelli (version faible) : si $\displaystyle\sum_{n\geqslant 0}P(A_n)$ converge, alors $P(B) = 0$.
+    \item On souhaite montrer que si $\displaystyle\sum_{n\in\mathbb{N}} P\left(A_n\right)=+\infty$, et si les $A_n$ sont mutuellement indépendants, alors $P(B)=1$.
+    \begin{enumerate}
+    \item Montrer que s'il existe une infinité de $A_n$ tels que $P(A_n)=1$, alors pour tout $p\in \mathbb{N}$, $P\left(\displaystyle\bigcup_{n=p}^{+\infty} A_n\right)=1$, et conclure.
+    \end{enumerate}
+    On suppose alors qu'à partir d'un certain rang, $P(A_n)<1$. Soit $p\in\mathbb{N}$ supérieur à ce rang.
+    \begin{enumerate}[resume]
+     \item Montrer que $P(\barr B)=\dlim _{p \rightarrow+\infty}P\left(\displaystyle\bigcap_{n=p}^{+\infty} \overline{A_n}\right)$.
+     \item Montrer que si $q\geqslant p$, alors $P\left(\displaystyle\bigcap_{n=p}^{+\infty} \overline{A_n}\right)\leq \displaystyle\prod_{n=p}^q\left(1-P\left(A_n\right)\right)$.
+     \item Montrer que $\ln \left(\displaystyle\prod_{n=p}^q\left(1-P\left(A_n\right)\right)\right) \leq-\displaystyle\sum_{n=p}^q P\left(A_n\right)$.
+     \item Conclure.
+    \end{enumerate}
+
+%     \item Comment interpréter le résultat de la question précédente ?
+\end{enumerate}

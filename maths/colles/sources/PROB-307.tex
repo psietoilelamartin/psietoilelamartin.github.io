@@ -1,0 +1,38 @@
+% p.824, les oraux corrigés et commentés, Concours PC-PC*
+
+% \section*{Thème : MARCHE ALÉatoire}
+Une particule se déplace sur une surface comportant quatre positions successives, $A_{0}$ qui est un puits, $A_{1}$ et $A_{2}$ deux positions intermédiaires, $A_{3}$ un second puits.\\
+A l'instant $t=n$,
+
+\begin{itemize}
+  \item si la particule est dans un puits, elle y reste
+  \item si elle est en $A_{1}$, elle va en $A_{0}$ avec la probabilité $p$ et en $A_{2}$ avec la probabilité $1-p$
+  \item si elle est en $A_{2}$, elle va en $A_{1}$ avec la probabilité $p$ et en $A_{3}$ avec la probabilité $1-p$.
+\end{itemize}
+
+On note $x_{n}$ la position de la particule à l'instant $t=n$, $x_{n}(\Omega)=\llbracket 0,3 \rrbracket$.
+
+% \begin{enumerate}
+%   \item Écrire en Python une fonction qui donne $x_{n+1}$ en fonction de $x_{n}$ et $p$.
+%   \item Écrire en Python une fonction renvoyant $x_{n}$ en fonction de $x_{0}, n$ et $p$.
+ % \item Faire l'histogramme des $x_{n}$ obtenues sur $N$ essais avec $p=1 / 2$.
+% \end{enumerate}
+On pose
+
+$$
+X_{n}=\left(\begin{array}{l}
+P\left(x_{n}=0\right) \\
+P\left(x_{n}=1\right) \\
+P\left(x_{n}=2\right) \\
+P\left(x_{n}=3\right)
+\end{array}\right)
+$$
+
+\begin{enumerate}
+\item Déterminer une matrice $M$ indépendante de $n$ telle que pour tout $n$, $X_{n+1}=M X_{n}$.\\
+\item Montrer que $M$ est diagonalisable si et seulement si $0<p<1$.\\
+\item On suppose $p=1 / 2$. %Diagonaliser $M$ %avec Python
+% puis en déduire
+Donner $\displaystyle\lim _{n \rightarrow \infty} X_{n}$. %Comparer aux résultats obtenus précédemment.
+\item Si $X_0=\bpm \frac12\\0\\ \frac13\\ \frac16\epm$, calculer $\displaystyle\lim _{n \rightarrow \infty} X_{n}$.
+\end{enumerate}

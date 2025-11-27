@@ -1,0 +1,267 @@
+% p.824, les oraux corrigés et commentés, Concours PC-PC*
+%
+% On resume les déplacements de la particule à l'aide du graphe suivant:\\
+% \includegraphics[max width=\textwidth, center]{2024_10_26_fb808d75f067b9b77188g-25}
+
+\begin{enumerate}
+%   \item On définit deux variables deplacement1 et deplacement2 dont les coordonnées sont les numéros des positions.\\
+% La fonction binomial $(1, \mathrm{p})$ est une variable de Bernoulli de paramètre $p$. Si la particule est en $A_{1}$ (ligne 10), alors si la variable de Bernoulli vaut 0, la particule se déplacera sur $A_{2}$ (première coordonnée de deplacement1); si la variable de Bernoulli vaut 1, la particule se déplacera sur $A_{0}$ (deuxième coordonnée de deplacement1).
+% \end{enumerate}
+%
+% \begin{verbatim}
+% import numpy.random as rd
+% def position(X,p):
+%     deplacement1 = [2,0]
+%     deplacement2 =[3,1]
+%     if X==0:
+%         nouveauX =0
+%             if X==3:
+%                         nouveauX=3
+%             if X==1:
+%                         nouveauX=deplacement1[rd.binomial (1,p)]
+%             if X==2:
+%                     nouveauX=deplacement2[rd.binomial (1,p)]
+%         return(nouveauX)
+% \end{verbatim}
+%
+% \begin{enumerate}
+%   \setcounter{enumi}{1}
+%   \item On itère la fonction position $n$ fois.
+% \end{enumerate}
+%
+% \begin{verbatim}
+% def marche(X0,p,n):
+%     X=X0
+%     for i in range(n):
+%         X=position(X,p)
+%     return(X)
+% \end{verbatim}
+%
+% \section*{Commentaires}
+% Il s'agit de déterminer une valeur approchée des limites $\lim _{n \rightarrow+\infty} P\left(x_{n}\right)$. Du point de vue de la simulation, il ne suffit pas d'augmenter $n$. Au bout de quenction marce on arrive dans un puits. Il s'agit de répeter un grand nombers. en comptant le nombre de fois que les sites ont été visites.
+%
+% On définit une liste cumulposition dont la $i$-ème coordonné est le nombre de fois que le site $A_{i}$ a été visite. On calcule les fréquences en divisant cumulPosition par le nombre de pas de toutes les marches soit n * nbEssai (ligne 18 et 19).\\
+% Remarque : la variable globale cumulPosition définie avant la fonction marcheHistograme est connue à l'intérieur de celle-ci.
+%
+% \begin{verbatim}
+% cumulPosition $=4 *[0]$
+% def marcheHistogramme (X0, p, n):
+%     $\mathrm{X}=\mathrm{X} 0$
+%     for i in range( n$)$ :
+%         pos=position (X, p)
+%         cumulPosition [pos]=cumulPosition [pos]+1
+%         $\mathrm{X}=\mathrm{pos}$
+%     return(cumulPosition)
+% nbEssai $=100$
+% $\mathrm{X} 0=1$
+% $\mathrm{p}=0.5$
+% $\mathrm{n}=100$
+% for i in range(nbEssai):
+%     marcheHistogramme(X0, p, n)
+% for $i$ in range(4):
+%     cumulPosition [i]=cumulPosition [i]/(nbEssai $*$ n)
+% from pylab import *
+% $\mathrm{X}=\mathrm{np}$. array $([0,1,2,3])$
+% bar(X, cumulPosition, facecolor="gray")
+% for $x, y$ in zip (X, cumulPosition):
+%     text $(\mathrm{x}+0.4, \mathrm{y}+0.02, \mathrm{x}, \mathrm{ha}=$ 'center', $\mathrm{va}=$ 'bottom')
+% plt.xlabel('position')
+% plt.ylabel ("cumul")
+% plt.grid()
+% plt.show()
+% \end{verbatim}
+%
+% % Avec nbessai égal à 100 , n égal à 100, p égal à 0,5 , et en partant de la position $x_{0}=1$, on obtient l'histogramme suivant :\\
+% % \includegraphics[max width=\textwidth, center]{2024_10_26_fb808d75f067b9b77188g-27}
+%
+% Numériquement, on a\\
+% $P\left(X_{n}=3\right)$
+%
+% $$
+% X_{\infty}=\lim _{n \rightarrow \infty}\left(\begin{array}{l}
+% P\left(X_{n}=0\right) \\
+% P\left(X_{n}=1\right) \\
+% P\left(X_{n}=2\right) \\
+% P\left(X_{n}=3\right)
+% \end{array}\right) \approx\left(\begin{array}{c}
+% 0.6576 \\
+% 0.0026 \\
+% 0.006 \\
+% 0.3338
+% \end{array}\right)
+% $$
+%
+% % \begin{center}
+% % \includegraphics[max width=\textwidth]{2024_10_26_fb808d75f067b9b77188g-28}
+% % \end{center}
+%
+% En diminuant la probabilité $p$ à 0.3 et en partant du site $A_{1}$, la particule se dirige vers $A_{3}$ (puits attractif).\\
+% % \includegraphics[max width=\textwidth, center]{2024_10_26_fb808d75f067b9b77188g-28(1)}
+\item
+$$
+\forall\, i \in \llbracket 0,3 \rrbracket,\ P\left(x_{n+1}=i\right)=\sum_{j=0}^{3} P_{(x_{n}=j)}\left(x_{n+1}=i \right) P\left(x_{n}=j\right)
+$$
+
+Les probabilités conditionnelles sont données par l'énoncé. Ces égalités s'écrivent matríciellement $X_{n+1}=M X_{n}$ avec $M$ la matrice :
+
+$$
+M=\left(\begin{array}{cccc}
+1 & p & 0 & 0 \\
+0 & 0 & p & 0 \\
+0 & 1-p & 0 & 0 \\
+0 & 0 & 1-p & 1
+\end{array}\right)
+$$
+%
+% \section*{Commentaires}
+% Les coefficients de la matrice $M$ sont des réels positifs et la somme des coefficients sur chaque colonne vaut 1 (ce qui implique que les coefficients sont compris entre 0 et 1 ). Une telle matrice s'appelle une matrice stochastique (voir également les planches $\mathrm{n}^{\circ} 53$ et 68).\\
+% Le coefficient $[M]_{i, j}$ est la probabilité $P\left(A_{j} \rightarrow A_{i}\right)$ que la particule se déplace de $A_{j}$ vers $A_{i}$. Ainsi,
+%
+% $$
+% \sum_{i=0}^{3}[M]_{i, j}=\sum_{i=0}^{3} P\left(A_{j} \rightarrow A_{i}\right)
+% $$
+%
+% -st la somme des probabilités que la particule partant de $A_{j}$ se déplace sur les autres ites (y compris $A_{j}$ lui-même). Cette probabilité vaut 1 (il faut bien que d'exercice, cela se traduit aille quelque part!). Dans le graphe d'état donné en début d'exercice, cela sumet raut 1 oar le fait que la somme des probabilités des flèches sortantes d'un som. de l'instant $n$ au suivant. En théorie des probabilices lecurs plutôt la transposee de cette matrice.\\
+% arquons pour finir que les vecteurs $X_{n}$ sont également ficients sont positifs et de somme égale à 1.\\
+% h effet, soit $M$ une matrice stochastique d'ordre $n$ et $X$ un tout $i$ dans $[1, n]$,\\
+\item Le polynôme caractéristique de $M$ est
+
+$$
+\chi_{M}(x)=\left|\begin{array}{cccc}
+x-1 & -p & 0 & 0 \\
+0 & x & -p & 0 \\
+0 & p-1 & x & 0 \\
+0 & 0 & p-1 & x-1
+\end{array}\right|=(x-1)^2\left[x^{2}-(p(1-p))\right]
+$$
+
+par des développements successifs. Le spectre de $M$ est donc
+
+$$
+\operatorname{Sp}(M)=\{1, \pm \sqrt{p(1-p)}\}
+$$
+
+\begin{itemize}
+  \item Si $p \in] 0,1[$ alors $M$ possède trois valeurs propres distinctes, et on observe sur la 1ère et la dernière colonne de $M$, que $\dim E_M(1)\geq2$. La matrice $M$ est donc diagonalisable.
+  \item Si $p=0$ ou $p=1$ alors $\operatorname{Sp}(M)=\{1,0\}$.
+\end{itemize}
+
+Dans ce cas, $M$ est de rang 3 donc $\Ker(f)$ est de dimension 1 alors que 0 est une valeur propre double. Donc $M$ n'est pas diagonalisable.
+
+% \section*{Commentaires}
+% La valeur propre double 1 était prévisible. Lorsque la particule est en $A_{0}$ ou $A_{3}$, elle y reste prisonnière.\\
+\item
+Les 1ers et 4èmes vecteurs de la base canonique, $e_1$ et $e_4$, forment une base de $E_1$. Si $X_0=(a,b,c,d)$, alors $a+b+c+d=1$, et $X_n=M^n X_0=ae_1+\dfrac1{2^n}(be_2+ce_3)+de_4\tend ae_1+be_4$.
+% On définit la matrice $M$ (ligne 4). La commande eig(M) du module numpy. linalg donne un couple dont la première coordonnée est la liste des valeurs propres et la seconde la liste des vecteurs propres.\\
+% On définit la matrice de passage $P$ (ligne 6). On sait que $A=P D P^{-1}$ avec
+%
+% $$
+% D=\left(\begin{array}{cccc}
+% 1 & 0 & 0 & 0 \\
+% 0 & 1 & 0 & 0 \\
+% 0 & 0 & 0.5 & 0 \\
+% 0 & 0 & 0 & -0.5
+% \end{array}\right)
+% $$
+%
+% donc $X_{n}=A^{n} X_{0}=P D^{n} P^{-1} X_{0}$.\\
+% La matrice diagonale $D^{n}$ est définie par la fonction $\operatorname{Dn}(\mathrm{n})$. On effectue le produit $P D^{n} P^{-1} X_{0}$ avec les quatre $X_{0}$ possibles correspondant aux quatre positions initiales de la particule.
+%
+% \begin{verbatim}
+% import numpy as np
+% import numpy.linalg as alg
+% \end{verbatim}
+%
+% % \begin{center}
+% % \includegraphics[max width=\textwidth]{2024_10_26_fb808d75f067b9b77188g-30}
+% % \end{center}
+%
+% \begin{verbatim}
+% elementPropre=alg.
+% $\mathrm{P}=$ elementPropre[1]
+% def $\operatorname{Dn}(\mathrm{n})$ :
+%     return (np.array
+%     $[0,0,0,(-0.5) * * \mathrm{n}]])), 0,0],[0,1,0,0],[0,0,(0.5) * * \mathrm{n}, 0]$,
+% \end{verbatim}
+%
+% \begin{verbatim}
+% 12 Pinv=alg.inv(P)
+% E1=np.transpose(np. array ([[1,0,0,0]]))
+% E2=np.transpose(np.array ([[0,1,0,0]]))
+% E3=np.transpose(np.array ([[0,0,1,0]]))
+% E4=np.transpose(np.array ([[0,0,0,1]]))
+% base =[E1,E2,E3,E4]
+% for i in range(4):
+%         print(P.dot(Dn(10)).dot(Pinv ).dot(base[i]))
+% \end{verbatim}
+%
+% Notons
+%
+% $$
+% X_{\infty}=\lim _{n \rightarrow \infty}\left(\begin{array}{l}
+% P\left(X_{n}=0\right) \\
+% P\left(X_{n}=1\right) \\
+% P\left(X_{n}=2\right) \\
+% P\left(X_{n}=3\right)
+% \end{array}\right)
+% $$
+%
+% Au bout de 10 itérations, on obtient les vecteurs limites suivants en fonction de la position initiale :
+%
+% $$
+% \begin{aligned}
+% X_{0}=\left(\begin{array}{l}
+% 1 \\
+% 0 \\
+% 0 \\
+% 0
+% \end{array}\right) \rightarrow X_{\infty} \approx\left(\begin{array}{l}
+% 1 \\
+% 0 \\
+% 0 \\
+% 0
+% \end{array}\right) \\
+% X_{0}=\left(\begin{array}{l}
+% 0 \\
+% 1 \\
+% 0 \\
+% 0
+% \end{array}\right) \rightarrow X_{\infty} \approx\left(\begin{array}{c}
+% 0.67 \\
+% 0 \\
+% 0 \\
+% 0.33
+% \end{array}\right) \\
+% X_{0}=\left(\begin{array}{l}
+% 0 \\
+% 0 \\
+% 1 \\
+% 0
+% \end{array}\right) \rightarrow X_{\infty} \approx\left(\begin{array}{c}
+% 0.33 \\
+% 0 \\
+% 0 \\
+% 0.67
+% \end{array}\right)
+% \end{aligned}
+% $$
+%
+% et
+%
+% $$
+% X_{0}=\left(\begin{array}{c}
+% 0 \\
+% 0 \\
+% 0 \\
+% 1
+% \end{array}\right) \rightarrow X_{\infty} \approx\left(\begin{array}{l}
+% 0 \\
+% 0 \\
+% 0 \\
+% 1
+% \end{array}\right)
+% $$
+%
+% Les valeurs obtenues sont coherentes avec la simulation de la question 3.
+\item Posons $v_1=(1-1,-1,1)$ et $v_3=(1,-3,3,-1)$. Alors $(e_1,v_2,v_3,e_4)$ est une base de vecteurs propres de $M$. De plus $X_0=\dfrac16[3e_1-v_2+v_3+3e_4]$, donc $\displaystyle\lim _{n \rightarrow \infty} X_{n}=(1/2,0,0,1/2)$.
+\end{enumerate}

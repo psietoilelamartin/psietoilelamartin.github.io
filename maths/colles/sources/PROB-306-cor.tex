@@ -1,0 +1,37 @@
+% p.739, les oraux corrigés et commentés, Concours PC-PC*
+
+\begin{enumerate}
+  \item On définit l'événement $U$ (respectivement $V$ ) \og le premier tirage s'effectue dans l'urne $U$ \fg\ (respectivement \og le premier tirage s'effectue dans l'urne $V$\fg ). La famille $(U, V)$ est un système complet d'événements. D'après la formule des probabilités totales~:
+\begin{align*}
+p_{1}&=P\left(B_{1}\right)=P\left(B_{1} \cap U\right)+P\left(B_{1} \cap V\right)\\
+&=P_U\left(B_{1}\right) P(U)+P_V\left(B_{1}\right) P(V).
+\end{align*}
+
+Compte tenu de l'énoncé :
+
+$$
+p_{1}=\frac{2}{6} \times \frac{1}{2}+\frac{3}{6} \times \frac{1}{2}=\frac{5}{12}.
+$$
+\item La famille $\left(B_{n}, \barr B_{n}\right)$ est un système complet d'événements. D'après la formule des probabilités totales:
+\begin{align*}
+p_{n+1}&=P\left(B_{n+1}\right)=P_{B_n}\left(B_{n+1}\right) P\left(B_{n}\right)+P_{\barr B_{n}}\left(B_{n+1} \right) P\left(\barr B_{n}\right)\\
+&=\frac{2}{6} p_{n}+\frac{3}{6}\left(1-p_{n}\right) .
+\end{align*}
+
+Ainsi,
+
+$$
+\forall n \in \mathbb{N}^{*}, p_{n+1}=-\frac{1}{6} p_{n}+\frac{1}{2}
+$$
+
+  \item La suite $\left(p_{n}\right)_{n \geq 1}$ est une suite arithmético-géométrique. Déterminons une expression de $p_{n}$ en fonction de $n$.\\
+L'équation $-\dfrac{1}{6} x+\dfrac{1}{2}=x$ admet l'unique solution $\ell=\dfrac{3}{7}$. On définit alors la suite $\left(u_{n}\right)_{n \geq 1}$ par $u_{n}=p_{n}-\ell$ pour tout $n \geq 1$. La suite $\left(u_{n}\right)_{n \geq 1}$ est géométrique de raison $-\dfrac{1}{6}$ donc pour tout $n \geq 1, u_{n}=\left(-\dfrac{1}{6}\right)^{n-1} u_{1}$. Or $u_{1}=p_{1}-\ell=\dfrac{5}{12}-\dfrac{3}{7}=-\dfrac{1}{84}$.\\
+On en déduit que
+
+$$
+\forall\, n \geq 1,\ p_{n}=-\frac{1}{84}\left(-\frac{1}{6}\right)^{n-1}+\frac{3}{7}.
+$$
+On vérifie que $p_{1}$ est bien égal à $\dfrac{5}{12}$.\\
+Comme la suite géométrique $\left(\left(-\dfrac{1}{6}\right)^{n-1}\right)_{n \geq 1}$ converge vers 0, $p_{n}\tend \dfrac{3}{7}$.
+
+\end{enumerate}

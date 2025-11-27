@@ -1,0 +1,17 @@
+% p.766, les oraux corrigés et commentés, Concours PC-PC*
+
+% THÈME : LOI D'APPARITION D'UN DOUBLE PILE\\
+On considère une pièce dont la probabilité d'apparition du côté face ( F ) est $1 / 3$ et celle du côté pile ( P ) est $2 / 3$. On effectue des lancers de façon indépendante jusqu'à ce que le motif PP apparaisse. On note $T$ le (premier) rang d'apparition de ce motif. (Par exemple, si on a la suite de lancers FPFFPP alors $T=6$.)
+
+\begin{enumerate}
+  \item Pour $k$ dans $\mathbb{N}^{*}$, exprimer l'événement $(T=k)$ en fonction des événements $(T>k)$. Montrer que la suite de terme général $p_{k}=P(T>k)$ vérifie la relation de récurrence
+
+$$
+\forall k \geq 2, p_{k}=\frac{2}{9} p_{k-2}+\frac{1}{3} p_{k-1}
+$$
+\item Exprimer $p_k$ en fonction de $k$.
+% En déduire la loi de la variable aléatoire $T$.\\
+% 2. Calculer l'espérance de $T$.\\
+\item Calculer la probabilité que le motif PP n'apparaisse jamais.\\
+% 4. Écrire un programme Python qui simule les lancers et calcule l'espérance de $T$.
+\end{enumerate}
