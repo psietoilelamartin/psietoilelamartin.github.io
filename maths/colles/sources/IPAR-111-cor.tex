@@ -1,0 +1,50 @@
+\begin{enumerate}
+\item Soit $f$ une fonction continue $T$-périodique, avec $T>0$.\\
+Soit $y\in f(\mathbb{R})$. Il existe donc $x\in\mathbb{R}$ tel que $y=f(x)$.\\
+Posons $k=\left\lfloor\frac xT\right\rfloor$. Alors $x=kT + (x-kT)$. Puisque $k\in\mathbb{Z}$, alors $y=f(x)=f(x-kT)$.\\
+Mais $k\leqslant\dfrac xT<k+1$ donc $0\leqslant x-kT<T$, et ainsi $y\in f([0,T])$. Et donc $f(\mathbb{R})\subset f([0,T])$.\\
+Mais $f$ est continue et $[0,T]$ est un segment, donc $f([0,T])$ est un ensemble borné, donc $f(\mathbb{R})$ aussi.
+\item Pour tout réel $x$, $f * g(x)$ est définie comme intégrale sur un segment d'une fonction continue.
+Une fonction continue $2 \pi$-périodique est bornée. Donc on peut majorer :
+$$
+\forall\, x \in \mathbb{R} \quad|(f * g)(x)| \leqslant 2 \pi N_{\infty}(f) N_{\infty}(g),
+$$
+ce qui permet de dire que $f * g$ est bornée et $N_\infty(f*g)\leqslant 2 \pi N_{\infty}(f) N_{\infty}(g)$.
+
+\item La $2 \pi$-périodicité de $f * g$ résulte immédiatement de celle de $f$.\\
+Il s'agit ensuite de montrer que, si $f$ et $g$ sont continues, $f * g$ l'est.\\
+Définissons
+$\phi$ : $(x, t) \mapsto f(x-t) g(t)$ sur $\mathbb{R} \times[-\pi, \pi]$. Elle est continue par rapport à chacune de ses variables, et
+$$
+\forall\,(x, t) \in \mathbb{R} \times[-\pi, \pi], \quad|\phi(x, t)| \leqslant N_{\infty}(f) N_{\infty}(g).
+$$
+Or la fonction $t \mapsto N_{\infty}(f) N_{\infty}(g)$ est continue sur $[-\pi, \pi]$ (la continuité par morceaux suffirait), intégrable sur ce segment. Le théorème de continuité sous le signe $\displaystyle\int$ permet alors de conclure.
+\item Nous avons
+$$
+\begin{aligned}
+(f * g)(x) & =\int_{-\pi}^\pi f(x-t) g(t)\mathrm{d} t \\
+& =\int_{x-\pi}^{x+\pi} f(u) g(x-u) \mathrm{d} u\ \text{(changement de variable $t=x-u$)}.
+\end{aligned}
+$$
+Mais
+$$
+\begin{aligned}
+\int_{x-\pi}^{x+\pi} f(u) g(x-u) \mathrm{d} u=\int_{x-\pi}^{-\pi} f(u) g(x-u) \mathrm{d} u & +\int_{-\pi}^\pi f(u) g(x-u) \mathrm{d} u \\
+& +\int_\pi^{x+\pi} f(u) g(x-u) \mathrm{d} u
+\end{aligned}
+$$
+et, en faisant le changement de variable $v=u+2 \pi, u=v-2 \pi$ dans la première intégrale, tenant compte de la $2 \pi$-périodicité de $f$ et $g$, on obtient finalement
+$$
+f * g=g * f.
+$$
+\item
+$$
+\begin{aligned}
+\left(e_k * e_{l}\right)(x) & =\int_{-\pi}^\pi \e^{i k(x-t)} \e^{i l t} \mathrm{d} t \\
+& =\p{\dint_{-\pi}^\pi \e^{i\left(l-k\right) t} \mathrm{d} t} e_k(x)
+\end{aligned}
+$$
+Si $k=l$, on obtient $\dint_{-\pi}^\pi \e^{i\left(l-k\right) t} \mathrm{d} t=2\pi$.\\
+Si $k\neq l$, $\dint_{-\pi}^\pi \e^{i\left(l-k\right) t} \mathrm{d} t=\left[\dfrac1{i(l-k)}\e^{i\left(l-k\right) t}\right]_{-\pi}^{\pi}=0$.\\
+Finalement $e_k*e_l=\begin{cases} 0&\text{ si }k\neq l\\2\pi e_k&\text{ si }k=l\end{cases}$.
+\end{enumerate}

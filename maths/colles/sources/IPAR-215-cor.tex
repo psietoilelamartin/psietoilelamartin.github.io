@@ -1,0 +1,46 @@
+\begin{enumerate}
+\item $F$ est bien définie sur $\mathbb{R}^{*}_+$ car pour $s>0$, on a
+$\e^{-s t} \dfrac{\sin (t)}{t}\underset{t \rightarrow0}{\longrightarrow}1$ et
+$\e^{-s t} \dfrac{\sin (t)}{t}\underset{t \rightarrow+\infty}{=}\mathcal o\left(\frac{1}{t^2}\right)$ donc $t \mapsto \e^{-s t} \dfrac{\sin (t)}{t}$ est intégrable sur $\mathbb{R}_+$ pour $s>0$.\\
+D'après la première phrase de l'énoncé, $F(0)$ est définie également.\\
+Montrons que $F$ est de classe $\cC^1$ sur $\mathbb{R}^{*}_+$.\\
+Soit $f$ : $(x, t) \in \mathbb{R}^{+} \times \mathbb{R}^{*}_+ \mapsto \e^{-x t} \dfrac{\sin (t)}{t}$. Alors $f$ est de classe $\cC ^{\infty}$ sur $\left(\mathbb{R}^{*}_+\right)^2$ avec $\dfrac{\partial f}{\partial x}(x, t)=-\e^{-x t} \sin (t)$.\\
+Soit $a>0$, pour tout $x \geq a$ et $t>0$, $\left|\dfrac{\partial f}{\partial x}(x, t)\right|=\e^{-x t}|\sin (t)| \leq \e^{-a t}$ et $t \mapsto \e^{-a t}$ est intégrable sur $\mathbb{R}^{+}$, donc par théorème de dérivation sous le signe somme, $F$ est de classe $\cC^1$ sur $] a,+\infty[$, donc sur $\mathbb{R}^{*}_+$, avec pour tout $s>0$,
+\begin{align*}
+F^{\prime}(x)&=-\int_0^{+\infty} \e^{-x t} \sin (t) \mathrm{d} t  =-\operatorname{Im}\left(\int_0^{+\infty} \e^{-(x-i) t} \mathrm{~d} t\right)\\
+ &=\operatorname{Im}\left(\frac{1}{i-x}\right)=-\frac{1}{1+x^2}.
+\end{align*}
+
+\item
+Donc il existe $c \in \mathbb{R}$ tel que $\forall\, x>0$, $F(x)=c-\arctan (x)$. Or, comme
+$$
+|F(x)| \leq \int_0^{+\infty} \e^{-x t} \mathrm{~d} t=\frac{1}{x} \xrightarrow[x \rightarrow+\infty]{ } 0
+$$
+On a donc $c=\dfrac{\pi}{2}$ et $\forall\, x>0, F(x)=\dfrac{\pi}{2}-\arctan (x)$.
+\item Il n'est pas possible d'utiliser le théorème de continuité sous le signe intégrale en l'état car $t \mapsto \dfrac{\sin (t)}{t}$ n'est pas intégrable sur $\mathbb{R}$.\\
+ Posons
+$$
+\left\{\begin{array}{l}
+F_1(x)=\dint_0^1 \e^{-x t} \dfrac{\sin (t)}{t} \mathrm{~d} t \\
+F_2(x)=\dint_1^{+\infty} \e^{-x t} \dfrac{\sin (t)}{t} \mathrm{~d} t
+\end{array}\right.
+$$
+de sorte que $F=F_1+F_2 $.\\
+
+La fonction $F_1$ est de classe $\cC^0$ sur $\mathbb{R}^{+}$ car on dispose de la domination $\left|f(x, t)\right|=\e^{-x t}\dfrac{|\sin (t)|}t \leq 1$ et la constante 1 est intégrable sur $] 0,1]$.\\
+Montrons la continuité sur $\mathbb R_+$ de $F_2=\operatorname{Im} G$ avec $G$ : $x \mapsto \dint_1^{+\infty} \dfrac{\e^{-(x-i) t}}{t} \mathrm{~d} t$.\\
+Pour $X \geq 1$,
+
+$$
+\int_1^X \frac{\e^{-(x-i) t}}{t} \mathrm{~d} t=\left[\frac{1}{i-x} \frac{\e^{-(x-i) t}}{t}\right]_1^X+\frac{1}{i-x} \int_1^X \frac{\e^{-(x-i) t}}{t^2} \mathrm{~d} t
+$$
+
+
+Comme $\left|\dfrac{\e^{-(x-i) t}}{t^2}\right| \leq \dfrac{1}{t^2}$, la fonction $t \mapsto \dfrac{\e^{-(x-i) t}}{t^2}$ est intégrable et
+
+$$
+G(x)=\frac{\e^{i-x}}{x-i}+\frac{1}{i-x} \int_1^{+\infty} \frac{\e^{-(x-i) t}}{t^2} \mathrm{~d} t
+$$
+Or, $(x, t) \mapsto \dfrac{\e^{-(x-i) t}}{t^2}$ est continue sur $\mathbb{R}^{+} \times\left[1,+\infty\left[\right.\right.$ et on dispose de la domination $\left|\dfrac{\e^{-(x-i) t}}{t^2}\right| \leq \dfrac{1}{t^2}$ donc $G$ est continue sur $\mathbb{R}^{+}$donc $F_1$ et $F_2$ le sont. Et donc $F$ aussi.
+\item On a donc $\dfrac\pi2=F(0)=\dint_0^{+\infty} \frac{\sin (t)}{t} \mathrm{~d} t$.
+\end{enumerate}

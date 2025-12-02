@@ -1,0 +1,14 @@
+%tous_les_exercices_danalyse_mp  Dunod 2008
+% Mines Ponts MP 2007
+
+\begin{enumerate}
+\item On pose $f=F^2$ où $F: x \mapsto \displaystyle\int_0^x \mathrm{e}^{-t^2} \mathrm{d} t$ est la primitive s'annulant en 0 de $x \mapsto \mathrm{e}^{-x^2}$. La fonction $F$ est de classe $\mathscr{C}^1$ sur $\mathbb{R}^{+}$. Donc $f$ l'est également, avec pour tout $x \geqslant 0, f^{\prime}(x)=2 F^{\prime}(x) F(x)=2 \mathrm{e}^{-x^2} \displaystyle\int_0^x \mathrm{e}^{-t^2} \mathrm{d} t$.
+
+Posons $h$ : $(x, t) \mapsto \displaystyle\frac{\mathrm{e}^{-x^2\left(1+t^2\right)}}{1+t^2}$ pour $(x, t) \in \mathbb{R}^{+} \times[0,1]$. Pour tout $x \geqslant 0$, $t \mapsto h(x, t)$ est continue sur $[0,1]$ et donc intégrable sur $[0,1]$. Pour tout $t \in[0,1], x \mapsto h(x, t)$ est de classe $\mathscr{C}^1$ sur $\mathbb{R}^{+}$avec $\displaystyle\frac{\partial h}{\partial x}(x, t)=-2 x \mathrm{e}^{-\left(1+t^2\right) x^2}$.\\
+Soit $[a,b]\subset\R_+$. Pour $(x, t) \in [a,b] \times[0,1],\left|\displaystyle\frac{\partial h}{\partial x}(x, t)\right| \leqslant 2b$ et $t \mapsto 2b$ est continue et intégrable sur $[0,1]$. Donc $g$ est de classe $\mathscr{C}^1$ sur $\mathbb{R}^{+}$avec, pour tout $x \geqslant 0$, $g^{\prime}(x)=-2 x \displaystyle\int_0^1 \mathrm{e}^{-x^2\left(1+t^2\right)} \mathrm{d} t=-2 \mathrm{e}^{-x^2} \displaystyle\int_0^1 \mathrm{e}^{-x^2 t^2} x \mathrm{d} t$. Le changement linéaire $u=x t$ donne $\forall x \in \mathbb{R}^{+}, g^{\prime}(x)=-2 \mathrm{e}^{-x^2} \displaystyle\int_0^x \mathrm{e}^{-u^2} d u$.
+
+\item D'après les calculs précédents, $f+g$ est de classe $\mathscr{C}^1$ sur $\mathbb{R}^{+}$, de dérivée nulle. La fonction $f+g$ est donc constante. Or $f(0)=0$ et $g(0)=\displaystyle\int_0^1 \displaystyle\frac{\mathrm{d} t}{1+t^2}=\operatorname{Arctan} 1=\displaystyle\frac{\pi}{4}$. Pour tout $x \geqslant 0, f(x)+g(x)=\displaystyle\frac{\pi}{4}$.
+
+\item La fonction $\varphi: t \mapsto \mathrm{e}^{-t^2}$ est intégrable sur $\mathbb{R}^{+}$car $\varphi$ est continue sur $\mathbb{R}^{+}$et $\varphi(t)=\underset{t \rightarrow+\infty}{\mathcal o}\left(\mathrm{e}^{-t}\right)$. Ainsi $\lim\limits _{x \rightarrow+\infty} f(x)=I^2$. On détermine la limite de $g$ en $+\infty$ par encadrement. Pour $x \geqslant 0$, on a $0 \leqslant g(x) \leqslant \displaystyle\int_0^1 \displaystyle\frac{\mathrm{e}^{-x^2}}{1+t^2} \mathrm{d} t=\displaystyle\frac{\pi}{4} \mathrm{e}^{-x^2}$.
+Par encadrement, on obtient $\lim\limits _{x \rightarrow+\infty} g(x)=0$. En conclusion $I^2=\displaystyle\frac{\pi}{4}$ et puisque $I \geqslant 0$, on obtient $I=\displaystyle\frac{\sqrt{\pi}}{2}$.
+\end{enumerate}

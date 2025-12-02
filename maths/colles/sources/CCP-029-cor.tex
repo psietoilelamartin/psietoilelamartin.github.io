@@ -1,0 +1,56 @@
+% CCP 2023, ex. 29
+\begin{enumerate}
+
+\item
+Soit $x\in \left] 0,+\infty\right[$.\\
+La fonction $t \mapsto {\mathrm{e}}^{ - t} t^{x - 1} $ est d\'{e}finie, positive et continue par morceaux sur $\left] {0, + \infty } \right[$.\\
+\medskip
+$f(x,t)\mathop  \sim \limits_{t \to 0^ +  } t^{x - 1}$ et $t\longmapsto  t^{x - 1}=\dfrac{1}{t^{1-x}}$ est int\'{e}grable sur $\left] 0,1\right] $ (fonction de Riemann avec $1-x<1$).\\
+Donc, par crit\`{e}re d'\'{e}quivalence pour les fonctions positives, $t\longmapsto f(x,t)$ est int\'{e}grable sur $\left] 0,1\right] $ .\:\:\:\:(*)\\
+\medskip
+De plus, $\lim\limits_{t\to+\infty}^{}t^2 f(x,t)=0$, donc, pour $t$ au voisinage de $+\infty$, $f(x,t)=o(\dfrac{1}{t^2})$.\\
+Or $t\longmapsto \dfrac{1}{t^2}$ est int\'{e}grable sur $\left[ 1,+\infty\right[ $ (fonction de Riemann int\'{e}grable).\\
+Donc  $t\longmapsto f(x,t)$ est int\'{e}grable sur $\left[ 1,+\infty\right[$.\:\:\:\:(**)\\
+\medskip
+Donc, d'apr\`{e}s (*) et (**), $t \mapsto f(x,t)$ est int\'{e}grable sur $\left] {0, + \infty } \right[$.\\
+\item
+Par int\'{e}gration par parties, justifi\'ee ci-apr\`es
+$\displaystyle\int_0^{+\infty}{{\mathrm{e}}^{ - t} t^x \,{\mathrm{d}}t}  = \left[ { - {\mathrm{e}}^{ - t} t^x } \right]_0^{+\infty}  + x\displaystyle\int_0^{+\infty} {{\mathrm{e}}^{ - t} t^{x - 1} \,{\mathrm{d}}t} $.\\
+Le crochet poss\`ede des limites finies \`a ses bornes par croissances compar\'ees, et est de valeur nulle, ce qui valide ce calcul et donne\\
+$\Gamma(x+1)=x\Gamma(x)$.\\
+\item
+i) pour tout $x>0$, $t\longmapsto f(x,t)$ est continue par morceaux et int\'{e}grable sur  $\left] {0, + \infty } \right[$ (d'apr\`{e}s la question 1.).\\
+ii) $\forall \:t\in \left] {0, + \infty } \right[$,  la fonction $x \mapsto f(x,t)$ est d\'{e}rivable et
+ $\forall \:(x,t)\in \left] {0, + \infty } \right[^2$,$\dfrac{{\partial f}}{{\partial x}}(x,t) = (\ln t){\mathrm{e}}^{ - t} t^{x - 1} $.\\
+iii) Pour tout $x > 0$, $t \mapsto \dfrac{{\partial f}}{{\partial x}}(x,t)$ est continue par morceaux sur  $ \left] {0, + \infty } \right[$.\\
+iv) Pour tout $t > 0$, $x \mapsto \dfrac{{\partial f}}{{\partial x}}(x,t)$ est continue sur  $ \left] {0, + \infty } \right[$.\\
+v) Pour tout $\left[ {a,b} \right] \subset \left] {0, + \infty } \right[$ et $\forall\,
+(t,x) \in \left] {0, + \infty } \right[ \times \left[ {a,b} \right]$~:\\
+$\left| {\dfrac{{\partial f}}{{\partial x}}(x,t)} \right| \leqslant  \varphi (t)$
+avec $\varphi(t)=\left\lbrace
+\begin{array}{lll}
+|\ln t|\mathrm{e}^{-t}t^{a-1}&\text{si}&t\in \left]  0,1\right[ \\
+|\ln t|\mathrm{e}^{-t}t^{b-1}&\text{si}&t\in \left[ 1,+\infty\right[
+
+\end{array}
+ \right. $
+
+avec  $\varphi $ continue par morceaux et int\'{e}grable sur $\left] {0, + \infty } \right[$.\\
+En effet:\\
+$\varphi(t)\underset{0^{+}}{\thicksim}|\ln t|t^{a-1}=\varphi_1(t)$ et $\lim\limits_{t\to 0^{+}}^{}t^{1-\frac{a}{2}}\varphi_1(t)=\lim\limits_{t\to 0}^{}t^{\frac{a}{2}}|\ln t|=0$.\\
+Donc, au voisinage de $0^{+}$, $\varphi_1(t)=\mathcal o\left( \dfrac{1}{t^{1-\frac{a}{2}}}\right) $.\\
+Or $t\longmapsto \dfrac{1}{t^{1-\frac{a}{2}}}$ est int\'{e}grable sur $\left]  0,1\right[$(fonction de Riemann avec $1-\dfrac{a}{2}<1$).\\
+Donc, $\varphi_1$ est int\'{e}grable sur $\left]  0,1\right[$.\\
+Donc, par crit\`{e}re d'\'{e}quivalence pour les fonctions positives, $\varphi$ est int\'{e}grable sur $\left]  0,1\right[$.\:\:\:\:\:\:(*)\\
+
+\medskip
+$\lim\limits_{t\to+\infty}^{}t^2\varphi(t)=0$.\\
+Donc, pour $t$ au voisinage de $+\infty$, $\varphi(t)=\mathcal o\left(\dfrac{1}{t^2}\right)$.\\
+Or, $t\longmapsto \dfrac{1}{t^2}$ est int\'{e}grable sur $\left[ 1,+\infty\right[ $ (fonction de Riemann int\'{e}grable).\\
+Donc $\varphi$ est int\'{e}grable sur $\left[1,+\infty \right[$.\:\:\:\:\:\:(**)\\
+\medskip
+D'apr\`{e}s (*) et (**), $\varphi$ est int\'{e}grable sur $\left] 0,+\infty\right[ $.\\
+\medskip
+D'o\`{u}, d'apr\`{e}s le th\'{e}or\`{e}me de d\'{e}rivation des int\'{e}grales \`{a} param\`{e}tres, $\Gamma $ est de classe ${\cC}^1 $ sur $\left] {0, + \infty } \right[$.\\
+De plus,  $\forall\:x\in\left] {0, + \infty } \right[$, $\Gamma '(x) = \displaystyle\int_0^{ + \infty } {(\ln t){\mathrm{e}}^{ - t} t^{x - 1} \,{\mathrm{d}}t} $.
+\end{enumerate}
