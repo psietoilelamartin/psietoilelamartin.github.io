@@ -1,0 +1,9 @@
+\begin{enumerate}
+\item $u$ étant continue, il existe $k\in\Rpe$ tel que pour tout $x$, $\norm{u(x)}\leq k\norm x$. Donc $\ens{\dfrac{\|u(x)\|}{\|x\|},\ x \in E \backslash\{0\}}$ est majoré Comme il est non vide, $M_1$ existe.\\
+De plus, $\ens{\dfrac{\|u(x)\|}{\|x\|},\ x \in E \backslash\{0\}}=\ens{\|u(x/\norm x)\|,\ x \in E \backslash\{0\}}=\ens{\|u(x)\|,\ x \in E \text { t.q. }\|x\|=1}$, donc $M_2$ existe, et vaut d'ailleurs $M_1$.\\
+Le dernier ensemble est inclus dans $\R_+$, non vide car $u$ est continue, et minoré par 0, donc $M_3$ existe.
+\item Nous avons déjà remarqué que $M_1=M_2$.\\
+$M_1$ majore $\ens{\dfrac{\|u(x)\|}{\|x\|},\ x \in E \backslash\{0\}}$ donc pour tout $x$, $\norm{u(x)}\leq M_1\norm x$. Donc $M_1\in\ens{k \geqslant 0 \text { t.q. } \forall\, x \in E,\ \|u(x)\| \leqslant k\|x\|}$, donc $M_3\leq M_1$.\\
+Réciproquement, soit $k\in\ens{k \geqslant 0 \text { t.q. } \forall\, x \in E,\ \|u(x)\| \leqslant k\|x\|}$. Donc si $x\neq 0$, $\dfrac{\|u(x)\|}{\|x\|}\leq k$. Ainsi $k$ est un majorant de $\ens{\dfrac{\|u(x)\|}{\|x\|},\ x \in E \backslash\{0\}}$, et donc $M_1\leq k$. Par conséquent $M_1$ est un minorant de $\ens{k \geqslant 0 \text { t.q. } \forall\, x \in E,\ \|u(x)\| \leqslant k\|x\|}$, donc $M_1\leq M_3$.\\
+Finalement $M_1=M_2=M_3$.
+\end{enumerate}

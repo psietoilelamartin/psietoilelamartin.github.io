@@ -1,0 +1,9 @@
+Soit l'application $\varphi$ : $A\to \R$, $y\mapsto \Vert x-y\Vert$.\\
+Soit $y,z \in A$. Alors
+\begin{align*}
+\left| \varphi(y)-\varphi(z)\right|&=\big|\ \Vert y-x\Vert-\Vert x-z\Vert\ \big|\\
+&\leq \Vert (y-x)+(x-z)\Vert\hspace{1cm}\text{par inégalité triangulaire}\\
+&\leq \Vert y-z\Vert.
+\end{align*}
+La fonction $\varphi$ est ainsi 1-lipschitzienne, et donc continue.\\
+Puisque $A$ est fermée et bornée et que $E$ est de dimension finie, $\varphi$ est bornée et atteint ses bornes. En particulier elle a un minimum, ce qui répond aux deux questions.
