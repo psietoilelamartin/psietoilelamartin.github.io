@@ -1,0 +1,6 @@
+\begin{enumerate}
+\item Soit $f \in F$. Alors la boule ouverte de centre $f$, de rayon $\displaystyle\frac{1}{2} \displaystyle\int_0^1 f$ (qui est bien strictement positif) est incluse dans $F$. En effet, si $g \in B\left(f, \frac{1}{2} \displaystyle\int_0^1 f\right)$ alors $\|g-f\|_{\infty}<\displaystyle\frac{1}{2} \displaystyle\int_0^1 f$ donc $f-\displaystyle\frac{1}{2} \displaystyle\int_0^1 f \leqslant g \leqslant f+\displaystyle\frac{1}{2} \displaystyle\int_0^1 f$.\\
+Donc par croissance de l'intégrale, $\displaystyle\int_0^1 g \geqslant \displaystyle\int_0^1 f-\displaystyle\frac{1}{2} \displaystyle\int_0^1 f=\displaystyle\frac{1}{2} \displaystyle\int_0^1 f>0$ donc $g \in F$.
+\item La fonction $\varphi$ : $E\to\R$, $f\mapsto\displaystyle\int_0^1 f$ vérifie : pour tout $f,g\in E$, $\left|\varphi(f)-\varphi(g)\right|\leqslant\displaystyle\int_0^1\Vert f-g\Vert_{\infty}=\Vert f-g\Vert_{\infty}$. Elle est donc 1-lipschitzienne, et ainsi elle est continue.\\
+Or $F=\varphi^{-1}(\R_+^{\star})$ et $\R_+^{\star}$ est un ouvert, donc $F$ aussi.
+\end{enumerate}

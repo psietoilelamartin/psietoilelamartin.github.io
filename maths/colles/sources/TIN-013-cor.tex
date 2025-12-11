@@ -1,0 +1,38 @@
+% \begin{enumerate}
+%  \item Trouver toutes les fontions $g$ continues sur $\mathbb{R}$, vérifiant $\forall (x,y)\in \mathbb{R}^2, g(x+y) = g(x)+g(y)$.
+%  \item Même question pour $g(x+y) = g(x)g(y)$.
+% \end{enumerate}
+\begin{enumerate}
+\item \underline{Analyse :} Soit $g$ solution.\\
+\bu\ $g(0)=g(0+0)=g(0)+g(0)$, donc $g(0)=0$.\\
+\bu\ Soit $y\in\mathbb{R}$. Pour tout $n\in\mathbb{N}$, posons $(H_n)$ : $g(ny)=ng(y)$.\\
+$(H_0)$ a été démontrée.\\
+Soit $n\in\mathbb{N}$ tel que $(H_n)$ est vraie. Alors $g((n+1)y)=g(ny)+g(y)=ng(y)+g(y)=(n+1)g(y)$, et ainsi par récurrence $(H_n)$ est vraie pour tout $n\in\mathbb{N}$. En particulier, nous avons montré, en posant $y=1$, que
+$$\forall\,x\in\mathbb{N},\ g(x)=xg(1).$$
+\bu\ Soit $n\in\mathbb{N}$, $0=g(0)=g(n-n)=g(n)+g(-n)$ et donc $g(-n)=-g(n)=-ng(1)$, ce qui prouve que
+$$\forall\,x\in\mathbb{Z},\ g(x)=xg(1).$$
+\bu\ Soit $q\in\mathbb{Q}$. Il existe $(a,b)\in\mathbb{Z}\times\mathbb{N}^\ast$ tel que $q=\dsp\frac ab$. Alors $bg(q)=g(bq)=g(a)=ag(1)$ donc $g(q)=\dsp\frac abg(1)$ donc
+$$\forall\,x\in\mathbb{Q},\ g(x)=xg(1).$$
+\bu\ Soit $x\in\mathbb{R}$. Par densité de $\mathbb{Q}$ dans $\mathbb{R}$, il existe une suite de rationnels $(q_n)$ qui converge vers $x$. D'une part $g(q_n)=q_ng(1)\tend xg(1)$ et d'autre part, par continuité de $g$, $g(q_n)\tend g(x)$. Ainsi
+$$\forall\,x\in\mathbb{R},\ g(x)=xg(1).$$\\
+Par conséquent il existe $\lambda\in\mathbb{R}$ tel que $g=\lambda\mathrm{id}_\mathbb{R}$.\\
+
+
+\underline{Synthèse :} Soit $\lambda\in\mathbb{R}$, il est immédiat que $\lambda\mathrm{id}_\mathbb{R}$ est solution.\\
+
+L'ensemble des solutions est donc $\{\lambda\mathrm{id}_\mathbb{R},\ \lambda\in\mathbb{R}\}$.
+
+
+\item \underline{Analyse :} Soit $g$ solution.\\
+S'il existe $x\in\R$ tel que $g(x)=0$, alors pour tout $t\in\R$, $g(t)=g(x+t-x)=g(x)g(t-x)=0$ donc $g=0$ -- et la fonction nulle est bien solution.\\
+Sinon, $g$ ne s'annule pas, et comme elle est continue, elle est de signe constant. Si $g<0$, pour tout $x,y\in\R$, $g(x+y)<0$ et $g(x)g(y)>0$, ce qui est absurde.\\
+Donc $g>0$.\\
+Alors pour tout $x,y\in\mathbb{R}$, $\ln\circ g(x+y)=\ln( g(x)g(y))=\ln\circ g(x)+\ln\circ g(y)$. Grâce à la première question, il existe donc $\lambda\in\mathbb{R}$ tel que $\ln\circ g=\lambda\mathrm{id}_\mathbb{R}$, donc $g=\exp\circ(\lambda\mathrm{id}_\mathbb{R})$.\\
+
+
+
+\underline{Synthèse :} Soit $\lambda\in\mathbb{R}$, il est immédiat que $\exp\circ(\lambda\mathrm{id}_\mathbb{R})$ est solution, ainsi que la fonction nulle.\\
+
+
+L'ensemble des solutions est donc $\{\exp\circ(\lambda\mathrm{id}_\mathbb{R}),\ \lambda\in\mathbb{R}\}\cup\{0\}$.
+\end{enumerate}
