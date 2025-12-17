@@ -1,0 +1,46 @@
+\begin{enumerate}
+\item La loi conjointe de $X$ et $Y$ déterminant une probabilité
+
+$$
+\sum_{j=0}^{+\infty} \sum_{k=0}^{+\infty} \mathrm{P}(X=j, Y=k)=1
+$$
+
+
+Or
+
+$$
+\sum_{j=0}^{+\infty} \sum_{k=0}^{+\infty} \mathrm{P}(X=j, Y=k)=8 a
+$$
+
+car
+
+$$
+\sum_{j=0}^{+\infty} \sum_{k=0}^{+\infty} \frac{j}{2^{j+k}}=\sum_{j=0}^{+\infty} \frac{j}{2^{j}}\sum_{k=0}^{+\infty} \frac{1}{2^{k}}=\sum_{j=1}^{+\infty} \frac{j}{2^{j-1}}=\frac{1}{(1-1 / 2)^2}=4
+$$
+
+
+On en déduit $a=1 / 8$
+\item Pour $j \in \mathbb{N}$
+
+$$
+\mathrm{P}(X=j)=\sum_{k=0}^{+\infty} \mathrm{P}(X=j, Y=k)=\frac{j+1}{2^{j+2}}
+$$
+
+et pour $k \in \mathbb{N}$
+
+$$
+\mathrm{P}(Y=k)=\sum_{j=0}^{+\infty} \mathrm{P}(X=j, Y=k)=\frac{k+1}{2^{k+2}}
+$$
+\item Les variables ne sont par indépendantes car l'on vérifie aisément
+
+$$
+\mathrm{P}(X=j, Y=k) \neq \mathrm{P}(X=j) \mathrm{P}(Y=k)
+$$
+
+pour $j=k=0$.
+\item Par probabilités totales
+
+$$
+\mathrm{P}(X=Y)=\sum_{n=0}^{+\infty} \mathrm{P}(X=n, Y=n)=\sum_{n=0}^{+\infty} \frac{2 n}{2^{2 n+3}}=\frac1{16}\sum_{n=1}^{+\infty} \frac{n}{4^{n-1}}=\frac{1}{9}
+$$
+\end{enumerate}

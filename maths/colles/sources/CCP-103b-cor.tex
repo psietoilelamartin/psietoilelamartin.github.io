@@ -1,0 +1,33 @@
+% CCP 2023 103
+\begin{enumerate}
+\item
+$X_1(\Omega)=\mathbb{N}$ et $X_2(\Omega)=\mathbb{N}$ donc $(X_1+X_2)(\Omega)=\mathbb{N}$.\\
+Soit $n\in \mathbb{N}$.\\
+$(X_1+X_2=n)=\bigcup\limits_{k=0}^{n}\left((X_1=k)\cap (X_2=n-k) \right) $ (union d'évènements deux à  deux disjoints).\\
+Donc:\\
+\begin{eqnarray*}
+P(X_1+X_2=n)&=&\displaystyle\sum\limits_{k=0}^{n} P\left( (X_1=k)\cap(X_2=n-k)\right)  \\
+& = & \displaystyle\sum\limits_{k=0}^{n} P{(X_1=k)}P(X_2=n-k)\:\text{car}\:X_1 \:\text{et}\: X_2 \:\text{sont indépendantes}.\\
+& = &\displaystyle\sum\limits_{k=0}^n  \e^{-\lambda_1} \dfrac{\lambda_1^k}{k!}\times \e^{-\lambda_2}\dfrac{\lambda_2^{n-k}}{(n-k)!}=\dfrac{\e^{-(\lambda_1+\lambda_2)}}{n!}\displaystyle\sum\limits_{k=0}^n \dfrac{n!}{k!(n-k)!}\lambda_1^k\lambda_2^{n-k}\\
+ &=&\dfrac{\e^{-(\lambda_1+\lambda_2)}}{n!}\displaystyle\sum\limits_{k=0}^n \dbinom{n}{k}\lambda_1^k\lambda_2^{n-k}=\e^{-(\lambda_1+\lambda_2)}\dfrac{(\lambda_1+\lambda_2)^n}{n!}
+\end{eqnarray*}
+Ainsi $X_1+X_2\leadsto\mathscr{P}(\lambda_1+\lambda_2)$.\\
+
+
+\item
+Soit $k\in\mathbb{N}$, $P(X=k)=\displaystyle\sum\limits_{m=0}^{+\infty}P\left( (X=k)\cap (Y=m)\right)=\displaystyle\sum\limits_{m=0}^{+\infty}P_{(Y=m)}( X=k)P(Y=m)$.\\
+Or, par hypothèse,
+$$\forall m\in \mathbb{N},\, P_{(Y=m)}(X=k)=\left\lbrace
+\begin{array}{cc}
+\dbinom{m}{k} p^k(1-p)^{m-k}&\text{si}\:k\leqslant m\\
+0&\text{sinon}\\
+\end{array} \right.$$
+Donc :
+\begin{eqnarray*}
+P(X=k)&=&\displaystyle\sum\limits_{m=k}^{+\infty} \binom{m}{k} p^k(1-p)^{m-k}\mathrm{e}^{-\lambda}\:\frac{\lambda^m}{m!}
+=\mathrm{e}^{-\lambda}\frac{p^k}{k!}\lambda^k\displaystyle\sum\limits_{m=k}^{+\infty} \frac{\left( \lambda(1-p)\right)^{m-k}}{(m-k)!}\\
+&=&\mathrm{e}^{-\lambda}\frac{p^k}{k!}\lambda^k\displaystyle\sum\limits_{m=0}^{+\infty} \frac{\left( \lambda(1-p)\right)^{m}}{m!}=\mathrm{e}^{-\lambda}\frac{p^k}{k!}\lambda^k\mathrm{e}^{\lambda(1-p)}\\
+&=&\mathrm{e}^{-\lambda p}\frac{\left(\lambda p \right) ^k}{k!}\\
+\end{eqnarray*}
+Ainsi $X\leadsto \mathscr{P}(\lambda p)$.
+\end{enumerate}

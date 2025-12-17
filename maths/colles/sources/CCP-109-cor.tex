@@ -1,0 +1,65 @@
+% CCP 2023 109
+\begin{enumerate}
+\item
+$X(\Omega)=\llbracket 1,3\rrbracket$.\\
+$\forall \: i\in\llbracket1,n\rrbracket$, on note $B_i$ la $i ^{\text{ème}}$ boule blanche.\\
+$\forall \: i\in\llbracket1,2\rrbracket$, on note $N_i$ la $i ^{\text{ème}}$ boule noire.\\
+On pose $E=\left\lbrace B_1,B_2,...,B_n,N_1,N_2 \right\rbrace$.\\
+Alors $\Omega$ est l'ensemble des permutations de $E$ et donc $\text{card}(\Omega)=(n+2)!$.\\
+
+
+$(X=1)$ correspond aux tirages des $(n+2)$ boules pour lesquels la première boule tirée est blanche.\\
+On a donc $n$ possibilités pour le choix de la première boule blanche et donc $(n+1)!$ possibilités pour les tirages restants.\\
+Donc $P(X=1)=\dfrac{n\times(n+1)!}{(n+2)!}=\dfrac{n}{n+2}.$ \\
+
+$(X=2)$ correspond aux tirages des $(n+2)$ boules pour lesquels la première boule tirée est noire et la seconde est blanche.\\
+On a donc 2 possibilités pour la première boule, puis $n$ possibilités pour la seconde boule et enfin $n!$ possibilités pour les tirages restants.\\
+Donc $P(X=2)=\dfrac{2\times n\times(n)!}{(n+2)!}=\dfrac{2n}{(n+1)(n+2)}.$\\
+
+$(X=3)$ correspond aux tirages des $(n+2)$ boules pour lesquels la première boule et la seconde boule sont noires.\\
+On a donc 2 possibilités pour la première boule, puis une seule possibilité pour la seconde et enfin $n!$ possibilités pour les boules restantes.\\
+Donc $P(X=3)=\dfrac{2\times 1\times(n)!}{(n+2)!}=\dfrac{2}{(n+1)(n+2)}.$\\
+
+\textbf{Autre méthode}: \\
+Dans cette méthode, on ne s'interesse qu'aux "premières" boules tirées, les autres étant sans importance.\\
+
+$X(\Omega)=\llbracket 1,3\rrbracket$.\\
+
+$(X=1)$ est l'événement: "obtenir une boule blanche au premier tirage".\\
+Donc $P(X=1)=\dfrac{\text{nombre de boules blanches}}{\text{nombre de boules de l'urne}}=\dfrac{n}{n+2}$.\\
+
+$(X=2)$ est l'événement: " obtenir une boule noire au premier tirage puis une boule blanche au second tirage".\\
+D'où $P(X=2)=\dfrac{2}{n+2}\times\dfrac{n}{n+1}=\dfrac{2n}{(n+2)(n+1)}$, les tirages se faisant sans remise.\\
+
+$(X=3)$ est l'événement : "obtenir une boule noire lors de chacun des deux premiers tirages puis une boule blanche au troisième tirage".\\
+D'où $P(X=3)=\dfrac{2}{n+2}\times\dfrac{1}{n+1}\times\dfrac{n}{n}=\dfrac{2}{(n+2)(n+1)}$, les tirages se faisant sans remise.\\
+\item
+$Y(\Omega)=\llbracket 1,n+1\rrbracket$.\\
+Soit $k\in \llbracket 1,n+1\rrbracket$.\\
+L'événement $(Y=k)$ correspond aux tirages des $(n+2)$ boules  où les $(k-1)$ premières boules tirées ne sont ni $B_1$ ni $N_1$ et la $k^{\text{ième}}$ boule tirée est $B_1$ ou $N_1$.\\
+On a donc, pour les $(k-1)$ premières boules tirées , $\dbinom{n}{k-1}$ choix possibles de ces boules et $(k-1)!$ possibilités pour leur rang de tirage sur les $(k-1)$ premiers tirages, puis 2 possibilités pour le choix de la  $k^{\text{ième}}$ boule et enfin $(n+2-k)!$ possibilités pour les rangs de tirage des boules restantes.\\
+
+Donc $P(Y=k)=\dfrac{\dbinom{n}{k-1}\times (k-1)!\times 2\times (n+2-k)!}{(n+2)!}
+=\dfrac{2\dfrac{n!}{(n-k+1)!}\times(n+2-k)!}{(n+2)!}$\\
+Donc $P(Y=k)=\dfrac{2(n+2-k)}{(n+1)(n+2)}$.\\
+
+\textbf{Autre méthode}:\\
+$Y(\Omega)=\llbracket 1,n+1\rrbracket$.\\
+
+On note
+ $A_k$ l'événement " une boule ne portant pas le numéro 1 est tirée au rang $k$".\\
+
+
+ Soit $k\in \llbracket 1,n+1\rrbracket$.\\
+
+ On a : $(Y=k)=A_1\cap A_2\cap....\cap A_{k-1}\cap \overline{A_k}$.\\
+
+ Alors, d'après la formule des probabilités composées,\\
+ $P(Y=k)=P(A_1)P_{A_1}(A_2)...P_{A_1\cap A_2\cap...\cap A_{k-2}}(A_{k-1})P_{A_1\cap A_2\cap...\cap A_{k-1}}(\overline{A_k})$.\\
+ $P(Y=k)=\dfrac{n}{n+2}\times\dfrac{n-1}{(n+2)-1}\times\dfrac{n-2}{(n+2)-2}\times ...\times\dfrac{n-(k-2)}{(n+2)-(k-2)}\times \dfrac{2}{(n+2)-(k-1)}$\\
+
+ $P(Y=k)=\dfrac{n}{n+2}\times\dfrac{n-1}{n+1}\times\dfrac{n-2}{n}\times...\times\dfrac{n-k+2}{n-k+4}\times \dfrac{2}{n-k+3}$.\\
+
+ $P(Y=k)=2\:\dfrac{n!}{(n-k+1)!}\times \dfrac{(n-k+2)!}{(n+2)!}$.\\
+ $P(Y=k)=\dfrac{2(n-k+2)}{(n+2)(n+1)}$.
+\end{enumerate}

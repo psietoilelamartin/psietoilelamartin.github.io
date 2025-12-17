@@ -1,0 +1,53 @@
+% CCP 2023 106
+\begin{enumerate}
+\item
+$(U,V)(\Omega)=\left\lbrace (m,n)\in\mathbb{N}^2\:\text{tel que}\: m\geqslant n\right\rbrace$.
+Soit $(m,n)\in\mathbb{N}^2$ tel que $m\geqslant n$.\\
+\textbf{Premier cas: si m=n}\\
+$P((U=m)\cap(V=n))=P((X=n)\cap(Y=n))=P(X=n)P(Y=n)$ car $X$ et $Y$ sont indépendantes.\\
+Donc $P((U=m)\cap(V=n))=p^2q^{2n}$. \\
+\textbf{Deuxième cas: si m>n}\\
+$P((U=m)\cap(V=n))=P(\left[  (X=m)\cap(Y=n)\right]  \cup \left[  (X=n)\cap(Y=m)\right]  )$\\
+Les événements $\left( (X=m)\cap(Y=n)\right)$ et  $\left( (X=n)\cap(Y=m)\right)$ sont incompatibles donc:\\
+$P((U=m)\cap(V=n))=P\left( (X=m)\cap(Y=n)\right)+P\left( (X=n)\cap(Y=m)\right)$.\\
+Or les variables $X$ et $Y$ suivent la même loi et sont indépendantes donc:\\
+$P((U=m)\cap (V=n))=2P (X=m)P(Y=n)=2p^2q^{n+m}$.\\
+\bigskip
+\textbf{Bilan}: $P((U=m)\cap (V=n))=\left\lbrace
+\begin{array}{ll}
+p^2q^{2n}&\:\text{ si}\: m=n\\
+2p^2q^{n+m} &\:\text{si}\: m>n\\
+0 & \:\text{ sinon}
+\end{array}
+\right.$
+\item
+$U(\Omega)=\mathbb{N}$ et $V(\Omega)=\mathbb{N}.$
+Soit $m\in\mathbb{N}$. \\
+$P(U=m)=\displaystyle\sum\limits_{n=0}^{+\infty}P((U=m)\cap(V=n))$. ( loi marginale de $(U,V)$ )\\
+Donc d'après 1., $P(U=m)=\displaystyle\sum\limits_{n=0}^{m}P((U=m)\cap(V=n))$ \:\:\: $(*)$\\
+\textbf{ Premier cas}: $m\geqslant 1$\\
+D'après $(*)$, $P(U=m)=P((U=m)\cap(V=m))+\displaystyle\sum\limits_{n=0}^{m-1}P((U=m)\cap(V=n))$. \\
+Donc $P(U=m)=p^2q^{2m}+\displaystyle\sum\limits_{n=0}^{m-1}2p^2q^{n+m}
+=p^2q^{2m}+2p^2q^m\displaystyle\sum\limits_{n=0}^{m-1}q^{n}
+=p^2q^{2m}+2p^2q^m\dfrac{1-q^m}{1-q}=p^2q^{2m}+2pq^m(1-q^m)$\\
+Donc  $P(U=m)=pq^m(pq^m+2-2q^m)$.\\
+\medskip
+\textbf{Deuxième cas }: $m=0$\\
+D'après $(*)$ et 1., $P(U=0)=P((U=0)\cap (V=0))=p^2$.\\
+\medskip
+\textbf{Bilan }:
+$\forall\:m\in\mathbb{N}$, $P(U=m)=pq^m(pq^m+2-2q^m)$.\\
+\item
+$W\left(\Omega \right)=\mathbb{N}^*$.\\
+Soit $n\in\mathbb{N}^*$.\\
+ $P(W=n)=P(V=n-1)=pq^{2(n-1)}(1+q)=(1-q)q^{2(n-1)}(1+q)$.\\
+Donc $P(W=n)=(1-q^2)\left( q^2\right) ^{n-1}$.\\
+Donc $W$ suit une loi géométrique de paramètre $1-q^2$.
+% Donc, d'après le cours, $E(W)=\dfrac{1}{1-q^2}$.
+% Donc $E(V)=E(W-1)=E(W)-1=\dfrac{q^2}{1-q^2}$.
+
+\item
+$P((U=0)\cap (V=1))=0$ et $P(U=0)P( V=1)=p^3q^2(1+q)\neq 0$.
+Donc $U$ et $V$ ne sont pas indépendantes.
+
+\end{enumerate}
