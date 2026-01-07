@@ -1,0 +1,30 @@
+\begin{enumerate}
+\item Ces deux séries entières ont le même rayon de convergence, 
+et pour le montrer il suffit de montrer que si $\a\geqslant 0$, 
+les séries entières $\displaystyle\sum_{n\geqslant 0} a_nz^n$ et 
+$\displaystyle\sum_{n\geqslant 0}n^\alpha a_nz^n$ ont le même rayon de convergence. 
+En effet, si le résultat est vrai pour $\alpha>0$, alors 
+$\displaystyle\sum_{n\geqslant 0} a_nz^n$ 
+et $\displaystyle\sum_{n\geqslant 0}\dfrac{a_n}{n^\alpha}z^n$ ont le même 
+rayon de convergence puisque $a_n=n^\alpha\times\displaystyle\frac{a_n}{n^\alpha}$. 
+Et ainsi le résultat sera aussi vrai pour $\alpha<0$.\\
+Pour cela posons $b_n=n^\alpha a_n$, et notons $R_a$ et $R_b$ les rayons de convergence
+des deux séries entières associées.
+\begin{itemize}
+\item Si $\alpha=0$, $a_n=b_n$ et donc le résultat est immédiat.
+\item Si $\alpha>0$, alors $a_n=o(b_n)$ donc $R_a\geqslant R_b$.\\
+Soit $r<R_a$. Alors il existe $\rho\in]r,R_a[$. 
+Alors $b_nr^n=a_n\rho^n\times n^\alpha\p{\displaystyle\frac r\rho}^n
+=o\left(a_n\rho^n\right)$ par croissances comparées. 
+Donc $\displaystyle\sum_{n\geqslant 0}b_nr^n$ converge, 
+car $\displaystyle\sum_{n\geqslant 0}a_n\rho^n$ converge. 
+Ainsi $r\leqslant R_b$, et ainsi étant valable pour tout $r<R_a$, nous avons 
+$R_a\leqslant R_b$.\\
+Finalement, $R_a=R_b$.
+\end{itemize}
+\item Soit $\alpha=\textrm{deg} P - \textrm{deg} Q$, et soit $p$ et $q$ les 
+coefficients dominants respectifs de $P$ et $Q$ (qui sont non nuls). 
+Alors $\displaystyle\frac{P(n)}{Q(n)}\sim \dfrac pq n^\alpha$. Donc 
+$\displaystyle\sum_{n\geqslant 0}\displaystyle\frac{P(n)}{Q(n)}a_nz^n$ a même
+rayon de convergence  que $\displaystyle\sum_{n\geqslant 0}a_nz^n$.
+\end{enumerate}

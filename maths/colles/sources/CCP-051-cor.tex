@@ -1,0 +1,38 @@
+% ccp 2023, ex. 51
+\begin{enumerate}
+
+\item On pose : $\forall\, n\in\mathbb N, u_{n}=\dfrac{(2n)!}{(n!)^{2}2^{4n}(2n+1)}$. \\
+On a : $\forall\, n\in\mathbb N$, $u_n>0$.\\
+ $\forall\, n\in\mathbb N, \dfrac{u_{n+1}}{u_{n}}=\dfrac{(2n+2)(2n+1)(2n+1)}{(n+1)^{2}2^{4}(2n+3)}=\dfrac{(2n+1)^2}{8(n+1)(2n+3)}\underset{+\infty}{\thicksim}\dfrac{1}{4}$\,.\\
+  Ainsi, $\dfrac{u_{n+1}}{u_{n}}\underset{n\to+\infty}{\longrightarrow}\dfrac{1}{4}<1$.
+
+Donc, d'après la règle de d'Alembert, $\sum u_{n}$ converge.
+
+\item D'après le cours,  $\forall\alpha\in\mathbb R$, $u\mapsto(1+u)^{\alpha}$ est développable en série entière en $0$ et le rayon de convergence $R$ de son développement en série entière vaut $1$ si $\alpha\not\in \mathbb{N}.$\\
+De plus, $\forall\:u\in \left] -1,1\right[ $, $(1+u)^\alpha=1+\sum\limits_{n=1}^{+\infty}\dfrac{\alpha(\alpha-1)...(\alpha-n+1)}{n!}u^n$.\\
+En particulier, pour $\alpha=-\dfrac{1}{2}$ et $u=-t$:\\
+$R=1$ et $\forall\, t\in]-1,1[,  \dfrac{1}{\sqrt{1-t}}=1+\displaystyle\sum\limits_{n=1}^{+\infty}\dfrac{(-1)(-3)\cdots\big(-(2n-1)\big)}{2^{n}n!}\,(-t)^{n}$.
+
+En multipliant numérateur et dénominateur par $2.4.\ldots2n=2^{n}n!$, on obtient~:
+
+$\forall\, t\in]-1,1[,\: \dfrac{1}{\sqrt{1-t}}=1+\displaystyle\sum\limits_{n=1}^{+\infty}\dfrac{(2n)!}{(2^{n}n!)^{2}}\,t^{n}$\\
+Conclusion : $R=1$ et $\forall\, t\in]-1,1[$,  $\dfrac{1}{\sqrt{1-t}}=\displaystyle\sum\limits_{n=0}^{+\infty}\dfrac{(2n)!}{(2^{n}n!)^{2}}\,t^{n}.$
+
+
+\item D'après la question précédente, en remarquant que~:  $x\in]-1,1[\Leftrightarrow t=x^{2}\in[0,1[$ et $[0,1[\subset]-1,1[$, il vient~:
+
+$\forall\, x\in]-1,1[,\ \,\dfrac{1}{\sqrt{1-x^{2}}}=\displaystyle\sum\limits_{n=0}^{+\infty}\dfrac{(2n)!}{(2^{n}n!)^{2}}\,x^{2n}$ avec un rayon de convergence $R=1$.
+
+$\mathrm{Arcsin}$ est dérivable sur $]-1,1[$ avec $\mathrm{Arcsin}':x\longmapsto\dfrac{1}{\sqrt{1-x^{2}}}$\,.\\
+D'après le cours sur les séries entières, on peut intégrer terme à terme le développement en série entière de $x\mapsto\dfrac{1}{\sqrt{1-x^2}}$ et  le rayon de convergence est conservé.\\
+De plus, on obtient~:\\
+
+$\forall\, x\in]-1,1[,\ \,\mathrm{Arcsin}\,x=\underbrace{\mathrm{Arcsin\,}0}_{=0}+\displaystyle\sum\limits_{n=0}^{+\infty}\dfrac{(2n)!}{(2^{n}n!)^{2}(2n+1)}\,x^{2n+1}$ avec un rayon de convergence $R=1$.
+
+
+
+\item Prenons $x=\dfrac{1}{2}\in]-1,1[$ dans le développement précédent.\\
+ On en déduit que $\mathrm{Arcsin\,}\left(\dfrac{1}{2}\right)=\displaystyle\sum\limits_{n=0}^{+\infty}\dfrac{(2n)!}{2^{2n}(n!)^{2}(2n+1)}\,\dfrac{1}{2^{2n+1}}$.\\
+C'est-à-dire, en remarquant que $\mathrm{Arcsin\,}\left(\dfrac{1}{2}\right)=\dfrac{\pi}{6}$, on obtient $\displaystyle\sum\limits_{n=0}^{+\infty}\dfrac{(2n)!}{(n!)^{2}2^{4n}(2n+1)}=\dfrac{\pi}{3}$.
+
+\end{enumerate}

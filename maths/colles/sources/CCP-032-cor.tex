@@ -1,0 +1,27 @@
+% ccp 2023, ex. 32
+\begin{enumerate}
+\item
+Soit $\displaystyle\sum {a_n x^n } $ une série entière de rayon de convergence $R > 0$ et de somme $S$.\\
+Pour tout $x \in \left] { - R,R} \right[$,
+$S(x) = \displaystyle\sum\limits_{n = 0}^{ + \infty } {a_n x^n } \text{, }S'(x) = \displaystyle\sum\limits_{n = 1}^{ + \infty } {na_n x^{n - 1} } \text{ et }S''(x) = \displaystyle\sum\limits_{n = 2}^{ + \infty } {n(n - 1)a_n x^{n - 2} }  = \displaystyle\sum\limits_{n = 1}^{ + \infty } {(n + 1)na_{n + 1} x^{n - 1} } $.\\
+\medskip
+Donc
+$x(x - 1)S''(x) + 3xS'(x) + S(x) = \displaystyle\sum\limits_{n = 0}^{ + \infty } {\left( {(n + 1)^2 a_n  - n(n + 1)a_{n + 1} } \right)x^n } $.\\
+Par unicité des coefficients d'un développement en série entière, la fonction $S$ est solution sur $\left] { - R,R} \right[$ de l'équation étudiée si, et seulement si, $\forall\:n\in\mathbb{N}$, $(n + 1)^2 a_n  - n(n + 1)a_{n + 1}=0 $.\\
+C'est-à-dire : $\forall n \in \mathbb{N}$, $na_{n + 1}  = (n + 1)a_n $.\\
+Ce qui revient à :
+$\forall n \in \mathbb{N},a_n  = na_1 $.\\
+Le rayon de convergence de la série entière $\displaystyle\sum {nx^n } $ étant égal à 1, on peut affirmer que les fonctions développables en série entière solutions de l'équation sont
+les fonctions :\\$x \mapsto a_1 \displaystyle\sum\limits_{n = 0}^{ + \infty } {nx^n }  = a_1 x\dfrac{{{\mathrm{d}}}}{{{\mathrm{d}}x}}\left( {\dfrac{1}{{1 - x}}} \right) = \dfrac{{a_1 x}}{{(1 - x)^2 }}$
+définies sur $\left] { - 1,1} \right[$,  avec $a_1\in\mathbb{R}$.\\
+
+\item
+Notons $(E)$ l'équation $x(x-1)y''+3xy'+y=0$.\\
+Prouvons que les solutions de $(E)$ sur $\left] 0;1\right[$ ne sont pas toutes développables en série entière à l'origine.
+Raisonnons par l'absurde.\\
+Si toutes les solutions de $(E)$ sur $\left] 0;1\right[$ étaient développables en série entière à l'origine alors, d'après 1., l'ensemble des solutions de $(E)$ sur $\left] 0;1\right[$ serait égal à la droite vectorielle $\mathrm{Vect} (f)$ où $f$ est la fonction définie par $\forall\:x\in \left] 0;1\right[$, $f(x)=\dfrac{x}{(1-x)^2}$.\\
+Or, d'après le cours, comme les fonctions $x\longmapsto x(x-1)$, $x\longmapsto 3x$ et $x\longmapsto 1$ sont continues sur $\left] 0;1\right[$ et que  la fonction $x\longmapsto x(x-1)$ ne s'annule pas sur $\left] 0;1\right[$, l'ensemble des solutions de $(E)$ sur  $\left] 0;1\right[$ est un plan vectoriel.\\
+D'où l'absurdité.
+
+
+\end{enumerate}

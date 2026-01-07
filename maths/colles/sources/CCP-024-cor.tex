@@ -1,0 +1,24 @@
+% CCP 2023, ex. 24
+
+\begin{enumerate}
+\item
+Notons $R$ le rayon de convergence de la série entière $\displaystyle\sum\dfrac{x^n}{(2n)!}$.\\
+ Pour $x \ne 0$, posons $u_n  = \dfrac{x^n }{(2n)!}$.\\
+ $\lim\limits_{n\to+\infty}^{}\left| \dfrac{u_{n + 1} }  {u_n } \right|=\lim\limits_{n\to+\infty}^{} \dfrac{|x|}{(2n+2)(2n+1)}=0$.\\
+On en déduit que la série entière $\displaystyle\sum {\dfrac{{x^n }}{{(2n)!}}} $ converge pour tout $x \in \mathbb{R}$ et donc $R =  + \infty $.
+\item
+
+$\forall \:x\in\mathbb{R}$, $\textrm{ch} (x) = \displaystyle\sum\limits_{n = 0}^{ + \infty } {\dfrac{{x^{2n} }}{{(2n)!}}} $ et le  rayon de convergence du développement en série entière de la fonction $\textrm{ch}$  est égal à $ + \infty $.
+\item 
+\begin{enumerate}
+\item
+ Pour $x \geqslant 0$, on peut écrire $x = t^2 $ et 
+$S(x) = \displaystyle\sum\limits_{n = 0}^{ + \infty } {\dfrac{{x^n }}{{(2n)!}}}  = \displaystyle\sum\limits_{n = 0}^{ + \infty } {\dfrac{{t^{2n} }}{{(2n)!}}}  = \textrm{ch} (t) = \textrm{ch} \sqrt x $.\\
+Pour $x < 0$, on peut écrire $x =  - t^2 $ et 
+$S(x) = \displaystyle\sum\limits_{n = 0}^{ + \infty } {\dfrac{{x^n }}{{(2n)!}}}  = \displaystyle\sum\limits_{n = 0}^{ + \infty } {\dfrac{{( - 1)^n t^{2n} }}{{(2n)!}}}  = \cos (t) = \cos \sqrt { - x} $.\\
+\item
+D'après la question précédente, la fonction $f$ n'est autre que la fonction $S$.\\
+$S$ est  de classe $\mcal{C}^\infty  $ sur $\mathbb{R}$ car développable en série entière à l'origine avec un rayon de convergence égal à $+\infty$.\\
+Cela prouve que $f$ est  de classe $\mcal{C}^\infty  $ sur $\mathbb{R}$.
+\end{enumerate}
+\end{enumerate}

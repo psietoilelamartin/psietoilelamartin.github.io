@@ -1,0 +1,35 @@
+% ccp 2023, ex. 47
+\begin{enumerate}
+\item
+On note $R$ le rayon de convergence de $\displaystyle\sum_{n\geqslant 1}^{} \dfrac{3^nx^{2n}}{n}$ et
+pour tout réel $x$, on pose $u_n(x)=\dfrac{3^nx^{2n}}{n}$.\\
+Pour $x$ non nul, $\left|\dfrac{u_{n+1}(x)}{u_n(x)}\right|=\left|\dfrac{3nx^2}{n+1}\right|\underset{n \to +\infty}{\longrightarrow}\left|3x^2\right|$.\\
+Donc, d'après la règle de d'Alembert:\\
+si $\left|3x^2\right|<1$ c'est-à-dire si $|x|<\dfrac{1}{\sqrt{3}}$ alors $\displaystyle\sum_{n\geqslant 1}^{} \dfrac{3^nx^{2n}}{n}$ converge absolument\\
+et si $\left|3x^2\right|>1$ c'est-à-dire si $|x|>\dfrac{1}{\sqrt{3}}$ alors $\displaystyle\sum_{n\geqslant 1}^{} \dfrac{3^nx^{2n}}{n}$ diverge.\\
+On en déduit que $R=\dfrac{1}{\sqrt{3}}$.\\
+\medskip
+On pose: $\forall\:x\in \left] -\dfrac{1}{\sqrt{3}},\dfrac{1}{\sqrt{3}}\right[$, $S(x)=\displaystyle\sum_{n= 1}^{+\infty} \dfrac{3^nx^{2n}}{n}$.\\
+On a: $\forall\:x\in \left] -\dfrac{1}{\sqrt{3}},\dfrac{1}{\sqrt{3}}\right[$, $S(x)=\displaystyle\sum_{n= 1}^{+\infty} \dfrac{(3x^2)^n}{n}$.\\
+Or, d'après les développements en séries entières usuels,
+on a : $\forall\:t\in \left] -1,1\right[$, $\displaystyle\sum_{n= 1}^{+\infty} \dfrac{t^n}{n}=-\ln (1-t)$.\\
+Ainsi :  $\forall\:x\in \left] -\dfrac{1}{\sqrt{3}},\dfrac{1}{\sqrt{3}}\right[$, $S(x)=-\ln (1-3x^2)$.\\
+
+\item
+Notons $R$ le rayon de convergence de $\displaystyle\sum_{n\geqslant 0} a_nx^n$.\\
+On considère les séries $\displaystyle\sum_{n\geqslant 0} a_{2n}x^{2n}=\displaystyle\sum_{n\geqslant 0} 4^nx^{2n}$ et $\displaystyle\sum_{n\geqslant 0} a_{2n+1}x^{2n+1}=\displaystyle\sum_{n\geqslant 0} 5^{n+1}x^{2n+1}$.\\
+
+Notons $R_1$ le rayon de convergence de $\displaystyle\sum_{n\geqslant 0} 4^nx^{2n}$ et $R_2$ le rayon de convergence de $\displaystyle\sum_{n\geqslant 0} 5^{n+1}x^{2n+1}$.\\
+\medskip
+Le rayon de convergence de $\displaystyle\sum_{n\geqslant 0} x^n$ vaut 1.\\
+Or, $\displaystyle\sum_{n\geqslant 0} 4^nx^{2n}=\displaystyle\sum_{n\geqslant 0} (4x^2)^n$.\\
+Donc pour $|4x^2|<1$ c'est-à-dire $|x|<\dfrac{1}{2}$,  $\displaystyle\sum_{n\geqslant 0} 4^nx^{2n}$ converge absolument\\
+et pour $|4x^2|>1$ c'est-à-dire $|x|>\dfrac{1}{2}$,  $\displaystyle\sum_{n\geqslant 0} 4^nx^{2n}$ diverge.\\
+On en déduit que $R_1=\dfrac{1}{2}$.\\
+Par un raisonnement similaire et comme $\displaystyle\sum_{n\geqslant 0} 5^{n+1}x^{2n+1}=5x\displaystyle\sum_{n\geqslant 0} (5x^2)^n$, on trouve $R_2=\dfrac{1}{\sqrt{5}}$.\\
+\medskip
+$\displaystyle\sum_{n\geqslant 0} a_nx^n$ étant la série somme des séries $\displaystyle\sum_{n\geqslant 0} a_{2n}x^{2n}$ et $\displaystyle\sum_{n\geqslant 0} a_{2n+1}x^{2n+1}$, on en déduit, comme $R_1\neq R_2$,  que $R=\min(R_1,R_2)=\dfrac{1}{\sqrt{5}}$.\\
+\medskip
+D'après ce qui précéde, on en déduit également que:\\
+ $\forall\:x\in \left] -\dfrac{1}{\sqrt{5}},\dfrac{1}{\sqrt{5}}\right[$, $S(x)=\displaystyle\sum_{n= 0}^{+\infty} a_nx^n=\displaystyle\sum_{n= 0}^{+\infty}(4x^2)^n+5x\sum_{n= 0}^{+\infty}(5x^2)^n=\dfrac{1}{1-4x^2}+\dfrac{5x}{1-5x^2}$.
+ \end{enumerate}

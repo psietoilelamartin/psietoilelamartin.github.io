@@ -1,0 +1,52 @@
+% ccp 2023, ex. 20
+\begin{enumerate}
+\item
+Soit $\displaystyle\sum a_nz^n$ une série entière.\\
+Le rayon de convergence $R$ de la série entière  $\displaystyle\sum a_nz^n$  est l'unique élément de $\mathbb{R}^+\cup \left\lbrace +\infty\right\rbrace $ défini par:\\
+$R=\sup \left\lbrace r\geqslant 0\:/ (a_nr^n)\:\text{est bornée} \right\rbrace $.\\
+\medskip
+On peut aussi définir le rayon de convergence de la manière suivante:\\
+\medskip
+
+$\exists\:!\:R\in\mathbb{R}^{+}\cup\left\lbrace +\infty\right\rbrace $ tel que:\\
+i) $\forall z\in \mathbb{C}$, $|z|<R\Longrightarrow \displaystyle\sum a_nz^n$ converge absolument.\\
+ii)  $\forall z\in \mathbb{C}$, $|z|>R\Longrightarrow \displaystyle\sum a_nz^n$ diverge (grossièrement).\\
+$R$ est le rayon de convergence de la  série entière $\displaystyle\sum a_nz^n$ .\\
+\medskip
+Remarque: pour une série entière de la variable réelle, la définition est identique.
+\item
+\begin{enumerate}
+
+\item
+
+Notons $R$ le rayon de convergence de $\displaystyle\sum \dfrac{\left(n!\right)^{2}}{\left(2n\right)!}z^{2n+1}$
+et posons : $\forall n\in\mathbb{N}$, $\forall\:z\in\mathbb{C}$, $u_n(z) = \dfrac{(n!)^2}{(2n)!}z^{2n+1}$.\\
+Pour $z=0$,
+ $\displaystyle\sum u_n(0)$ converge.\\
+Pour $z\neq 0$, $\left| {\dfrac{{u_{n + 1} (z)}}{{u_n (z)}}} \right| =\dfrac{n+1}{4n+2}|z|^2$. Donc $\lim\limits_{n\to +\infty}^{} \left| {\dfrac{{u_{n + 1} (z)}}{{u_n (z)}}} \right|=\dfrac{\left| z \right|^2}{4}$.\\
+D'après la règle de d'Alembert,\\
+Pour $\left| z \right| < 2$, la série numérique $\displaystyle\sum u_n(z)$ converge absolument.\\
+Pour $\left| z \right| > 2$, la série numérique diverge grossièrement.\\
+On en déduit que $R$=2.
+\item
+Notons $R$ le rayon de convergence de $\displaystyle\sum n^{\left( -1\right)^{n}} z^{n}$ et posons :
+ $\forall \:n\in\mathbb{N}$, $a_n= n^{\left( -1\right)^{n}}$.\\
+\medskip
+On a, $\forall \:n\in\mathbb{N}$, $\forall \:z\in\mathbb{C}$, $|a_nz^n|\leqslant |nz^n|$ et le rayon de convergence de la série entière $\displaystyle\sum nz^n$ vaut 1.\\
+Donc $R\geqslant 1$.\:\:\:\:\:(*)\\
+\medskip
+De même, $\forall \:n\in\mathbb{N}^*$, $\forall \:z\in\mathbb{C}$, $\abs{\dfrac{1}{n}z^n}\leqslant|a_nz^n|$ et le rayon de convergence de la série $\displaystyle\sum\limits_{n\geqslant 1}^{}\dfrac{1}{n}z^n$ vaut 1.\\
+Donc $R\leqslant 1$.\:\:\:\:\:(**)\\
+\medskip
+D'après (*) et (**), $R=1$.
+\item
+Notons $R$ le rayon de convergence de $\displaystyle\sum \cos nz^{n}$ et posons:   $\forall \:n\in\mathbb{N}$, $a_n= \cos n$.\\
+On a, $\forall \:n\in\mathbb{N}$, $\forall \:z\in\mathbb{C}$, $|a_nz^n|\leqslant |z^n|$ et le rayon de convergence de la série entière $\displaystyle\sum z^n$ vaut 1.\\
+Donc $R\geqslant 1$.\:\:\:\:\:(*)\\
+Pour $z=1$, la série  $\displaystyle\sum \cos nz^{n}= \displaystyle\sum \cos n$ diverge grossièrement car $\cos n\underset{n\to +\infty}{\not\longrightarrow}0$.\\
+Donc $R\leqslant 1$.\:\:\:\:\:(**)\\
+\medskip
+D'après (*) et (**), $R=1$.
+\end{enumerate}
+\end{enumerate}
+
