@@ -1,0 +1,26 @@
+% CCP 2023 exo 96
+ Soit $X$ une variable aléatoire à valeurs dans $\mathbb{N}$, de loi de probabilité donnée par : $\forall n\in \mathbb{N}$, $P(X=n)=p_n$.\\
+  La fonction génératrice de $X$ est notée $G_X$ et elle est définie par $G_X(t)=E[t^X]=\displaystyle \sum_{n=0}^{+\infty}p_nt^n$.
+  \begin{enumerate}
+  \item
+  Prouver que l'intervalle $\left] -1,1\right[ $ est inclus dans l'ensemble de définition de $G_X$. \:\:
+\item
+Soit $X_1$ et $X_2$ deux variables aléatoires indépendantes à valeurs dans $\mathbb{N}$.\\
+On pose $S=X_1+X_2$.\\
+Démontrer  que  $\forall t\in \left]-1,1 \right[ $, $G_S(t)=G_{X_1} (t)G_{X_2}(t)$:\\
+\begin{enumerate}
+\item
+en utilisant le produit de Cauchy de deux séries entières.  \:\:
+\item
+en utilisant uniquement la définition de la fonction génératrice par $G_X(t)=E[t^X]$. \:\:
+\end{enumerate}
+
+\textbf{Remarque}: on admettra, pour la question suivante,  que ce résultat est généralisable à $n$ variables aléatoires indépendantes à valeurs dans $\mathbb{N}$.
+\item
+Un sac contient quatre boules : une boule numérotée 0, deux boules numérotées 1 et une boule numérotée 2.\\
+Soit $n\in\mathbb{N}^{*}$.
+On effectue $n$ tirages  successifs, avec remise, d'une boule dans ce sac.\\
+On note $S_n$ la somme des numéros tirés.\\
+Soit $t\in \left]-1,1 \right[ $. \\
+Déterminer $G_{S_n}(t)$ puis  en  déduire la loi de $S_n$.  \:\:
+  \end{enumerate}

@@ -1,0 +1,50 @@
+% CCP 2023 98
+\begin{enumerate}
+\item
+L'expérience est la suivante:
+l'épreuve de l'appel téléphonique de la secrétaire vers un correspondant est répétée $n$ fois et ces $n$ épreuves sont  mutuellement indépendantes.\\
+De plus, chaque épreuve n'a que deux issues possibles:
+ le correspondant est joint avec la probabilité $p$ (succès)
+ou le correspondant n'est pas joint avec la probabilité $1-p$ (échec).\\
+ La variable $X$ considérée représente le nombre de succès et suit donc une loi binômiale de paramètres $(n,p)$.\\
+ C'est-à-dire $X(\Omega)=\llbracket 0,n\rrbracket $ et $\forall k\in{\llbracket 0,n\rrbracket}$ $P(X=k)=\dbinom{n}{k}p^{k}(1-p)^{n-k}$.\\
+
+ \item
+ \begin{enumerate}
+ \item
+ Soit $i$ $\in \llbracket 0,n \rrbracket $.\\
+ Sous la condition $(X=i)$, la secrétaire rappelle $n-i$ correspondants lors de la seconde série d'appels.
+ Comme cette nouvelle série d'appels se fait dans les mêmes conditions que pour la question 1.,  sauf pour le nombre de répétitions qui est maintenant égal à $n-i$ , alors on se retrouve dans le schéma d'une loi binomiale de paramètre $(n-i,p)$.\\
+ \bigskip
+
+Donc $P_{(X=i)}(Y=k)=\left\lbrace
+\begin{array}{l}\dbinom{n-i}{k}p^{k}(1-p)^{n-i-k} \:\:\text{si}\:\: k\in \llbracket 0,n-i \rrbracket\\
+0 \:\:\text{sinon}
+\end{array}
+\right.$
+ \item
+  $Z(\Omega)=\llbracket 0,n\rrbracket $ et $\forall k\in{\llbracket 0,n\rrbracket}$ $P(Z=k)=\displaystyle\sum\limits_{i=0}^{k}P(X=i\cap Y=k-i)=\displaystyle\sum\limits_{i=0}^{k}P_{(X=i)}(Y=k-i)P(X=i)$.\\
+
+  Soit $k$ $\in \llbracket 0,n \rrbracket $. D'après les questions précédentes,\\ $P(Z=k)=\displaystyle\sum\limits_{i=0}^{k}\dbinom{n-i}{k-i}\dbinom{n}{i}p^{k}(1-p)^{2n-k-i}$.\\
+  Or, d'après l'indication, $\dbinom{n-i}{k-i}\dbinom{n}{i}=\dbinom{k}{i}\dbinom{n}{k}$.
+  Donc
+  \begin{align*}
+   P(Z=k)&=\displaystyle\sum\limits_{i=0}^{k}\dbinom{k}{i}\dbinom{n}{k}p^{k}(1-p)^{2n-k-i}\\&=\dbinom{n}{k}p^{k}(1-p)^{2n-k}\displaystyle\sum\limits_{i=0}^{k}\dbinom{k}{i}\left( \dfrac{1}{1-p}\right) ^i.
+  \end{align*}
+
+  Donc d'après le binôme de Newton,
+  \begin{align*} P(Z=k)&=\dbinom{n}{k}p^{k}(1-p)^{2n-k}\left( \dfrac{2-p}{1-p}\right) ^{k}\\&=\dbinom{n}{k}\left( p(2-p)\right)^k\left( (1-p)^2\right)^{n-k}  .
+  \end{align*}
+
+  On vérifie que $1-p(2-p)=(1-p)^2$ et donc on peut conclure que:\\
+   $Z$ suit une loi binomiale de paramètre $(n,p(2-p))$.\\
+   \medskip
+  \textbf{ Remarque}: preuve (non demandée dans l'exercice) de l'égalité proposée dans l'indication:\\
+    $\dbinom{n-i}{k-i}\dbinom{n}{i}=\dfrac{(n-i)!}{(n-k)!\:(k-i)!}\dfrac{n!}{i!\:(n-i)!}=
+  \dfrac{n!}{(k-i)!\:(n-k)!\:i!}=\dfrac{k!}{(k-i)!\:i!}\dfrac{n!}{k!\:(n-k)!}=\dbinom{k}{i}\dbinom{n}{k}$.\\
+   \item
+  D'après le cours, comme $Z$ suit une loi binomiale de paramètre $(n,p(2-p))$, alors:\\  $E(Z)=np(2-p)$ et $V(Z)=np(2-p)\left( 1-p(2-p)\right)=np(2-p)(p-1)^{2} $.
+
+
+  \end{enumerate}
+  \end{enumerate}

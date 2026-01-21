@@ -1,0 +1,35 @@
+% CCP 2023 exo 99
+\begin{enumerate}
+  \item
+  Soit  $a\in{\left]  0,+\infty\right[}$.
+  Pour toute variable aléatoire $X$ telle que $X$ admettant une variance, on a~: \\
+   $P\left( \left|X-E(X)\right|\geqslant a\right) \leqslant\dfrac{V(X)}{a^2}$.
+   \item
+   On pose $X=\dfrac{S_n}{n}$.\\
+   Par linéarité de l'espérance et comme toutes les variables $Y_i$ ont la même espérance,  on a $E(X)=E(Y_1)$.\\
+   De plus, comme les variables sont  indépendantes, on a $V(X)=\dfrac{1}{n^2}V(S_n)=\dfrac{1}{n}V(Y_1)$.\\
+   Alors, en appliquant 1. à $X$, on obtient le résultat souhaité.
+ \item
+ $\forall i\in{\mathbb{N}^*}$, on considère la variable aléatoire $Y_i$ valant 1 si la $i^{\text{ème}}$ boule tirée est rouge et 0 sinon.\\
+ $Y_i$ suit une loi de Bernoulli de paramètre $p$ avec  $p=\dfrac{2}{5}=0,4$ .\\
+ Les variables $Y_i$ suivent la même loi, sont  indépendantes et $\forall i\in \mathbb{N}^*$, $Y_i$ admet une variance. \\
+ On a d'après le cours, $\forall i\in{\mathbb{N}^*}$, $E(Y_i)=0,4$ et $V(Y_i)=0,4(1-0,4)=0,24$.\\
+  On pose $S_n=\displaystyle\sum\limits_{i=1}^{n}Y_i$.  $S_n$ représente le nombre de boules rouges obtenues au cours de $n$ tirages.\\
+ Alors $T_n=\dfrac{\displaystyle\sum\limits_{i=1}^{n}Y_i}{n}$ représente
+ la proportion de boules rouges obtenues au cours de  $n$ tirages.\\
+ On cherche à partir de combien de tirages on a $P(0,35\leqslant T_n\leqslant 0,45)>0,95$.\\
+ Or
+ \begin{align*}
+ &P\left(0,35\leqslant T_n\leqslant 0,45\right)\\=&P\left(0,35\leqslant \dfrac{S_n}{n}\leqslant 0,45\right)=P\left(-0,05\leqslant \dfrac{S_n}{n}-E(Y_1)\leqslant 0,05\right)\\
+=&P\left(\left|\dfrac{S_n}{n}-E(Y_1)\right|\leqslant0,05\right)=1-P\left(\left|\dfrac{S_n}{n}-E(Y_1)\right|>0,05\right).
+\end{align*}
+ On a donc $P\left(0,35\leqslant T_n\leqslant 0,45\right)=1-P\left(\left|\dfrac{S_n}{n}-E(Y_1)\right|>0,05\right)$.\\
+ Or, d'après la question précédente, $P\left( \left|\dfrac{S_n}{n}-E(Y_1)\right|\geqslant 0,05\right) \leqslant\dfrac{0,24}{n(0,05)^{2}}$.\\
+ Donc $P\left(0,35\leqslant T_n\leqslant 0,45\right)\geqslant 1-\dfrac{0,24}{n(0,05)^{2}}$.\\
+ Il suffit alors pour répondre au problème de chercher à partir de quel rang $n$, on a
+ $1-\dfrac{0,24}{n(0,05)^{2}}\geqslant 0,95$.\\
+ La résolution de cette inéquation donne $n\geqslant\dfrac{0,24}{0,05^3}$ c'est-à-dire $n\geqslant 1920$.
+
+
+
+ \end{enumerate}

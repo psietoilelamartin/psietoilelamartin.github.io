@@ -1,0 +1,75 @@
+% CCP 2023 exo 96
+ \begin{enumerate}
+   \item
+   On considère la série entière $\displaystyle\sum p_nt^n$ et on note $R$ son rayon de convergence.\\
+   La série $\displaystyle\sum p_n$ converge car $\displaystyle\sum_{n=0}^{+\infty}p_n=1$.\\
+    Donc $\displaystyle\sum p_nt^n$ converge pour $t=1$, donc $R\geqslant 1$.\\
+    Notons $D_{G_X}$ l'ensemble de définition de $G_{X}$.\\
+    On a donc  :$\left] -1,1 \right[ \subset D_{G_X}$
+
+
+   \item
+   Soit $X_1$ et $X_2$ deux variables aléatoires indépendantes à valeurs dans $\mathbb{N}$.\\
+On pose $S=X_1+X_2$.\\
+Prouvons que $\forall t\in \left]-1,1 \right[ $, $G_S(t)=G_{X_1} (t)G_{X_2}(t)$.\\
+\medskip
+
+\begin{enumerate}
+\item
+\textbf{En utlisant le produit de Cauchy de deux séries entières}:\\
+
+
+Notons $R_1$ le rayon de convergence de la série entière $\displaystyle \sum P(X_1=n) t^n$.\\
+Notons $R_2$ le rayon de convergence de la série entière $ \displaystyle \sum P(X_2=n) t^n$.\\
+
+Notons $R$ le rayon de convergence de la série entière  produit $\displaystyle \sum c_n t^n$
+avec $c_n =\displaystyle\sum_{k=0}^{n}P(X_1=k)P(X_2=n-k)$.\\
+\medskip
+On a, d'après le cours, $R\geqslant \mathrm{min}\left( R_1,R_2\right) $ et :\\ $\forall t\in \left] -R,R\right[$, $\left( \displaystyle \sum _{n=0}^{+\infty}P(X_1=n) t^n \right) \left(  \displaystyle \sum _{n=0}^{+\infty}P(X_2=n) t^n\right) = \displaystyle \sum _{n=0}^{+\infty}\displaystyle\left( \sum_{k=0}^{n}P(X_1=k)P(X_2=n-k)\right) t^n$ \\
+\medskip
+Or, on a vu dans la question 1. que $R_1\geqslant 1$ et  $R_2\geqslant 1$.\\
+Donc,  $R\geqslant 1$.\\
+Donc, par produit de Cauchy pour les séries entières, \\
+$\forall t\in \left] -1,1\right[$,  $\left( \displaystyle \sum _{n=0}^{+\infty}P(X_1=n) t^n \right) \left(  \displaystyle \sum _{n=0}^{+\infty}P(X_2=n) t^n\right) = \displaystyle \sum _{n=0}^{+\infty}\displaystyle\left( \sum_{k=0}^{n}P(X_1=k)P(X_2=n-k)\right) t^n$.\:\:(*)\\
+\medskip
+De plus, pour tout entier naturel $n$,\\
+ $(S=n)=(X_1+X_2=n)=\displaystyle\bigcup_{k=0}^{n} \left( (X_1=k)\cap (X_2=n-k)\right) $ (union d'événements deux à deux incompatibles).\\
+Donc :  $P(S=n)=\displaystyle\sum_{k=0}^{n}P(X_1=k)P(X_2=n-k)$.\:\:(**)\\
+\medskip
+Donc, d'après (*) et (**),
+$\forall t\in \left] -1,1\right[$,
+ $G_{X_1}(t)G_{X_2}(t)= \displaystyle \sum _{n=0}^{+\infty}P(S=n) t^n$.\\
+ C'est-à-dire, $\forall t\in \left] -1,1\right[$,
+ $G_{X_1}(t)G_{X_2}(t)= G_S(t)$.
+\item
+\textbf{En utilisant uniquement la définition de de $G_X(t)$}:\\
+
+Soit $t\in \left] -1,1\right[ $.\\
+D'après 1., $t^{X_{1}}$ et $t^{X_{2}}$ admettent une espérance.\\
+De plus, $G_{X_1}(t)=E[t^{X_{1}}]$ et $G_{X_{2}}(t)=E[t^{X_{2}}]$.\\
+$X_1$ et $X_2$ sont indépendantes donc $t^{X_{1}}$ et $t^{X_{2}}$ sont indépendantes.\\
+Donc    $t^{X_{1}}t^{X_{2}}=t^S$ admet une espérance et $E[t^S]=E[t^{X_{1}}]E[t^{X_{2}}]$.\\
+C'est-à-dire, $G_S(t)=G_{X_1}(t)G_{X_2}(t)$.
+\end{enumerate}
+\item
+Soit $S_n$ variable aléatoire égale à la somme des numéros tirés.\\
+Soit  $i \in \llbracket 1,n\rrbracket$.\\
+On note $X_i$ la variable aléatoire égale au numéro tiré au $i ^{\text{ème}}$ tirage.\\
+$X_i\left(\Omega \right)=\left\lbrace 0,1,2\right\rbrace$.\\
+De plus, $P(X_i=0)=\frac{1}{4} $, $P(X_i=1)=\frac{2}{4}=\frac{1}{2}$ et $P(X_i=2)=\frac{1}{4}$.\\\
+\medskip
+Donc, $\forall t\in \left] -1,1\right[$, $G_{X_i} (t)=E[t^{X_i}]= t^0P(X_i=0)+t^1P(X_i=1)+t^2P(X_i=2)$.\\
+Donc, $\forall t\in \left] -1,1\right[$, $G_{X_i} (t)=\frac{1}{4}+\frac{1}{2}t+\frac{1}{4}t^2=\frac{1}{4}(t+1)^2$.\\
+\medskip
+On a :  $S_n=X_1+X_2+...+X_n$.\\
+De plus, les variables aléatoires $X_1,X_2,...,X_n$ sont indépendantes.\\
+D'après 2., on en déduit que: $\forall t\in \left] -1,1\right[$, $G_{S_n} (t)=G_{X_1} (t) G_{X_2} (t)....G_{X_n} (t)$.\\
+C'est-à-dire, $\forall t\in \left] -1,1\right[$, $G_{S_n}(t)=\frac{1}{4^n}\left( 1+t\right) ^{2n}$.\\
+Ou encore,  $\forall t\in \left] -1,1\right[$, $G_{S_n}(t)=\displaystyle\sum_{k=0}^{2n} \dbinom{2n}{k}\frac{1}{4^n}t^{k}$.\\
+\medskip
+Or,  $\forall t\in \left] -1,1\right[$, $G_{S_n}(t)=\displaystyle\sum_{k=0}^{+\infty} P(S_n=k)t^{k}$.\\
+Donc, par unicité du développement en série entière:\\
+$S\left(\Omega \right)=\llbracket 0,2n \rrbracket$ et $ \forall k\in\llbracket 0,2n \rrbracket$, $P(S_n=k)=\dbinom{2n}{k}\frac{1}{4^n}=\dbinom{2n}{k}\left( \frac{1}{2}\right) ^{k} \left( \frac{1}{2}\right) ^{2n-k}$\\
+\medskip
+Donc, $S_n$ suit une loi binomiale de paramètre $(2n,\frac{1}{2})$.
+\end{enumerate}

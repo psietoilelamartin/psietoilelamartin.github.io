@@ -1,0 +1,51 @@
+% CCP 2023 exo 108
+\begin{enumerate}
+\item
+ $\forall\:(i,j)\in\mathbb{N}^2$, $P((X=i)\cap (Y=j))=\dfrac{1}{\mathrm{e}\:2^{i+1}j!}$.\\
+ $X(\Omega)=\mathbb{N}$. \\
+Soit $i\in \mathbb{N}$.\\
+$\displaystyle\sum\limits_{j\geqslant 0}^{}\dfrac{1}{\mathrm{e}\:2^{i+1}j!}=\dfrac{1}{\mathrm{e}\:2^{i+1}}\displaystyle\sum\limits_{j\geqslant 0}^{}\dfrac{1}{j!}$ converge et $\displaystyle\sum\limits_{j=0}^{+\infty}\dfrac{1}{\mathrm{e}\:2^{i+1}j!}=\dfrac{1}{2^{i+1}}$.\\
+Or $P(X=i)=\displaystyle\sum\limits_{j=0}^{+\infty}P((X=i)\cap (Y=j))$
+donc $P(X=i)=\displaystyle\sum\limits_{j=0}^{+\infty}\dfrac{1}{\mathrm{e}2^{i+1}j!}
+=\dfrac{1}{\mathrm{e}2^{i+1}}\displaystyle\sum\limits_{j=0}^{+\infty}\dfrac{1}{j!}
+=\dfrac{1}{2^{i+1}}.$\\
+Conclusion: $\forall\:i\in\mathbb{N}$, $P(X=i)=\dfrac{1}{2^{i+1}}.$\\
+\bigskip
+ $Y(\Omega)=\mathbb{N}$.\\
+ Soit $j\in \mathbb{N}$.\\
+  $\displaystyle\sum\limits_{i\geqslant 0}^{}\dfrac{1}{\mathrm{e}\:2^{i+1}j!}=
+  \dfrac{1}{2\mathrm{e}j!}\displaystyle\sum\limits_{i\geqslant 0}^{}\left(\dfrac{1}{2} \right)^i$ converge (série géométrique de raison $\dfrac{1}{2}$)   et $\displaystyle\sum\limits_{i=0}^{+\infty}\dfrac{1}{\mathrm{e}\:2^{i+1}j!}=\dfrac{1}{2\mathrm{e}j!}\dfrac{1}{1-\dfrac{1}{2}}=\dfrac{1}{\mathrm{e}j!}$.\\
+Or $P(Y=j)=\displaystyle\sum\limits_{i=0}^{+\infty}P((X=i)\cap (Y=j))$.\\
+Donc $P(Y=j)=\displaystyle\sum\limits_{i=0}^{+\infty}\dfrac{1}{\text{e}2^{i+1}j!}
+=\dfrac{1}{2\mathrm{e}j!}\displaystyle\sum\limits_{i=0}^{+\infty}\left(\dfrac{1}{2} \right)^i
+=\dfrac{1}{2\mathrm{e}j!}\dfrac{1}{1-\dfrac{1}{2}}=\dfrac{1}{\mathrm{e}j!}$.\\
+Conclusion: $\forall\:j\in\mathbb{N}$, $P(Y=j)=\dfrac{1}{\mathrm{e}j!}$.
+\item
+\begin{enumerate}
+\item
+On pose $Z=X+1$.\\
+$Z(\Omega)=N^*$.\\
+De plus, $\forall\:n\in\mathbb{N}^*$, $P(Z=n)=P(X=n-1)=\dfrac{1}{2^n}=\dfrac{1}{2}\left( \dfrac{1}{2}\right)^{n-1}$. \\
+Donc $Z$ suit une loi géométrique de paramètre $p=\dfrac{1}{2}$.\\
+\medskip
+Donc, d'après le cours, $E(Z)=\dfrac{1}{p}=2$ et $V(Z)=\dfrac{1-p}{p^2}=2$.\\
+Donc $E(X)=E(Z-1)=E(Z)-1=2-1=1$ et $V(X)=V(Z-1)=V(Z)=2$.\\
+C'est-à-dire $E(X)=1$ et $V(X)=2$.\\
+\item
+$Y$ suit une loi de Poisson de paramètre $\lambda=1$.\\
+Donc, d'après le cours, $E(Y)=V(Y)=\lambda=1$.
+\end{enumerate}
+\item
+On a : $\forall\:(i,j)\in\mathbb{N}^2$, $P((X=i)\cap(Y=j))=P(X=i)P(Y=j)$.
+Donc les variables $X$ et $Y$ sont indépendantes.
+\item $\left((X=k)\right)_{k\in\N}$ est un système complet d'évènements donc avec la formule des probabilités totales
+% $(X=Y)=\displaystyle\bigcup\limits_{k\in\mathbb{N}}^{}((X=k)\cap (Y=k))$ et il s'agit d'une union d'événements deux à deux incompatibles donc~:
+\begin{align*}
+P(X=Y)&=\displaystyle\sum\limits_{k=0}^{+\infty}P((X=k)\cap (Y=k))
+=\displaystyle\sum\limits_{k=0}^{+\infty}\dfrac{1}{\text{e}2^{k+1}}\dfrac{1}{k!}\\
+&=\dfrac{1}{2\mathrm{e}}\displaystyle\sum\limits_{k=0}^{+\infty}\dfrac{\left( \dfrac{1}{2}\right) ^k}{k!}
+=\dfrac{1}{2\mathrm{e}}\mathrm{e}^{\frac{1}{2}}.
+\end{align*}
+Donc $P(X=Y)=\dfrac{1}{2\sqrt{\mathrm{e}}}$.
+
+\end{enumerate}
