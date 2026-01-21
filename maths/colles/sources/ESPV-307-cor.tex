@@ -1,0 +1,24 @@
+\begin{enumerate}
+\item  Pour $|t|<\sqrt{2}$, on a par sommation géométrique
+
+$$
+G_X(t)=\frac{t}{2} \sum_{n=0}^{+\infty}\left(\frac{t^2}{2}\right)^n=\sum_{n=0}^{+\infty} \frac{t^{2 n+1}}{2^{n+1}}
+$$
+
+
+On en déduit la loi de $X$ : $X$ prend presque sûrement ces valeurs dans $2 \mathbb{N}+1$ avec
+
+$$
+\forall\, n \in \mathbb{N},\ P(X=2 n+1)=\frac{1}{2^{n+1}}
+$$
+
+\item Presque sûrement, $Y$ prend ses valeurs dans $\mathbb{N}^*$ avec
+
+$$
+\forall\, n \in \mathbb{N}^*,\ P(Y=n)=P(X=2 n-1)=\frac{1}{2^n}=\left(1-\frac{1}{2}\right)^{n-1} \frac{1}{2}
+$$
+
+
+La variable $Y$ suit une loi géométrique de paramètre $1 / 2$. On sait alors $\mathrm{E}(Y)=2$ et $\mathrm{V}(Y)=2$.
+L'égalité $X=2 Y-1$ donne $\mathrm{E}(X)=2 \mathrm{E}(Y)-1$ et $\mathrm{V}(X)=4 \mathrm{~V}(Y)$ donc $\mathrm{E}(X)=3$ et $\mathrm{V}(X)=8$
+\end{enumerate}
