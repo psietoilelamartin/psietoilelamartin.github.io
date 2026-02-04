@@ -1,0 +1,54 @@
+% CCP 2023, ex. 81
+\begin{enumerate}
+\item
+ On a immédiatement ${\mathcal{F}} = \textrm{Vect} (\mathrm{I}_2,K)$ avec
+$K = \left( {
+\begin{array}{cc}
+ 0 & 1  \\
+ { - 1} & 0  \\
+\end{array}
+} \right)\text{ }$.\\
+On peut donc affirmer que ${\mathcal{F}}$ est un sous-espace vectoriel de ${\mathcal{M}}_2 (\mathbb{R})$.
+
+ ${\mathcal{F}} = \textrm{Vect} (\mathrm{I}_2,K)$ donc $(\mathrm{I}_2,K)$ est une famille génératrice de $\mathcal{F}$.\\
+ De plus, $\mathrm{I}_2$ et $K$ sont non colinéaires donc la famille $(\mathrm{I}_2,K)$ est libre.\\
+ On en déduit que $(\mathrm{I}_2,K)$ est une base de $\mathcal{F}$.
+ \item
+ Soit $M=\begin{pmatrix}
+ a&b\\
+ c&d
+ \end{pmatrix}\in{\mathcal{M}}_2\left( \mathbb{R}\right) $.\\
+ Comme $(\mathrm{I}_2,K)$ est une base de $\mathcal{F}$,\\
+ $M\in\mathcal{F}^{\perp}\Longleftrightarrow$ $\varphi(M,\mathrm{I}_2)=0$ et $\varphi(M,K)=0$.\\
+ C'est-à-dire, $M\in\mathcal{F}^{\perp}\Longleftrightarrow$ $a+d=0$ et $b-c=0$.\\
+ Ou encore, $M\in\mathcal{F}^{\perp}\Longleftrightarrow$ $d=-a$ et $c=b$.\\
+ On en déduit que $\mathcal{F}^{\perp}=\mathrm{Vect}\left( A,B\right)$ avec
+$A = \left(
+\begin{array}{cc}
+ 1 & 0  \\
+ 0 & { - 1}  \\
+\end{array}
+ \right)\text{ et }B = \left( {
+\begin{array}{cc}
+ 0 & 1  \\
+ 1 & 0  \\
+\end{array}
+} \right)$.\\
+$(A,B)$ est une famille libre et génératrice de $\mathcal{F}^{\perp}$ donc $(A,B)$ est une base de  $\mathcal{F}^{\perp}$.\\
+\medskip
+
+
+\item
+ On peut écrire
+$J = \mathrm{I}_2 +  B\text{  avec }\mathrm{I}_2 \in {\mathcal{F}}\text{ et } B \in {\mathcal{F}}^ \bot  $.\\
+Donc le projeté orthogonal de $J$ sur $\mathcal{F}^{\perp}$  est $ B=\begin{pmatrix}
+0&1\\1&0
+\end{pmatrix}$.
+\item
+On note $d(J,\mathcal{F})$ la distance de $J$ à $\mathcal{F}$.\\
+D'après le cours, $d(J,\mathcal{F})=||J-p_{\mathcal{F}}(J)||$ où $p_{\mathcal{F}}(J)$ désigne le projeté orthogonal de $J$ sur $\mathcal{F}$.\\
+ On peut écrire à nouveau que
+$J = \mathrm{I}_2 +  B\text{  avec }\mathrm{I}_2 \in {\mathcal{F}}\text{ et } B \in {\mathcal{F}}^ \bot  $.\\
+Donc $p_{\mathcal{F}}(J)=\mathrm{I}_{2}$.\\
+On en déduit que  $d(J,\mathcal{F})=||J-p_{\mathcal{F}}(J)||=||J-\mathrm{I}_2||=||B||=\sqrt{2}$.
+\end{enumerate}

@@ -1,0 +1,34 @@
+\begin{enumerate}
+
+\item
+$\left(\bpm 1\\-1\\0\epm, \bpm 0\\1\\-1\epm\right)$ est une base de $P$.
+
+De plus $D=\Vect\bpm 1\\1\\1\epm$ et $\bpm 1\\1\\1\epm \perp \bpm 1\\-1\\0\epm$ et $\bpm 1\\1\\1\epm \perp \bpm 0\\1\\-1\epm$
+donc $D \subset P^{\perp}$.
+
+Pour raisons de dimension, $D = P^{\perp}$ donc $P \oplus D = \mathbb{R}^{3}$.
+
+\item
+Posons $u_1 = \dfrac{1}{\sqrt{3}} \bpm 1\\1\\1\epm$ et $u_2 = \dfrac{1}{\sqrt{2}} \bpm 1\\-1\\0\epm$.
+
+Alors $u_3 = u_1 \wedge u_2$ complète $(u_1, u_2, u_3)$ en une b.o.n. de $\mathbb{R}^3$ et $\Vect(u_2, u_3) = D^{\perp} = P$.
+
+On calcule $u_3 = \dfrac{1}{\sqrt{6}} \bpm 1\\1\\-2\epm$.
+
+Alors
+\begin{align*}
+p(u) &= \langle u | u_2 \rangle u_2 + \langle u | u_3 \rangle u_3
+= \dfrac{1}{2} (x- y) \bpm 1\\-1\\0\epm + \dfrac{1}{6} (x + y - 2z) \bpm 1\\1\\-2\epm\\
+&= \dfrac {1}{3} \left( \begin{array}{c} 2 x - y - 3 \\ x + 2 y - 3 \\ - x - y + 2 z \end{array} \right)
+\end{align*}
+
+Si $\cC$ est la base canonique de $\R^3$,
+alors $\MAT_{\cC}(p) = \dfrac{1}{3} \left( \begin{array}{rrr} 2 & -1 & -1 \\ 1 & 2 & -1 \\ -1 & -1 & 2 \end{array} \right).$
+
+\item
+Si $\cB = (u_1, u_2, u_3)$ alors $B$ est une b.o.n. et
+\[
+\MAT_{\cB}(p) = \left( \begin{array}{ccc} 0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right).
+\]
+
+\end{enumerate}

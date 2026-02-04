@@ -1,0 +1,68 @@
+% CCP 2023, ex. 76
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item
+Soit $E$ un $\mathbb{R}$-espace vectoriel muni d'un produit scalaire noté $\left(\:|\:\right)$.\\
+On pose $\forall\:x\in E$, $||x||=\sqrt{(x|x)}$.
+
+Inégalité de Cauchy-Schwarz: $\forall (x,y)\in E^2$, $|\left(x|y\right)|\leqslant ||x||\,||y||$\\
+Preuve:\\
+Soit $(x,y)\in E^2$.
+Posons $\forall \lambda\in \mathbb{R}$, $P(\lambda)=||x+\lambda y||^2$.\\
+
+On remarque que $\forall \lambda \in \mathbb{R}$, $P(\lambda )\geqslant 0$.\\
+De plus,  $P(\lambda)=\left(x+\lambda y|x+\lambda y\right)$.\\
+Donc,  par bilinéarité et symétrie de $\left(\:|\:\right)$, $P(\lambda )=||y||^2\lambda ^2+2\lambda \left(x|y\right)+||x||^2$.\\
+On remarque que $P(\lambda)$ est un trinôme en $\lambda$ si et seulement si $||y||^2\neq 0$.\\
+\textbf{Premier cas}: si $y=0$\\
+Alors  $|\left(x|y\right)|=0$ et $||x||\,||y||=0$ donc l'inégalité de Cauchy-Schwarz est vérifiée.\\
+\textbf{Deuxième cas}: $y\neq 0$\\
+Alors $||y||=\sqrt{(y|y)}\neq 0$ car $y\neq 0$ et $\left(\:|\:\right)$ est une forme bilinéaire symétrique définie positive.\\
+Donc, $P$ est un trinôme du second degré en $\lambda$ qui est positif ou nul.\\
+On en déduit que le discriminant réduit $\Delta$ est négatif ou nul.\\
+Or  $\Delta=\left(x|y\right)^2-||x||^2||y||^2$ donc  $\left(x|y\right)^2\leqslant||x||^2||y||^2$.\\
+Et donc, $|\left(x|y\right)|\leqslant ||x||\,||y||$.
+\item
+On reprend les notations de 1. .\\
+Prouvons que $\forall (x,y)\in E^2$, $|\left(x|y\right)|=||x||\,||y||$ $\Longleftrightarrow$ $x$ et $y$ sont colinéaires.\\
+\medskip
+Supposons que $|\left(x|y\right)|=||x||\,||y||$.\\
+Premier cas: si $y=0$ \\
+Alors $x$ et $y$ sont colinéaires.\\
+Deuxième cas: si $y\neq 0$\\
+Alors le discriminant de $P$ est nul et donc $P$ admet une racine double $\lambda_0$.\\
+C'est-à-dire $P(\lambda_0)=0$ et comme  $\left(\:|\:\right)$ est définie positive, alors $x+\lambda_0y=0$.\\
+Donc $x$ et $y$ sont colinéaires.\\
+\medskip
+Supposons que $x$ et $y$ soient  colinéaires.\\
+Alors $\exists\:\alpha\in\mathbb{R}$ tel que $x=\alpha y$ ou $y=\alpha x$.\\
+Supposons par exemple que $x=\alpha y$ (raisonnement similaire pour l'autre cas).\\
+$|\left(x|y\right)|=|\alpha|.|\left(y|y\right)|=|\alpha|\,||y||^2$
+et $||x||\,||y||=\sqrt{(x|x)}\,||y||=\sqrt{\alpha^2(y|y)}||y||=|\alpha|.||y||^2$.\\
+Donc, on a bien l'égalité.\\
+\medskip
+
+\end{enumerate}
+\item
+On considère le produit scalaire classique sur $\mathcal{C}\left( \left[ a,b\right] ,\mathbb{R}\right)$ défini par :\\
+$\forall (f,g)\in \mathcal{C}\left( \left[ a,b\right] ,\mathbb{R}\right)$, $(f|g)=\displaystyle\int_{a}^{b}f(t)g(t)dt$.\\
+On pose $ \cE=\left\lbrace \displaystyle\int_{a}^{b}f(t)\mathrm{d}t\times \displaystyle\int_{a}^{b}\dfrac{1}{f(t)}\mathrm{d}t\:,\:f\in A\right\rbrace $.\\
+$\cE\subset \mathbb{R}$.\\
+$\cE\neq \emptyset$ car $(b-a)^2\in \cE$ ( valeur obtenue pour la fonction $t\longmapsto 1$ de $A$).\\
+De plus, $\forall\:f\in A $,$\displaystyle\int_{a}^{b}f(t)\mathrm{d}t\times \displaystyle\int_{a}^{b}\dfrac{1}{f(t)}\mathrm{d}t\geqslant 0$  
+donc $\cE$ est minorée par 0.\\
+\medskip
+On en déduit que $A$ admet une borne inférieure et on pose $m=\inf \cE$.\\
+Soit $f\in A$.\\
+On considère la quantité $\left( \displaystyle\int_{a}^{b}\sqrt{f(t)}\dfrac{1}{\sqrt{f(t)}}\mathrm{d}t\right) ^2$.\\
+D'une part, $\left( \displaystyle\int_{a}^{b}\sqrt{f(t)}\dfrac{1}{\sqrt{f(t)}}\mathrm{d}t\right)  ^2=\left( \displaystyle\int_{a}^{b}1\mathrm{d}t\right) ^2=(b-a)^2.$\\
+D'autre part, si on utilise l'inégalité de Cauchy-Schwarz pour le produit scalaire $(\:|\:)$  on obtient:\\
+ $\left( \displaystyle\int_{a}^{b}\sqrt{f(t)}\dfrac{1}{\sqrt{f(t)}}\mathrm{d}t\right) ^2\leqslant \displaystyle\int_{a}^{b} f(t)\mathrm{d}t\displaystyle\int_{a}^{b}\dfrac{1}{f(t)}\mathrm{d}t$.\\
+ \medskip
+ On en déduit que $\forall\:f\in E$, $\displaystyle\int_{a}^{b} f(t)\mathrm{d}t\displaystyle\int_{a}^{b}\dfrac{1}{f(t)}\mathrm{d}t\geqslant (b-a)^2$.\\
+ Donc $m\geqslant (b-a)^2$.\\
+ Et, si on considère la fonction $f:t\longmapsto 1$ de $A$, alors $\displaystyle\int_{a}^{b} f(t)\mathrm{d}t\displaystyle\int_{a}^{b}\dfrac{1}{f(t)}\mathrm{d}t= (b-a)^2$.\\
+ Donc $m=(b-a)^2$.
+
+\end{enumerate}
