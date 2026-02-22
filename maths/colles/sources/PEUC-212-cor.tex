@@ -1,0 +1,48 @@
+% Polynômes de Legendre
+
+\begin{enumerate}
+\item Bilinéarité et positivité évidentes et si $\phi(P, P)=0$ c'est que $P$ est la fonction nulle car $P^2$ est une fonction continue positive d'intégrale nulle. On en déduit que $P$ est le polynôme nul car il possède une infinité de racines, d'où la propriété de définie positivité.
+\item
+\begin{enumerate}
+\item $\left(x^2-1\right)^k$ est de degré $2 k$ donc sa dérivée $k$-ième est de degré $2 k-k=k$.
+\item En intégrant par parties en posant $v^{\prime}=\frac{\mathrm{d}^k\left(\left(x^2-1\right)^k\right)}{\mathrm{d} x^k}$ et $u=x^i$, on a $v=\frac{\mathrm{d}^{k-1}\left(\left(x^2-1\right)^k\right)}{\mathrm{d} x^{k-1}}$ et $u^{\prime}=i x^{i-1}$, d'où
+\begin{align*}
+\phi\left(X^i, f^k\right)&=\int_{-1}^1 x^i \frac{\mathrm{d}^k\left(\left(x^2-1\right)^k\right)}{\mathrm{d} x^k} \mathrm{d} x\\
+&=\left[x^i \frac{\mathrm{d}^{k-1}\left(\left(x^2-1\right)^k\right)}{\mathrm{d} x^{k-1}}\right]_{-1}^1-\int_{-1}^1 i x^{i-1} \frac{\mathrm{d}^{k-1}\left(\left(x^2-1\right)^k\right)}{\mathrm{d} x^{k-1}} \mathrm{d} x
+\end{align*}
+
+
+Mais 1 et -1 sont des racines de multiplicité $k$ de $p_k(x)=\left(x^2-1\right)^k$, donc 1 et -1 annulent $p_k$ jusqu'à sa dérivée $k-1$-ième. Ainsi,
+
+$$
+\phi\left(X^i, f^k\right)=-\int_{-1}^1 i x^{i-1} \frac{\mathrm{d}^{k-1}\left(\left(x^2-1\right)^k\right)}{\mathrm{d} x^{k-1}} \mathrm{d} x
+$$
+
+
+Une nouvelle intégration par parties donne
+
+
+\begin{align*}
+\phi\left(X^i, f^k\right) & =\left[-i x^{i-1} \frac{\mathrm{d}^{k-2}\left(\left(x^2-1\right)^k\right)}{\mathrm{d} x^{k-2}}\right]_{-1}^1\\
+&+\int_{-1}^1 i(i-1) x^{i-2} \frac{\mathrm{d}^{k-2}\left(\left(x^2-1\right)^k\right)}{\mathrm{d} x^{k-2}} \mathrm{d} x \\
+& =\int_{-1}^1 i(i-1) x^{i-2} \frac{\mathrm{d}^{k-2}\left(\left(x^2-1\right)^k\right)}{\mathrm{d} x^{k-2}} \mathrm{d} x
+\end{align*}
+
+puisque 1 et -1 annulent $\dfrac{\mathrm{d}^{k-2}\left(\left(x^2-1\right)^k\right)}{\mathrm{d} x^{k-2}}$. Et ainsi de suite : en dérivant $i+1$ fois, il restera
+
+\begin{align*}
+\phi\left(X^i, f^k\right)&=\dint(-1)^i i!\frac{\mathrm{d}^{k-i}\left(\left(x^2-1\right)^k\right)}{\mathrm{d} x^{k-i}}\\
+&= \left[(-1)^i i!\frac{\mathrm{d}^{k-i-1}\left(\left(x^2-1\right)^k\right)}{\mathrm{d} x^{k-i-1}}\right]_{-1}^1\\
+&=0
+\end{align*}
+
+puisque 1 et -1 annulent $\dfrac{\mathrm{d}^{k-i}\left(\left(x^2-1\right)^k\right)}{\mathrm{d} x^{k-i}}$.
+\item Par définition même du processus d'orthonormalisation de la base $\left(1, X, \ldots, X^n\right)$, on a $\operatorname{Vect}\left(1, X, \ldots, X^i\right)=\operatorname{Vect}\left(e_0, e_1, \ldots, e_i\right)$, donc chaque $e_i$ est combinaison de $1, X, \ldots, X^i$. Puisque $\phi\left(X^j, f_k\right)=0$ pour tout $j \in\{0, \ldots, k-1\}$, on a $\phi\left(e_j, f_k\right)=0$ lorsque $j \leq k-1$. Enfin, $f_k$ étant de degré $k, f_k$ est combinaison de $\left(1, X, \ldots, X^k\right)$ donc de $\left(e_0, e_1, \ldots, e_k\right)$ et on peut donc écrire
+
+$$
+f_k=\sum_{j=0}^k \lambda_j e_j
+$$
+
+et comme $\left(e_0, \ldots, e_n\right)$ est une base orthonormée, $\phi\left(f_k, e_j\right)=\lambda_j$. C'est donc que $\lambda_j=0$ pour tout $j \leq k-1$ et $f_k=\lambda_k e_k$.
+\end{enumerate}
+\end{enumerate}
