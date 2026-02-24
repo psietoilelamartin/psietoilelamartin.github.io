@@ -1,0 +1,22 @@
+% ccp 2023, ex. 42
+
+\begin{enumerate}
+\item   On trouve comme solution de l'équation homogène sur $\left]  0,+\infty\right[ $ la droite vectorielle engendrée par $x\longmapsto x^{\frac{3}{2}}$.\\
+En effet, une primitive de $x\longmapsto\dfrac{3}{2x} $ sur $\left] 0,+\infty\right[ $ est $x\longmapsto\dfrac{3}{2}\ln x$.
+\item On utilise la méthode de variation de la constante en cherchant une fonction $k$ telle que  $x\longmapsto k(x)x^\frac{3}{2}$ soit une solution de l'équation complète $(E)$ sur  $\left]  0,+\infty\right[ $.\\
+On arrive alors à $2k'(x)x^\frac{5}{2}=\sqrt{x}$ et on choisit $ k(x)=-\dfrac{1}{2x}$.\\
+Les solutions de $(E)$ sur  $\left]  0,+\infty\right[ $ sont donc les fonctions $ x\longmapsto kx^\frac{3}{2}-\dfrac{1}{2}\sqrt{x}$ avec $k\in\mathbb{R}$.\\
+\item
+On suppose qu'il existe une solution $f$ de  $(E)$ sur
+$\left[  0,+\infty\right[ $.\\
+Alors $f$ est aussi solution de $E$ sur $\left]0,+\infty \right]$.\\
+Donc, il existe une constante $k$ telle que $\forall x\in\left]0,+\infty \right[$, $ f(x)=kx^\frac{3}{2}-\dfrac{1}{2}\sqrt{x}$ avec $k\in\mathbb{R}$.\\
+De plus, comme $f$ est solution de $E$ sur $\left[  0,+\infty\right[ $ alors $f$ est dérivable sur $\left[  0,+\infty\right[ $.\\
+Donc en particulier, $f$ est continue en $0$.\\
+Donc $f(0)=\displaystyle\lim_{x\rightarrow 0}\left( kx^\frac{3}{2}-\dfrac{1}{2}\sqrt{x}\right) =0$.\\
+$f$ doit également être dérivable en $0$.\\
+Or,  $\dfrac{f(x)-f(0)}{x-0}=k\sqrt{x}-\dfrac{1}{2}\dfrac{1}{\sqrt{x}}\underset{x\to 0}{\longrightarrow}-\infty$.\\
+Donc $f$ n'est pas dérivable en $0$.\\
+Conclusion: l'ensemble des solutions de l'équation différentielle $ 2xy'-3y=\sqrt{x}$ sur $\left[  0,+\infty\right[ $ est l'ensemble vide.
+
+\end{enumerate}

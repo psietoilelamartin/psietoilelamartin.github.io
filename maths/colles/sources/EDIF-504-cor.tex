@@ -1,0 +1,11 @@
+\begin{enumerate}
+\item On trouve $t\mapsto \dfrac1{(1+t^2)^2}$.
+\item Une solution particulière (relativement) évidente est $t\mapsto 1+t^2$. \\
+Cherchons donc les solutions sous la forme $y(t)=K(t)(1+t^2)$.\\
+$y$ est solution ssi pour tout $t\in\mathbb R$, $(1+t^2)^2K''(t)+4(t^2+1)tK'(t)=0$, ou encore $K'$ est solution de l'équation différentielle  $z'+\dfrac{4t}{1+t^2}z=0$.\\
+Cette dernière équation a pour solutions les fonctions de la forme $t\mapsto \dfrac{\l}{(1+t^2)^2}$ quand $\l$ parcourt $\mathbb R$.\\
+Grâce à la première question, $y$ est solution ssi il existe $\l,\mu\in\mathbb R$ telles que $K$ : $t\mapsto \dfrac\l2\left(\arctan t +\dfrac t{1+t^2}\right)+\mu$. Finalement l'ensemble des solutions est
+$$\Set{\foncc{\mathbb R}{\mathbb R} t{\l\left((1+t^2)\arctan t + t\right)+\mu(1+t^2)},\l,\mu\in\mathbb R}.$$
+\item Nous avons résolu l'équation homogène associée. Une solution évidente de l'équation avec second membre est la fonction $t\mapsto-\dfrac t2$, donc l'ensemble des solutions est
+$$\Set{\foncc{\mathbb R}{\mathbb R} t{\l\left((1+t^2)\arctan t + t\right)+\mu(1+t^2)-\dfrac t2},\l,\mu\in\mathbb R}.$$
+\end{enumerate}

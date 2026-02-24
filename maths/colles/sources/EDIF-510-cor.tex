@@ -1,0 +1,26 @@
+Comme le suggère l'énoncé, pour $y$ : $\mathbb{R} \longrightarrow \mathbb{R}$ deux fois dérivable, considérons $z=\left(x^2+1\right) y$, qui est deux fois dérivable.\\
+Comme (E) commence par $\left(x^2+1\right) y^{\prime \prime}$, calculons $z^{\prime}$ et $z^{\prime \prime}$.
+On a pour tout $x\in\R$~:
+\begin{align*}
+z(x)&=\left(x^2+1\right) y(x), \quad z^{\prime}(x)=2 x y(x)+\left(x^2+1\right) y^{\prime}(x) \\
+z^{\prime \prime}(x)&=2 y(x)+4 x y^{\prime}(x)+\left(x^2+1\right) y^{\prime \prime}(x)
+\end{align*}
+d'où :
+\begin{align*}
+&\left(x^2+1\right) y^{\prime \prime}(x)-\left(3 x^2-4 x+3\right) y^{\prime}(x)+\left(2 x^2-6 x+4\right) y(x) \\
+=&\left(z^{\prime \prime}(x)-2 y-4 x y^{\prime}(x)\right)-\left(3 x^2-4 x+3\right) y^{\prime}(x)+\left(2 x^2-6 x+4\right) y(x) \\
+=&z^{\prime \prime}(x)-3\left(x^2+1\right) y^{\prime}(x)+\left(2 x^2-6 x+2\right) y(x) \\
+=&z^{\prime \prime}(x)-3\left(z^{\prime}(x)-2 x y(x)\right)+\left(2 x^2-6 x+2\right) y(x) \\
+=&z^{\prime \prime}(x)-3 z^{\prime}(x)+2 z(x)
+\end{align*}
+Ainsi, $y$ est solution de (E) si et seulement si $z$ est solution de:
+(F) $\quad z^{\prime \prime}-3 z^{\prime}+2 z=0$.
+
+(F) est une équation différentielle linéaire d'ordre 2 à coefficients constants. L'équation caractéristique $r^2-3 r+2=0$ admet deux solutions réelles 1 et 2 , donc, d'après le cours, la solution générale de (F) est :
+
+$$
+z: x \longmapsto \lambda \mathrm{e}^x+\mu \mathrm{e}^{2 x}, \quad(\lambda, \mu) \in \mathbb{R}^2
+$$
+
+On conclut que l'ensemble $\mcal{S}$ des solutions de (E) est : \\
+$$\mcal{S}=\left\{y: \mathbb{R} \longrightarrow \mathbb{R}, \quad x \longmapsto \frac{\lambda \mathrm{e}^x+\mu \mathrm{e}^{2 x}}{x^2+1} ;(\lambda, \mu) \in \mathbb{R}^2\right\} .$$
