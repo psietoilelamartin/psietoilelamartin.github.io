@@ -1,0 +1,33 @@
+Existence : il existe $P\in\mathrm O_n(\mathbb{R})$ telle que $A=P^TDP$, où $D=\mathrm{diag}(d_1,\cdots,d_n)$ et les $d_i\in\mathbb{R}_+$.
+Posons $B=P^TD'P$ avec $D'=\mathrm{diag}(\sqrt{d_1},\cdots,\sqrt{d_n})$. Alors $B^2=A$.\\
+
+Unicité : \\
+
+1ère méthode : Notons $f$ l'endomorphisme canoniquement associé à $A$. $A$ est diagonalisable,
+donc $E=\mathbb{R}^n$ est la somme directe des espaces propres de $A$. Soit $F$ un
+espace propre associé à une valeur propre $d$, et soit $B$ telle que $B^2=A$, représentant l'endomorphisme $g$.\\
+Alors $A$ et $B$ commutent, donc $F$ est stable par $B$. Notons $h=f|_F$.alors $h$ est aussi symétrique positive réelle
+et donc elle diagonalisable. Ses valeurs propres sont positives, mais puisque $h^2=d\mathrm{Id}$, alors ces valeurs
+propres valent toutes $\sqrt d$. Donc $h=\sqrt d\mathrm{Id}$. $f$ est donc définie de manière unique sur chaque sous-espace
+prope. Ces derniers étant supplémentaires, $f$ est définie de manière unique.\\
+
+2ème méthode :\\
+
+Soient $R$ et $S$ deux racines, on note $V=\mathrm{Sp}(R)\cup \mathrm{Sp}(S)$, et on appelle $v_1,\cdots,v_p$ ses éléments, nommés
+injectivement. Comme elles sont positives, alors les $v_1^2,\cdots,v_p^2$ sont deux à deux distinctes. On note $L$
+le polynôme d'interpolation qui envoie les $v_i^2$ sur les $v_i$.\\
+Si on note $R=Q^T\Delta Q$ avec $Q$ inversible et $\Delta$ diagonale, les coefficients diagonaux de $\Delta$ sont
+dans $V$. Alors $L(A)=L(R^2)=Q^T L(\Delta^2) Q=Q^T L(\Delta)Q=R$. Et de même $L(A)=S$, donc $R=S$.\\
+
+
+3ème méthode :\\
+
+Si $B_1=P_1^{\top} D_1 P_1$ et $B_2=P_2^{\top} D_2 P_2$ sont deux racines carrées (convenablement diagonalisées), alors l'égalité $B_1^2=B_2^2$ entraine $D_1^2 Q-Q D_2^2=0$ avec $Q=P_1 P_2^{\top}$. En termes de coefficients, cela donne
+\begin{align*}
+0&=\left[D_1^2 Q-Q D_2^2\right]_{i, j}=\left[D_1\right]_{i, i}^2[Q]_{i, j}-\left[D_2\right]_{j, j}^2[Q]_{i, j}\\
+&=[Q]_{i, j}\left(\left[D_1\right]_{i, i}-\left[D_2\right]_{j, j}\right)\left(\left[D_1\right]_{i, i}+\left[D_2\right]_{j, j}\right)
+\end{align*}
+
+
+Or on a $\left[D_1\right]_{i, i}>0$ et $\left[D_2\right]_{j, j}>0$. Ce qui fournit $[Q]_{i, j}\left(\left[D_1\right]_{i, i}-\left[D_2\right]_{j, j}\right)=0$, c'est-à-dire $\left[D_1 Q-Q D_2\right]_{i, j}=0$ ou encore $D_1 Q-Q D_2=0$ et enfin $B_1-B_2=0$.
+Autrement dit, les endomorphismes matriciels $Q \mapsto D_1^2 Q-Q D_2^2$ et $Q \mapsto D_1 Q-Q D_2$ ont le même noyau dès lors que $D_1$ et $D_2$ sont deux matrices diagonales à valeurs propres strictement positives !

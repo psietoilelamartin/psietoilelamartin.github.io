@@ -1,0 +1,22 @@
+\begin{enumerate}
+  \item\label{ENDO-010-cor-1} Avec $\cB=(e_1,\dots,e_n)$ une base orthonormée de $\R^n$ et $u$ l'endomorphisme canonique associé à $A$, si $e = e_1+\dots+e_n$ alors $\dsum_{i,j} a_{i,j} = \Braket{u(e),e}$, pour le produit scalaire canonique de $\mathbb R^n$. Puis on conclut en utilisant l'inégalité de Cauchy-Schwarz.
+  \item Pour tout $j$, $\dsum_i a_{i,j}^2 = 1$ donc pour tout $i$ $a_{i,j}^2 \leqslant 1$, donc
+$|a_{i,j}| \leqslant 1$ donc $\dsum_{i,j} |a_{i,j}| \geq \dsum_{i,j} a_{i,j}^2 = n$.
+  \item\label{ENDO-010-cor-3} $\dsum_{i,j} |a_{i,j}|=\dsum_{i,j} |a_{i,j}|\times 1=\Braket{|A|,J}$ pour le produit scalaire canonique de $\mathscr M_n(\R)$, où $J$ est la matrice dont tous les coefficients valent 1, et $|A|=(|a_{ij}|)$. Alors, toujours avec l'inégalité de Cauchy-Schwarz, $\dsum_{i,j} |a_{i,j}|  \leqslant \sqrt{\dsum_{i,j} |a_{i,j}|^2} \sqrt{\dsum_{i,j} 1^2} \leqslant n\sqrt{n}$.
+  \item On peut avoir l'égalité si $n=1$ mais aussi si $n=4$ avec
+
+$$
+A=\frac{1}{2}\left(\begin{array}{cccc}
+-1 & 1 & 1 & 1 \\
+1 & -1 & 1 & 1 \\
+1 & 1 & -1 & 1 \\
+1 & 1 & 1 & -1
+\end{array}\right)
+$$
+
+
+En fait, un approfondissement du problème donne $\sqrt{n} \in 2 \mathbb{Z}$ comme condition nécessaire à l'obtention de l'égalité.\\
+Pour avoir égalité dans l'inégalité de Cauchy-Schwarz de la question \ref{ENDO-010-cor-3}, il faut que tous les coefficients de $A$ soient de même valeur absolue $\l$. Et donc en faisant la somme des $|a_{ij}|$ on obtient $n^2\l=n\sqrt n$ donc $\l=1/\sqrt n$.\\
+Pour l'inégalité de Cauchy-Schwarz de la question \ref{ENDO-010-cor-1}, il faut que la somme de tous les coefficients d'une ligne vaille une constante. Cette constante doit valoir 1 pour que la somme de tous les coefficients vaille $n$. Si on appelle $a$ le nombre de $+$ sur une ligne, on doit donc avoir $(a-(n-a))\sqrt n=1$, donc $2a=n+\sqrt n$. Donc $n$ doit être un carré parfait.\\
+Enfin les colonnes doivent être deux à deux orthogonales, donc le nombre de $+$, $a$, doit avoir la même parité que $n$ (je ne sais pas trop le montrer rigoureusement :) ) donc $n$ doit être pair.
+\end{enumerate}

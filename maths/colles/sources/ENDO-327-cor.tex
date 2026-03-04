@@ -1,0 +1,9 @@
+Soit $A \in \mathrm{G L}_n(\mathbb{R})$.
+\begin{enumerate}
+\item $(A^\top A)^\top=A^\top A$ dont $A^\top A$ est symétrique.\\
+Soit $X\in\mathscr M_{n1}(\R)$ non nul. Alors $X^\top(A^\top A)X=(AX)^\top(AX)=\Vert AX\Vert^2$. Mais $X\neq 0$ et $A$ est inversible donc $\Vert AX\Vert^2>0$, donc $A^\top A\in\mathscr S_n^{++}(\mathbb R)$.
+\item On nous rappelle qu'il existe $S \in \mathscr S_n^{++}(\mathbb R)$telle que $A^\top A=S^2$.\\
+Notons $\Omega=A S^{-1}$. On a alors $A=\Omega S$, et :
+$$\Omega^\top \Omega=\left(A S^{-1}\right)^\top A S^{-1}=(S^{-1})^\top\left(A^\top A\right) S^{-1}=S^{-1} S^2 S^{-1}=\mathrm{I}_n$$
+donc $\Omega \in \mathrm{O}_n(\mathbb{R})$. Ceci montre l'existence d'un couple $(\Omega, S)$ convenable.
+\end{enumerate}

@@ -1,0 +1,25 @@
+\begin{enumerate}
+\item $(u+v \mid u-v)=\|u\|^2-\|v\|^2=0$ pour $u$ et $v$ unitaires.
+\item\label{ENDO-019-cor-2} Soient $u$ et $v$ des vecteurs unitaires de $E$.
+$u+v$ et $u-v$ sont orthogonaux donc $f(u+v)$ et $f(u-v)$ le sont aussi.
+Or par linéarité
+$$
+f(u+v)=f(u)+f(v) \text { et } f(u-v)=f(u)-f(v)$$
+de sorte que l'orthogonalité de ces deux vecteurs entraîne
+$$
+\|f(u)\|=\|f(v)\|
+$$
+Ainsi les vecteurs unitaires de $E$ sont envoyés par $f$ sur des vecteurs ayant tous la même norme $\alpha \in \mathbb{R}^{+}$.
+Montrons qu'alors
+$$
+\forall\, x \in E,\ \|f(x)\|=\alpha\|x\|
+$$
+Soit $x \in E$.\\
+Si $x=0$ alors on a $f(x)=0$ puis $\|f(x)\|=\alpha\|x\|$.\\
+Si $x \neq 0$ alors en introduisant le vecteur unitaire $u=x /\|x\|$, on a $\|f(u)\|=\alpha$ puis $\|f(x)\|=\alpha\|x\|$
+\item Si $\alpha=0$ alors $f=\tilde{0}$ et n'importe quel $g \in \mathrm{O}(E)$ convient.\\
+Si $\alpha \neq 0$ alors introduisons l'endomorphisme
+$$
+g=\frac{1}{\alpha} f
+$$
+La relation obtenue en \textbf{\ref{ENDO-019-cor-2}} assure que $g$ conserve la norme et donc $g \in \mathrm{O}(E)$ ce qui permet de conclure.                                                                                                                    \end{enumerate}

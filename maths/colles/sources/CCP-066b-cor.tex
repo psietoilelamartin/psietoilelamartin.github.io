@@ -1,0 +1,93 @@
+% CCP 2023 exo 66
+On introduit, sur $\mathscr{M}_{n,1}\left(\mathbb{R} \right)  $,  la norme euclidienne, notée $||.||$, associée au produit scalaire canonique,  définie par : $\forall\, X\in \mathscr{M}_{n,1}\left(\mathbb{R} \right) $, $||X||=\sqrt{\transp X X}$.
+
+
+
+\begin{enumerate}
+\item Soit  $A\in \mathscr{S}_n\left( \mathbb{R}\right)$.
+Prouvons que $A\in \mathscr{S}_n^+\left( \mathbb{R}\right)\Longleftrightarrow \mathrm{Sp}(A)\subset \left[0,+\infty \right[$. \\
+Raisonnons par double implication.\\
+\medskip
+Supposons que $A\in \mathscr{S}_n^+\left( \mathbb{R}\right)$.\\
+Prouvons que  $\mathrm{Sp}(A)\subset \left[0,+\infty \right[$.\\
+Soit $\lambda \in \mathrm{Sp}(A)$.\\
+$\exists X\in \mathscr{M}_{n,1} \left( \mathbb{R} \right)\backslash\left\lbrace 0\right\rbrace$ / $ AX=\lambda X$.\\
+Alors $ X ^\top AX=\transp X \lambda X=\lambda ||X||^2$.\\
+
+Or, $A\in \mathscr{S}_n^+\left( \mathbb{R}\right)$ donc $ \transp X  AX\geqslant 0$.\\
+Donc $\lambda ||X||^2\geqslant 0$.\\
+Or, $X\neq 0$ donc $||X||^2>0$.\\
+Donc $\lambda \geqslant 0$.\\
+\medskip
+Supposons  que  $\mathrm{Sp}(A)\subset \left[0,+\infty \right[$.\\
+Prouvons que $A\in \mathscr{S}_n^+\left( \mathbb{R}\right)$.\\
+$A\in \mathscr{S}_n\left( \mathbb{R}\right)$ donc, d'après le théorème spectral, $\exists P\in \mathrm{O}(n)$ / $A=PDP^\top $ où $D=\mathrm{diag}\left(\lambda_1,\lambda_2,...,\lambda_n \right) $.\\
+
+Soit $X\in \mathscr{M}_{n,1} \left(\mathbb{R} \right)$.\\
+$\transp X AX=\transp X PDP^\top X=(P^\top X)^\top D(P^\top X)$.\\
+Notons $y_1,y_2,...,y_n$ les composantes de la matrice colonne $Y=P^\top X$.\\
+Ainsi  $Y=\begin{pmatrix}
+y_1\\
+y_2\\
+.\\
+.\\
+.\\
+
+y_n
+\end{pmatrix}$
+et donc  $\transp X AX=\transp Y  DY=\displaystyle\sum_{i=1}^{n}\lambda_iy_i^2$.\:\:\:(1)\\
+Or, $\lambda_1$, $\lambda_2$,...,$\lambda_n$ sont les valeurs propres de $A$ donc, par hypothèse, $\forall\, i \in\llbracket 1,n\rrbracket$, $\lambda_i\geqslant 0$.\\
+Donc $\forall\, i \in\llbracket 1,n\rrbracket$, $\lambda_iy_i^2\geqslant 0$.\\
+Donc, d'après (1),  $\transp X AX\geqslant 0$.
+
+\item
+
+Soit $A\in \mathscr{S}_n\left( \mathbb{R}\right)$.\\
+Prouvons que $A^2\in  \mathscr{S}_n^+\left( \mathbb{R}\right)$.\\
+\medskip
+$\transp{\left( A^2\right)} =\transp A  \transp A  $.\\
+Or, $A\in \mathscr{S}_n\left( \mathbb{R}\right)$ donc $\transp A =A$.
+Donc $\transp{\left( A^2\right)} =A^2$.
+Donc $A^2\in \mathscr{S}_n\left( \mathbb{R}\right)$.\\
+\medskip
+Soit $X\in \mathscr{M}_{n,1} \left(\mathbb{R} \right)$.\\
+$\transp X A^2X=\transp X \transp A  AX=\transp{\left(AX \right)}  \left(AX \right)=||AX||^2\geqslant 0$.\\
+Donc $A^2\in  \mathscr{S}_n^+\left( \mathbb{R}\right)$.\\
+\item
+soit $A\in \mathscr{S}_n\left( \mathbb{R}\right)$ et soit $B\in \mathscr{S}_n^+\left( \mathbb{R}\right)$. \\
+On suppose que  $AB=BA$.\\
+% Prouvons que   $A^2B\in \mathscr{S}_n^+\left( \mathbb{R}\right)$.\\
+% Remarque: par hypothèse,  $A$ et $B$ commutent donc $A^2$ et $B$ commutent.\\
+% En effet : $A^2B=A(AB)=A(BA)=(AB)A=(BA)A=BA^2$.\\
+% $(A^2B)^\top =B^\top \left( A^2\right) ^\top =B^2\left(\transp A   \right)^2$.\\
+%  Or,  $A\in \mathscr{S}_n\left( \mathbb{R}\right)$ et  $B\in \mathscr{S}_n^+\left( \mathbb{R}\right)$ donc $\transp A  =A$ et $B^\top =B$.\\
+%  Donc $(A^2B)^\top =BA^2$.\\
+%  Or, d'après la remarque, $A^2$ et $B$ commutent.\\
+%  Donc $\left( A^2B\right) ^\top =A^2B$.\\
+$\transp{(A^2B)}=\transp{(ABA)}=\transp A\transp B\transp A=ABA=A^2B$.\\
+ Donc $A^2B\in \mathscr{S}_n\left( \mathbb{R}\right)$.\\
+ \medskip
+ Soit $X\in \mathscr{M}_{n,1} \left(\mathbb{R} \right)$.\\
+ $A$ et $B$ commutent donc $\transp X \left( A^2B\right) X=\transp X ABAX$.\\
+ Or, $A$ est symétrique donc $\transp X ABAX=\transp{\left( AX\right)} B(AX)$.\\
+ On pose $Y=AX$. \\
+ $Y\in\mathscr{M}_{n,1} \left(\mathbb{R} \right)$ et
+  $B\in \mathscr{S}_n^{+}\left( \mathbb{R}\right)$ donc $\transp{\left( AX\right)}  B(AX)=\transp Y  BY \geqslant 0$ .\\
+ Donc $\transp X A^2B X\geqslant 0$.\\
+ Donc $A^2B\in \mathscr{S}_n^{+}\left( \mathbb{R}\right)$.
+
+%  \item
+%
+% Soit $A\in \mathscr{S}_n^+\left( \mathbb{R}\right)$.\\
+% $A\in \mathscr{S}_n^{+}\left( \mathbb{R}\right)$ donc, d'après le théorème spectral et 1. :\\
+%   $\exists P\in \mathrm{O}(n)$ / $A=PDP^\top $ où $D=\mathrm{diag}\left(\lambda_1,\lambda_2,...,\lambda_n \right) $ avec
+%  $\forall\, i \in\llbracket 1,n\rrbracket$, $\lambda_i\geqslant 0$.\\
+% On pose $\Delta=\mathrm{diag}\left(\sqrt{\lambda_1},\sqrt{\lambda_2},...,\sqrt{\lambda_n} \right)$. \\
+% Alors $A=P\Delta^2P^\top  =P\Delta P^\top  P\Delta P^\top $ car $P^\top =P^{-1}$.\\
+% C'est-à-dire, $A=\left( P\Delta P^\top \right) ^2$.\\
+% On pose alors $B=P\Delta P^\top $.\\
+% On a $A=B^2$.\\
+% De plus, $B^\top =\left( P^\top \right) ^\top \Delta ^\top  P^\top =P\Delta P^\top =B$ donc $B\in \mathscr{S}_n\left( \mathbb{R}\right)$.\\
+% De plus, $B$ est semblable à $\Delta$ donc $\mathrm{Sp}\left( B\right) =\left\lbrace \sqrt{\lambda_1},\sqrt{\lambda_2},...,\sqrt{\lambda_n}\right\rbrace$ et donc $ \mathrm{Sp}\left( B\right) \subset \left[ 0,+\infty\right[$. \\
+% Donc  $B\in \mathscr{S}_n^{+}\left( \mathbb{R}\right)$.
+\end{enumerate}
