@@ -1,0 +1,20 @@
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item $P(\N)=1$ et par $\sigma$-additivité, $P(\N)=\dsum_{n=0}^{\pinf} P(\ens{n})$. La série $\dsum_{n\in\N} P(\ens{n})$ converge donc son terme général tend vers 0.
+\item Le reste de cette même série tend vers 0 donc $\dlim _{n \rightarrow+\infty} P(\{k\in\N,\ k \geqslant n\})$.
+\end{enumerate}
+\item $(a_n)$ est strictement décroissante de limite nulle, donc tous ses termes sont strictement positifs. \\
+Analyse : nous devons avoir $P(\N)=1$ donc $\l=\dfrac1{a_0}$.\\
+De plus,
+\begin{align*}
+P(\{n\}) & =P\big[\ens{k\in\N,\ k \geqslant n} \backslash\ens{k\in\N,\ k \geqslant n+1}\big] \\
+& =P(\ens{k\in\N,\ k \geqslant n})-P(\ens{k\in\N,\ k \geqslant n+1})=\frac{a_n-a_{n+1}}{a_0}.
+\end{align*}
+Synthèse : Posons $\l=\dfrac1{a_0}$. Pour tout $n\in\N$, posons $p_n=\l(a_{n}-a_{n+1})$. Alors $p_n>0$ et $\dsum_{n=0}^{\pinf}p_n=\l(a_0-\dlim_{n\to\pinf} a_n)=1$ par télescopage. Il existe donc une probabilté $P$ telle que pour tout $n\in\N$, $P(\ens{n})=p_n$. De plus $P(\N)=\l a_0=1$. Enfin, si $n\in\N$,
+\begin{align*}
+P(\ens{k\in\N,\ k \geqslant n})&=\dsum_{k=n}^{\pinf}P(\ens{n})= \dsum_{k=n}^{\pinf}P(\ens{n})\l(a_{k}-a_{k+1})\\
+&= \lambda a_n.
+\end{align*}
+Il existe donc une probabilité vérifiant la propriété voulue \ssi\ $\l=\dfrac1{a_0}$.
+\end{enumerate}
